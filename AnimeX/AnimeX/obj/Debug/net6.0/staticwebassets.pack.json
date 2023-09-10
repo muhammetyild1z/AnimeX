@@ -1,0 +1,769 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\AnimeX.bundle.scp.css",
+      "PackagePath": "staticwebassets\\AnimeX.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\.DS_Store",
+      "PackagePath": "staticwebassets\\animeX\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\Source\\OwlCarousel2-2.3.4.zip",
+      "PackagePath": "staticwebassets\\animeX\\Source\\OwlCarousel2-2.3.4.zip"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\Source\\SlickNav-master.zip",
+      "PackagePath": "staticwebassets\\animeX\\Source\\SlickNav-master.zip"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\Source\\bootstrap-4.4.1-dist.zip",
+      "PackagePath": "staticwebassets\\animeX\\Source\\bootstrap-4.4.1-dist.zip"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\Source\\elegant_font.zip",
+      "PackagePath": "staticwebassets\\animeX\\Source\\elegant_font.zip"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\Source\\font-awesome-4.7.0.zip",
+      "PackagePath": "staticwebassets\\animeX\\Source\\font-awesome-4.7.0.zip"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\Source\\jquery-nice-select-1.1.0.zip",
+      "PackagePath": "staticwebassets\\animeX\\Source\\jquery-nice-select-1.1.0.zip"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\Source\\plyr-master.zip",
+      "PackagePath": "staticwebassets\\animeX\\Source\\plyr-master.zip"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\Source\\sass.zip",
+      "PackagePath": "staticwebassets\\animeX\\Source\\sass.zip"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\anime-details.html",
+      "PackagePath": "staticwebassets\\animeX\\anime-details.html"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\anime-watching.html",
+      "PackagePath": "staticwebassets\\animeX\\anime-watching.html"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\blog-details.html",
+      "PackagePath": "staticwebassets\\animeX\\blog-details.html"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\blog.html",
+      "PackagePath": "staticwebassets\\animeX\\blog.html"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\categories.html",
+      "PackagePath": "staticwebassets\\animeX\\categories.html"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\animeX\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\elegant-icons.css",
+      "PackagePath": "staticwebassets\\animeX\\css\\elegant-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\animeX\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\animeX\\css\\nice-select.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\animeX\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\plyr.css",
+      "PackagePath": "staticwebassets\\animeX\\css\\plyr.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\slicknav.min.css",
+      "PackagePath": "staticwebassets\\animeX\\css\\slicknav.min.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\style.css",
+      "PackagePath": "staticwebassets\\animeX\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\fonts\\ElegantIcons.eot",
+      "PackagePath": "staticwebassets\\animeX\\fonts\\ElegantIcons.eot"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\fonts\\ElegantIcons.svg",
+      "PackagePath": "staticwebassets\\animeX\\fonts\\ElegantIcons.svg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\fonts\\ElegantIcons.ttf",
+      "PackagePath": "staticwebassets\\animeX\\fonts\\ElegantIcons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\fonts\\ElegantIcons.woff",
+      "PackagePath": "staticwebassets\\animeX\\fonts\\ElegantIcons.woff"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\animeX\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\animeX\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\animeX\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\animeX\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\animeX\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\animeX\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\anime\\details-pic.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\anime\\details-pic.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\anime\\review-1.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\anime\\review-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\anime\\review-2.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\anime\\review-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\anime\\review-3.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\anime\\review-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\anime\\review-4.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\anime\\review-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\anime\\review-5.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\anime\\review-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\anime\\review-6.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\anime\\review-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\blog\\blog-1.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\blog\\blog-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\blog\\blog-10.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\blog\\blog-10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\blog\\blog-11.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\blog\\blog-11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\blog\\blog-12.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\blog\\blog-12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\blog\\blog-2.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\blog\\blog-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\blog\\blog-3.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\blog\\blog-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\blog\\blog-4.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\blog\\blog-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\blog\\blog-5.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\blog\\blog-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\blog\\blog-6.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\blog\\blog-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\blog\\blog-7.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\blog\\blog-7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\blog\\blog-8.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\blog\\blog-8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\blog\\blog-9.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\blog\\blog-9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\blog\\details\\bd-item-1.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\blog\\details\\bd-item-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\blog\\details\\bd-item-2.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\blog\\details\\bd-item-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\blog\\details\\bd-item-3.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\blog\\details\\bd-item-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\blog\\details\\blog-details-pic.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\blog\\details\\blog-details-pic.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\blog\\details\\comment-1.png",
+      "PackagePath": "staticwebassets\\animeX\\img\\blog\\details\\comment-1.png"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\blog\\details\\comment-2.png",
+      "PackagePath": "staticwebassets\\animeX\\img\\blog\\details\\comment-2.png"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\blog\\details\\comment-3.png",
+      "PackagePath": "staticwebassets\\animeX\\img\\blog\\details\\comment-3.png"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\favicon.ico",
+      "PackagePath": "staticwebassets\\animeX\\img\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\hero\\hero-1.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\hero\\hero-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\live\\live-1.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\live\\live-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\live\\live-2.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\live\\live-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\live\\live-3.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\live\\live-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\live\\live-4.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\live\\live-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\live\\live-5.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\live\\live-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\live\\live-6.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\live\\live-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\logo.png",
+      "PackagePath": "staticwebassets\\animeX\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\normal-breadcrumb.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\normal-breadcrumb.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\popular\\popular-1.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\popular\\popular-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\popular\\popular-2.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\popular\\popular-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\popular\\popular-3.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\popular\\popular-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\popular\\popular-4.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\popular\\popular-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\popular\\popular-5.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\popular\\popular-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\popular\\popular-6.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\popular\\popular-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\recent\\recent-1.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\recent\\recent-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\recent\\recent-2.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\recent\\recent-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\recent\\recent-3.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\recent\\recent-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\recent\\recent-4.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\recent\\recent-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\recent\\recent-5.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\recent\\recent-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\recent\\recent-6.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\recent\\recent-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\sidebar\\comment-1.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\sidebar\\comment-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\sidebar\\comment-2.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\sidebar\\comment-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\sidebar\\comment-3.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\sidebar\\comment-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\sidebar\\comment-4.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\sidebar\\comment-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\sidebar\\tv-1.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\sidebar\\tv-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\sidebar\\tv-2.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\sidebar\\tv-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\sidebar\\tv-3.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\sidebar\\tv-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\sidebar\\tv-4.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\sidebar\\tv-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\sidebar\\tv-5.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\sidebar\\tv-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\trending\\trend-1.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\trending\\trend-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\trending\\trend-2.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\trending\\trend-2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\trending\\trend-3.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\trending\\trend-3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\trending\\trend-4.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\trending\\trend-4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\trending\\trend-5.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\trending\\trend-5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\trending\\trend-6.jpg",
+      "PackagePath": "staticwebassets\\animeX\\img\\trending\\trend-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\index.html",
+      "PackagePath": "staticwebassets\\animeX\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\animeX\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\js\\jquery-3.3.1.min.js",
+      "PackagePath": "staticwebassets\\animeX\\js\\jquery-3.3.1.min.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\js\\jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets\\animeX\\js\\jquery.nice-select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\js\\jquery.slicknav.js",
+      "PackagePath": "staticwebassets\\animeX\\js\\jquery.slicknav.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\js\\main.js",
+      "PackagePath": "staticwebassets\\animeX\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\js\\mixitup.min.js",
+      "PackagePath": "staticwebassets\\animeX\\js\\mixitup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\animeX\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\js\\player.js",
+      "PackagePath": "staticwebassets\\animeX\\js\\player.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\login.html",
+      "PackagePath": "staticwebassets\\animeX\\login.html"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\main.html",
+      "PackagePath": "staticwebassets\\animeX\\main.html"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\readme.txt",
+      "PackagePath": "staticwebassets\\animeX\\readme.txt"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\sass\\_anime-details.scss",
+      "PackagePath": "staticwebassets\\animeX\\sass\\_anime-details.scss"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\sass\\_anime-watching.scss",
+      "PackagePath": "staticwebassets\\animeX\\sass\\_anime-watching.scss"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\sass\\_base.scss",
+      "PackagePath": "staticwebassets\\animeX\\sass\\_base.scss"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\sass\\_blog-details.scss",
+      "PackagePath": "staticwebassets\\animeX\\sass\\_blog-details.scss"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\sass\\_blog.scss",
+      "PackagePath": "staticwebassets\\animeX\\sass\\_blog.scss"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\sass\\_breadcrumb.scss",
+      "PackagePath": "staticwebassets\\animeX\\sass\\_breadcrumb.scss"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\sass\\_footer.scss",
+      "PackagePath": "staticwebassets\\animeX\\sass\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\sass\\_header.scss",
+      "PackagePath": "staticwebassets\\animeX\\sass\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\sass\\_hero.scss",
+      "PackagePath": "staticwebassets\\animeX\\sass\\_hero.scss"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\sass\\_login.scss",
+      "PackagePath": "staticwebassets\\animeX\\sass\\_login.scss"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\sass\\_mixins.scss",
+      "PackagePath": "staticwebassets\\animeX\\sass\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\sass\\_product.scss",
+      "PackagePath": "staticwebassets\\animeX\\sass\\_product.scss"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\sass\\_responsive.scss",
+      "PackagePath": "staticwebassets\\animeX\\sass\\_responsive.scss"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\sass\\_signup.scss",
+      "PackagePath": "staticwebassets\\animeX\\sass\\_signup.scss"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\sass\\_variable.scss",
+      "PackagePath": "staticwebassets\\animeX\\sass\\_variable.scss"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\sass\\style.scss",
+      "PackagePath": "staticwebassets\\animeX\\sass\\style.scss"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\signup.html",
+      "PackagePath": "staticwebassets\\animeX\\signup.html"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\videos\\1.mp4",
+      "PackagePath": "staticwebassets\\animeX\\videos\\1.mp4"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\videos\\anime-watch.jpg",
+      "PackagePath": "staticwebassets\\animeX\\videos\\anime-watch.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.AnimeX.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.AnimeX.props",
+      "PackagePath": "build\\AnimeX.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.AnimeX.props",
+      "PackagePath": "buildMultiTargeting\\AnimeX.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.AnimeX.props",
+      "PackagePath": "buildTransitive\\AnimeX.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
