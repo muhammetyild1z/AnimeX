@@ -5,13 +5,15 @@
 
 html,
 body {
-	height: 100%;
+	/*height: 100%;
 	width: 100%;
-	margin:0;
-	padding:0;
-	font-family: "Mulish", sans-serif;
+	margin: 0;
+	padding: 0;*/
+	font-family: Roboto,Helvetica Neue,sans-serif;
+	Roboto,Helvetica Neue,sans-serif;
 	-webkit-font-smoothing: antialiased;
 	background: black;
+	
 }
 
 h1,
@@ -59,9 +61,10 @@ p {
 	margin: 0 0 15px 0;
 }
 
-/*img {
-	object-fit: cover
-}*/
+img {
+	object-fit: cover;
+	
+}
 
 input:focus,
 select:focus,
@@ -301,10 +304,11 @@ ol {
   Header
 -----------------------*/
 
-.header {	
-	background-color: #000000;
-	opacity: 0.6;
-	filter: alpha(opacity=60);
+.header {
+	width:100%;
+	
+	background-color:#111111
+
 }
 
 
@@ -317,6 +321,7 @@ ol {
 }
 
 .header__menu {
+	
 	text-align: right;
 }
 
@@ -422,7 +427,8 @@ ol {
 -----------------------*/
 
 .hero {
-	padding-top: 50px;
+	margin:0;
+	padding-top: 20px;
 	
 }
 
@@ -1913,7 +1919,7 @@ ol {
 -----------------------*/
 
 .footer {
-	background: #070720;
+	background: black;
 	padding-top: 60px;
 	padding-bottom: 40px;
 	position: relative;
@@ -1986,8 +1992,11 @@ ol {
 
 @media only screen and (min-width: 1200px) {
 	.container {
-		max-width: 1170px;
+		max-width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
+		
 }
 
 /* Medium Device = 1200px */
@@ -2010,7 +2019,7 @@ ol {
 
 /* Tablet Device = 768px */
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 1222px) {
 	.hero {
 		overflow: hidden;
 	}
