@@ -1,8 +1,28 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Anasayfa";
+    Layout = "~/Views/CustomerLayout/Index.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@await Component.InvokeAsync("_Slider")
+ <section class="product spad" style="max-width:80%; position: relative;  margin: auto;">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-8">
+                @await Component.InvokeAsync("_SonEklenenBolumler")
+                @await Component.InvokeAsync("_SonCıkanAnimeler")
+
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-8">
+                    <div class="product__sidebar">
+                    @await Component.InvokeAsync("_CokIzlenenAnimeler")
+                    @await Component.InvokeAsync("_EnYuksekPuanliAnimeler")
+
+                    </div>
+                </div>
+            @await Component.InvokeAsync("_GelecekAnimeler")
+            @await Component.InvokeAsync("_CokOyAlanAnimeler")
+            </div>
+        </div>
+    </section>

@@ -18,30 +18,11 @@
     <!-- Header End -->
     <!-- Hero Section Begin -->
     @*<div class="container">*@
-    @await Component.InvokeAsync("_Slider")
+  
     @*</div>*@
     <!-- Hero Section End -->
     <!-- Product Section Begin -->
-    <section class="product spad" style="max-width:80%; position: relative;  margin: auto;">
-        <div class="container">
-            <div class="row">
-              
-                <div class="col-lg-8">
-                    @await Component.InvokeAsync("_SonEklenenBolumler")
-                @await Component.InvokeAsync("_SonCıkanAnimeler")
-                @await Component.InvokeAsync("_GelecekAnimeler")
-                @await Component.InvokeAsync("_CokOyAlanAnimeler")
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-8">
-                    <div class="product__sidebar">
-                        @await Component.InvokeAsync("_CokIzlenenAnimeler")
-                        @await Component.InvokeAsync("_EnYuksekPuanliAnimeler")
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   @RenderBody()
     <!-- Product Section End -->
     <!-- Footer Section Begin -->
     @await Component.InvokeAsync("_Footer")

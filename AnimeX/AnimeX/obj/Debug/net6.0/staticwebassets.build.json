@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "koZXuJWFysYEjZEbi/QsGMMgyGeyCSXw5WrIqpFzgJs=",
+  "Hash": "Ee7xOSQFECwoXC86G07HUIOhab3s4niqrT2Kh+v5JD4=",
   "Source": "AnimeX",
   "BasePath": "_content/AnimeX",
   "Mode": "Default",
@@ -304,23 +304,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\animeX\\css\\style.css"
-    },
-    {
-      "Identity": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\templatemo-cyborg-gaming.css",
-      "SourceId": "AnimeX",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\",
-      "BasePath": "_content/AnimeX",
-      "RelativePath": "animeX/css/templatemo-cyborg-gaming.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\animeX\\css\\templatemo-cyborg-gaming.css"
     },
     {
       "Identity": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\fonts\\ElegantIcons.eot",
@@ -1562,6 +1545,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\animeX\\img\\trending\\trend-6.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\user.png",
+      "SourceId": "AnimeX",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\",
+      "BasePath": "_content/AnimeX",
+      "RelativePath": "animeX/img/user.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\animeX\\img\\user.png"
     },
     {
       "Identity": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\index.html",

@@ -97,10 +97,6 @@
       "PackagePath": "staticwebassets\\animeX\\css\\style.css"
     },
     {
-      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\templatemo-cyborg-gaming.css",
-      "PackagePath": "staticwebassets\\animeX\\css\\templatemo-cyborg-gaming.css"
-    },
-    {
       "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\fonts\\ElegantIcons.eot",
       "PackagePath": "staticwebassets\\animeX\\fonts\\ElegantIcons.eot"
     },
@@ -391,6 +387,10 @@
     {
       "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\trending\\trend-6.jpg",
       "PackagePath": "staticwebassets\\animeX\\img\\trending\\trend-6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\img\\user.png",
+      "PackagePath": "staticwebassets\\animeX\\img\\user.png"
     },
     {
       "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\index.html",
