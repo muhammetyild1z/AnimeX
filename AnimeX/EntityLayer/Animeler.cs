@@ -20,8 +20,10 @@ namespace EntityLayer
         public bool status { get; set; }
         public DateTime AnimeEklenmeTarihi { get; set; }
         public DateTime AnimeCikisTarihi { get; set; }
-        //public CategoryAnime KategoriID { get; set; }
-       // public List<CategoryAnime> categoryAnimes { get; set; }
+
+        public List<CategoryAnime> categoryAnimes { get; set; }
+
+
 
     }
 }

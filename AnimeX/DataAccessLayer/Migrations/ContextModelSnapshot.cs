@@ -52,9 +52,6 @@ namespace AnimeX.DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("CategoryAnimeID")
-                        .HasColumnType("int");
-
                     b.Property<string>("IMDb")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -67,8 +64,6 @@ namespace AnimeX.DataAccessLayer.Migrations
 
                     b.HasKey("AnimeID");
 
-                    b.HasIndex("CategoryAnimeID");
-
                     b.ToTable("Animelers");
                 });
 
@@ -80,9 +75,6 @@ namespace AnimeX.DataAccessLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("kategoriID"), 1L, 1);
 
-                    b.Property<int?>("CategoryAnimeID")
-                        .HasColumnType("int");
-
                     b.Property<string>("KategoriAdi")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -91,8 +83,6 @@ namespace AnimeX.DataAccessLayer.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("kategoriID");
-
-                    b.HasIndex("CategoryAnimeID");
 
                     b.ToTable("Categories");
                 });
@@ -105,36 +95,48 @@ namespace AnimeX.DataAccessLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
-                    b.Property<int>("AnimeID")
+                    b.Property<int>("AnimeID1")
                         .HasColumnType("int");
 
-                    b.Property<int>("KategoriID")
+                    b.Property<int>("kategoriID")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
 
+                    b.HasIndex("AnimeID1");
+
+                    b.HasIndex("kategoriID");
+
                     b.ToTable("CategoryAnimes");
-                });
-
-            modelBuilder.Entity("EntityLayer.Animeler", b =>
-                {
-                    b.HasOne("EntityLayer.CategoryAnime", null)
-                        .WithMany("animelers")
-                        .HasForeignKey("CategoryAnimeID");
-                });
-
-            modelBuilder.Entity("EntityLayer.Categories", b =>
-                {
-                    b.HasOne("EntityLayer.CategoryAnime", null)
-                        .WithMany("categories")
-                        .HasForeignKey("CategoryAnimeID");
                 });
 
             modelBuilder.Entity("EntityLayer.CategoryAnime", b =>
                 {
-                    b.Navigation("animelers");
+                    b.HasOne("EntityLayer.Animeler", "AnimeID")
+                        .WithMany("categoryAnimes")
+                        .HasForeignKey("AnimeID1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("categories");
+                    b.HasOne("EntityLayer.Categories", "KategoriID")
+                        .WithMany("categoryAnimes")
+                        .HasForeignKey("kategoriID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AnimeID");
+
+                    b.Navigation("KategoriID");
+                });
+
+            modelBuilder.Entity("EntityLayer.Animeler", b =>
+                {
+                    b.Navigation("categoryAnimes");
+                });
+
+            modelBuilder.Entity("EntityLayer.Categories", b =>
+                {
+                    b.Navigation("categoryAnimes");
                 });
 #pragma warning restore 612, 618
         }

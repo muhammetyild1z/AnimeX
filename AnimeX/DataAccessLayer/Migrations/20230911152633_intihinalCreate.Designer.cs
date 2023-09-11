@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimeX.DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230911145517_intihinalCreate")]
+    [Migration("20230911152633_intihinalCreate")]
     partial class intihinalCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,21 +23,6 @@ namespace AnimeX.DataAccessLayer.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
-
-            modelBuilder.Entity("CategoriesCategoryAnime", b =>
-                {
-                    b.Property<int>("categorieskategoriID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("categoryAnimesID")
-                        .HasColumnType("int");
-
-                    b.HasKey("categorieskategoriID", "categoryAnimesID");
-
-                    b.HasIndex("categoryAnimesID");
-
-                    b.ToTable("CategoriesCategoryAnime");
-                });
 
             modelBuilder.Entity("EntityLayer.Animeler", b =>
                 {
@@ -69,9 +54,6 @@ namespace AnimeX.DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("CategoryAnimeID")
-                        .HasColumnType("int");
-
                     b.Property<string>("IMDb")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -83,8 +65,6 @@ namespace AnimeX.DataAccessLayer.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("AnimeID");
-
-                    b.HasIndex("CategoryAnimeID");
 
                     b.ToTable("Animelers");
                 });
@@ -117,42 +97,48 @@ namespace AnimeX.DataAccessLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
-                    b.Property<int>("AnimeID")
+                    b.Property<int>("AnimeID1")
                         .HasColumnType("int");
 
-                    b.Property<int>("KategoriID")
+                    b.Property<int>("kategoriID")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
 
+                    b.HasIndex("AnimeID1");
+
+                    b.HasIndex("kategoriID");
+
                     b.ToTable("CategoryAnimes");
-                });
-
-            modelBuilder.Entity("CategoriesCategoryAnime", b =>
-                {
-                    b.HasOne("EntityLayer.Categories", null)
-                        .WithMany()
-                        .HasForeignKey("categorieskategoriID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("EntityLayer.CategoryAnime", null)
-                        .WithMany()
-                        .HasForeignKey("categoryAnimesID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("EntityLayer.Animeler", b =>
-                {
-                    b.HasOne("EntityLayer.CategoryAnime", null)
-                        .WithMany("animelers")
-                        .HasForeignKey("CategoryAnimeID");
                 });
 
             modelBuilder.Entity("EntityLayer.CategoryAnime", b =>
                 {
-                    b.Navigation("animelers");
+                    b.HasOne("EntityLayer.Animeler", "AnimeID")
+                        .WithMany("categoryAnimes")
+                        .HasForeignKey("AnimeID1")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EntityLayer.Categories", "KategoriID")
+                        .WithMany("categoryAnimes")
+                        .HasForeignKey("kategoriID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AnimeID");
+
+                    b.Navigation("KategoriID");
+                });
+
+            modelBuilder.Entity("EntityLayer.Animeler", b =>
+                {
+                    b.Navigation("categoryAnimes");
+                });
+
+            modelBuilder.Entity("EntityLayer.Categories", b =>
+                {
+                    b.Navigation("categoryAnimes");
                 });
 #pragma warning restore 612, 618
         }

@@ -11,15 +11,9 @@ namespace EntityLayer
 {
     public class CategoryAnime
     {
-        [Key]
-        public int ID { get; set; }
-        public int AnimeID { get; set; }
-
-        public int KategoriID { get; set; }
-
-
-        public List<Categories> categories { get; set; }
-        public List<Animeler> animelers { get; set; }
+        public int ID { get; set; }         
+        public Animeler AnimeID { get; set; }
+        public Categories KategoriID { get; set; }
 
     }
 }
