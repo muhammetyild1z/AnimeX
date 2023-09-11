@@ -1,4 +1,6 @@
-﻿using AnimeX.Models;
+﻿using AnimeX.DataAccessLayer.Concrate;
+using AnimeX.Models;
+using EntityLayer;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -15,6 +17,14 @@ namespace AnimeX.Controllers
 
 		public IActionResult Index()
 		{
+			
+			var context = new Context();
+
+			var values= context.Animelers.ToList();
+			var b = context.Categories.ToList();
+			var d = values.Select(x => x.AnimeID);
+			var c= context.CategoryAnimes.Where(x=>x.animeler.AnimeID==1).Select(x=>x.KategoriID).ToList();
+						   
 			return View();
 		}
 

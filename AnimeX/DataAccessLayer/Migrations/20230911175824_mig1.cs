@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AnimeX.DataAccessLayer.Migrations
 {
-    public partial class intihinalCreate : Migration
+    public partial class mig1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -50,35 +50,37 @@ namespace AnimeX.DataAccessLayer.Migrations
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    AnimeID1 = table.Column<int>(type: "int", nullable: false),
-                    kategoriID = table.Column<int>(type: "int", nullable: false)
+                    AnimeID = table.Column<int>(type: "int", nullable: false),
+                    animelerAnimeID = table.Column<int>(type: "int", nullable: false),
+                    KategoriID = table.Column<int>(type: "int", nullable: false),
+                    categorieskategoriID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_CategoryAnimes", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_CategoryAnimes_Animelers_AnimeID1",
-                        column: x => x.AnimeID1,
+                        name: "FK_CategoryAnimes_Animelers_animelerAnimeID",
+                        column: x => x.animelerAnimeID,
                         principalTable: "Animelers",
                         principalColumn: "AnimeID",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_CategoryAnimes_Categories_kategoriID",
-                        column: x => x.kategoriID,
+                        name: "FK_CategoryAnimes_Categories_categorieskategoriID",
+                        column: x => x.categorieskategoriID,
                         principalTable: "Categories",
                         principalColumn: "kategoriID",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_CategoryAnimes_AnimeID1",
+                name: "IX_CategoryAnimes_animelerAnimeID",
                 table: "CategoryAnimes",
-                column: "AnimeID1");
+                column: "animelerAnimeID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CategoryAnimes_kategoriID",
+                name: "IX_CategoryAnimes_categorieskategoriID",
                 table: "CategoryAnimes",
-                column: "kategoriID");
+                column: "categorieskategoriID");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimeX.DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20230911152633_intihinalCreate")]
-    partial class intihinalCreate
+    [Migration("20230911175824_mig1")]
+    partial class mig1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -97,38 +97,44 @@ namespace AnimeX.DataAccessLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
-                    b.Property<int>("AnimeID1")
+                    b.Property<int>("AnimeID")
                         .HasColumnType("int");
 
-                    b.Property<int>("kategoriID")
+                    b.Property<int>("KategoriID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("animelerAnimeID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("categorieskategoriID")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("AnimeID1");
+                    b.HasIndex("animelerAnimeID");
 
-                    b.HasIndex("kategoriID");
+                    b.HasIndex("categorieskategoriID");
 
                     b.ToTable("CategoryAnimes");
                 });
 
             modelBuilder.Entity("EntityLayer.CategoryAnime", b =>
                 {
-                    b.HasOne("EntityLayer.Animeler", "AnimeID")
+                    b.HasOne("EntityLayer.Animeler", "animeler")
                         .WithMany("categoryAnimes")
-                        .HasForeignKey("AnimeID1")
+                        .HasForeignKey("animelerAnimeID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EntityLayer.Categories", "KategoriID")
+                    b.HasOne("EntityLayer.Categories", "categories")
                         .WithMany("categoryAnimes")
-                        .HasForeignKey("kategoriID")
+                        .HasForeignKey("categorieskategoriID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("AnimeID");
+                    b.Navigation("animeler");
 
-                    b.Navigation("KategoriID");
+                    b.Navigation("categories");
                 });
 
             modelBuilder.Entity("EntityLayer.Animeler", b =>

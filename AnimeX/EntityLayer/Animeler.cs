@@ -22,7 +22,7 @@ namespace EntityLayer
         public DateTime AnimeCikisTarihi { get; set; }
 
         public List<CategoryAnime> categoryAnimes { get; set; }
-
+       
 
 
     }
