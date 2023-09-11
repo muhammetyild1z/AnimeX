@@ -1,0 +1,17 @@
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DataAccessLayer\bin\Debug\net6.0\AnimeX.DataAccessLayer.deps.json
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DataAccessLayer\bin\Debug\net6.0\AnimeX.DataAccessLayer.runtimeconfig.json
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DataAccessLayer\bin\Debug\net6.0\AnimeX.DataAccessLayer.dll
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DataAccessLayer\bin\Debug\net6.0\AnimeX.DataAccessLayer.pdb
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DataAccessLayer\bin\Debug\net6.0\AnimeX.EntityLayer.dll
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DataAccessLayer\bin\Debug\net6.0\AnimeX.EntityLayer.pdb
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DataAccessLayer\obj\Debug\net6.0\AnimeX.DataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DataAccessLayer\obj\Debug\net6.0\AnimeX.DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DataAccessLayer\obj\Debug\net6.0\AnimeX.DataAccessLayer.AssemblyInfoInputs.cache
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DataAccessLayer\obj\Debug\net6.0\AnimeX.DataAccessLayer.AssemblyInfo.cs
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DataAccessLayer\obj\Debug\net6.0\AnimeX.DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DataAccessLayer\obj\Debug\net6.0\AnimeX.DataAccessLayer.csproj.CopyComplete
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DataAccessLayer\obj\Debug\net6.0\AnimeX.DataAccessLayer.dll
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DataAccessLayer\obj\Debug\net6.0\refint\AnimeX.DataAccessLayer.dll
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DataAccessLayer\obj\Debug\net6.0\AnimeX.DataAccessLayer.pdb
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DataAccessLayer\obj\Debug\net6.0\AnimeX.DataAccessLayer.genruntimeconfig.cache
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DataAccessLayer\obj\Debug\net6.0\ref\AnimeX.DataAccessLayer.dll

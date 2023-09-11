@@ -3728,6 +3728,65 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "AnimeX.BusinnessLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AnimeX.DataAccessLayer": "1.0.0",
+          "AnimeX.DtoLayer": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.20",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.20"
+        },
+        "compile": {
+          "bin/placeholder/AnimeX.BusinnessLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AnimeX.BusinnessLayer.dll": {}
+        }
+      },
+      "AnimeX.DataAccessLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "AnimeX.EntityLayer": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.20",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.20"
+        },
+        "compile": {
+          "bin/placeholder/AnimeX.DataAccessLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AnimeX.DataAccessLayer.dll": {}
+        }
+      },
+      "AnimeX.DtoLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.20",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.20"
+        },
+        "compile": {
+          "bin/placeholder/AnimeX.DtoLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AnimeX.DtoLayer.dll": {}
+        }
+      },
+      "AnimeX.EntityLayer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.20",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.20"
+        },
+        "compile": {
+          "bin/placeholder/AnimeX.EntityLayer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AnimeX.EntityLayer.dll": {}
+        }
       }
     }
   },
@@ -10676,10 +10735,31 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "AnimeX.BusinnessLayer/1.0.0": {
+      "type": "project",
+      "path": "../BusinnessLayer/AnimeX.BusinnessLayer.csproj",
+      "msbuildProject": "../BusinnessLayer/AnimeX.BusinnessLayer.csproj"
+    },
+    "AnimeX.DataAccessLayer/1.0.0": {
+      "type": "project",
+      "path": "../DataAccessLayer/AnimeX.DataAccessLayer.csproj",
+      "msbuildProject": "../DataAccessLayer/AnimeX.DataAccessLayer.csproj"
+    },
+    "AnimeX.DtoLayer/1.0.0": {
+      "type": "project",
+      "path": "../DtoLayer/AnimeX.DtoLayer.csproj",
+      "msbuildProject": "../DtoLayer/AnimeX.DtoLayer.csproj"
+    },
+    "AnimeX.EntityLayer/1.0.0": {
+      "type": "project",
+      "path": "../EntityLayer/AnimeX.EntityLayer.csproj",
+      "msbuildProject": "../EntityLayer/AnimeX.EntityLayer.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "AnimeX.BusinnessLayer >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.20",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.20",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.20",
@@ -10713,7 +10793,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\BusinnessLayer\\AnimeX.BusinnessLayer.csproj": {
+              "projectPath": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\BusinnessLayer\\AnimeX.BusinnessLayer.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,6 +9,7 @@ namespace EntityLayer
 {
     public class Animeler
     {
+        [Key]
         public int AnimeID { get; set; }
         public string AnimeAdi { get; set; }
         public string AnimeDetay { get; set; }
@@ -18,6 +20,8 @@ namespace EntityLayer
         public bool status { get; set; }
         public DateTime AnimeEklenmeTarihi { get; set; }
         public DateTime AnimeCikisTarihi { get; set; }
+        //public CategoryAnime KategoriID { get; set; }
+       // public List<CategoryAnime> categoryAnimes { get; set; }
 
     }
 }

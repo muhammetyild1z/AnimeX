@@ -1,0 +1,14 @@
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DtoLayer\bin\Debug\net6.0\AnimeX.DtoLayer.deps.json
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DtoLayer\bin\Debug\net6.0\AnimeX.DtoLayer.runtimeconfig.json
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DtoLayer\bin\Debug\net6.0\AnimeX.DtoLayer.dll
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DtoLayer\bin\Debug\net6.0\AnimeX.DtoLayer.pdb
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DtoLayer\obj\Debug\net6.0\AnimeX.DtoLayer.csproj.AssemblyReference.cache
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DtoLayer\obj\Debug\net6.0\AnimeX.DtoLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DtoLayer\obj\Debug\net6.0\AnimeX.DtoLayer.AssemblyInfoInputs.cache
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DtoLayer\obj\Debug\net6.0\AnimeX.DtoLayer.AssemblyInfo.cs
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DtoLayer\obj\Debug\net6.0\AnimeX.DtoLayer.csproj.CoreCompileInputs.cache
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DtoLayer\obj\Debug\net6.0\AnimeX.DtoLayer.dll
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DtoLayer\obj\Debug\net6.0\refint\AnimeX.DtoLayer.dll
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DtoLayer\obj\Debug\net6.0\AnimeX.DtoLayer.pdb
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DtoLayer\obj\Debug\net6.0\AnimeX.DtoLayer.genruntimeconfig.cache
+C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\DtoLayer\obj\Debug\net6.0\ref\AnimeX.DtoLayer.dll
