@@ -1,6 +1,10 @@
-﻿using AnimeX.DataAccessLayer.Concrate;
+﻿using AnimeX.BusinnessLayer.Concrate;
+using AnimeX.DataAccessLayer.Concrate;
+using AnimeX.DataAccessLayer.EntityFramwork;
+using AnimeX.EntityLayer;
 using AnimeX.Models;
 using EntityLayer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -14,19 +18,15 @@ namespace AnimeX.Controllers
 		{
 			_logger = logger;
 		}
+		
+
+
+		// AnimelerManager anm = new AnimelerManager(new efAnimelerDal( new Context()));
 
 		public IActionResult Index()
 		{
-			
-			var context = new Context();
-
-			var values= context.Animelers.ToList();
-			//var b = context.Categories.ToList();
-			//var d = values.Select(x => x.AnimeID);
-			//var c= context.CategoryAnimes.Where(x=>x.animeler.AnimeID==1).Select(x=>x.KategoriID).ToList();
-			
-						   
-			return View(values);
+								   
+			return View();
 		}
 
 		public IActionResult Privacy()
