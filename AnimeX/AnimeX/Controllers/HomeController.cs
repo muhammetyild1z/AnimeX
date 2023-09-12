@@ -21,11 +21,12 @@ namespace AnimeX.Controllers
 			var context = new Context();
 
 			var values= context.Animelers.ToList();
-			var b = context.Categories.ToList();
-			var d = values.Select(x => x.AnimeID);
-			var c= context.CategoryAnimes.Where(x=>x.animeler.AnimeID==1).Select(x=>x.KategoriID).ToList();
+			//var b = context.Categories.ToList();
+			//var d = values.Select(x => x.AnimeID);
+			//var c= context.CategoryAnimes.Where(x=>x.animeler.AnimeID==1).Select(x=>x.KategoriID).ToList();
+			
 						   
-			return View();
+			return View(values);
 		}
 
 		public IActionResult Privacy()

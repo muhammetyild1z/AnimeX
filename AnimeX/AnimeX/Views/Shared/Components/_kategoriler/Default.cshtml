@@ -1,0 +1,30 @@
+﻿@model List<EntityLayer.Categories>
+
+<div class="widget widget-collapsible col-md-3">
+    <h3 class="widget-title">
+        <span data-toggle="collapse" href="#widget-1" role="button" aria-expanded="true" aria-controls="widget-1">
+            Kategoriler
+        </span>
+    </h3><!-- End .widget-title -->
+
+    <div class="collapse show" id="widget-1">
+        <div class="widget-body">
+            <div class="filter-items filter-items-count">
+                @foreach (var item in Model)
+                {
+                    <div class="filter-item">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="cat-1">
+                            <label class="custom-control-label" for="cat-1">@item.KategoriAdi</label>
+                        </div><!-- End .custom-checkbox -->
+                      @*  <span class="item-count">3</span>*@
+                    </div>
+                }
+              
+                <!-- End .filter-item -->
+
+                
+            </div><!-- End .filter-items -->
+        </div><!-- End .widget-body -->
+    </div><!-- End .collapse -->
+</div><!-- End .widget -->

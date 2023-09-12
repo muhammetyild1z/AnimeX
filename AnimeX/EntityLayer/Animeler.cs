@@ -18,6 +18,7 @@ namespace EntityLayer
         public string IMDb { get; set; }
         public int Like { get; set; }
         public bool status { get; set; }
+        public string AnimeImg { get; set; }
         public DateTime AnimeEklenmeTarihi { get; set; }
         public DateTime AnimeCikisTarihi { get; set; }
 

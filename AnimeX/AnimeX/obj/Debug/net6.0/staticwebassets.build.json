@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3egieA+bNOwGoJS/4htt7r4/fdDvs8J6cVXcpMSFdDM=",
+  "Hash": "kdbY92Ur+KxWNB1D0SMBA0Gnpxo/sYjW1kgSu3uUfWE=",
   "Source": "AnimeX.UI",
   "BasePath": "_content/AnimeX.UI",
   "Mode": "Default",
@@ -221,6 +221,23 @@
       "OriginalItemSpec": "wwwroot\\animeX\\css\\font-awesome.min.css"
     },
     {
+      "Identity": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\main.min.css",
+      "SourceId": "AnimeX.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\",
+      "BasePath": "_content/AnimeX.UI",
+      "RelativePath": "animeX/css/main.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\animeX\\css\\main.min.css"
+    },
+    {
       "Identity": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\nice-select.css",
       "SourceId": "AnimeX.UI",
       "SourceType": "Discovered",
@@ -304,6 +321,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\animeX\\css\\style.css"
+    },
+    {
+      "Identity": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\style1.css",
+      "SourceId": "AnimeX.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\",
+      "BasePath": "_content/AnimeX.UI",
+      "RelativePath": "animeX/css/style1.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\animeX\\css\\style1.css"
     },
     {
       "Identity": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\fonts\\ElegantIcons.eot",
