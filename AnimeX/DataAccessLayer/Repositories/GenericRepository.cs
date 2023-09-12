@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,14 +25,14 @@ namespace AnimeX.DataAccessLayer.Repositories
             _context.SaveChanges();
         }
 
-        public async Task<T> GetByIDAsync(int id)
+        public T GetByID(int id)
         {
-            return await _context.Set<T>().FindAsync(id);
+            return  _context.Set<T>().Find(id);
         }
 
-        public async Task<List<T>> GetListAsync()
+        public List<T> GetList()
         {
-            return await _context.Set<T>().ToListAsync();
+            return _context.Set<T>().ToList();
         }
 
         public void Insert(T entity)
@@ -43,6 +44,10 @@ namespace AnimeX.DataAccessLayer.Repositories
         public void Update(T entity, T unchanged)
         {
             _context.Entry(unchanged).CurrentValues.SetValues(entity);
+        }
+        public List<T> GetListAllByIdInclude(Expression<Func<T, bool>> filter)
+        {
+            return _context.Set<T>().Where(filter).ToList();
         }
     }
 }

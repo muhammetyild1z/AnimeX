@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,7 +12,8 @@ namespace AnimeX.DataAccessLayer.Abstract
         void Insert(T entity);
         void Update(T entity, T unchanged);
         void Delete(T entity);
-        Task<T> GetByIDAsync(int id);
-        Task<List<T>> GetListAsync();
+        T GetByID(int id);
+        List<T> GetList();
+        List<T> GetListAllByIdInclude(Expression<Func<T, bool>> filter);
     }
 }

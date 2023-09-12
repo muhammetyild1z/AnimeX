@@ -11,7 +11,7 @@ namespace AnimeX.BusinnessLayer.Abstract
         void TInsert(T entity);
         void TUpdate(T entity, T unchanged);
         void TDelete(T entity);
-        Task<T> TGetByIDAsync(int id);
-        Task<List<T>> TGetListAsync();
+        T TGetByID(int id);
+        List<T> TGetList();
     }
 }

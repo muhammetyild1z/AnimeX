@@ -1,7 +1,7 @@
 ﻿
 using AnimeX.BusinnessLayer.Concrate;
 using AnimeX.DataAccessLayer.Concrate;
-
+using AnimeX.DataAccessLayer.EntityFramework;
 using AnimeX.EntityLayer;
 using AnimeX.Models;
 using EntityLayer;
@@ -20,20 +20,17 @@ namespace AnimeX.Controllers
 		//	_logger = logger;
 		//}
 
-        private readonly AnimelerManager _animeManager;
-
-        public HomeController(AnimelerManager animeManager)
-        {
-            _animeManager = animeManager;
-        }
-
-        // AnimelerManager anm = new AnimelerManager(new efAnimelerDal( new Context()));
+		
+         AnimelerManager anm = new AnimelerManager(new efAnimelerRepository( new Context()));
+         CategoriesManager an = new CategoriesManager(new efCatagoriesRepository( new Context()));
+         CategoryAnimeManeger ann = new CategoryAnimeManeger(new efCategoryAnimeRepository( new Context()));
+		
 
         public IActionResult Index()
 		{
-					var a = _animeManager.TGetListAsync();
-
-            return View();
+		  
+			
+            return View( anm.TGetList());
 		}
 
 		public IActionResult Privacy()

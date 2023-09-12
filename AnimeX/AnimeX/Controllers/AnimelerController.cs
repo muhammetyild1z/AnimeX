@@ -1,12 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AnimeX.BusinnessLayer.Concrate;
+using AnimeX.DataAccessLayer.Concrate;
+using AnimeX.DataAccessLayer.EntityFramework;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AnimeX.UI.Controllers
 {
     public class AnimelerController : Controller
     {
-        public IActionResult Index()
+        public  IActionResult Index()
         {
-            return View();
+            AnimelerManager am = new AnimelerManager(new efAnimelerRepository(new Context()));
+
+            return View( am.TGetList());
         }
     }
 }

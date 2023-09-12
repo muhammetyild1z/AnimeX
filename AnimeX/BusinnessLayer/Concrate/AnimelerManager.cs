@@ -13,24 +13,24 @@ namespace AnimeX.BusinnessLayer.Concrate
     {
         IAnimelerDal _animelerDal;
 
-        public AnimelerManager(IAnimelerDal animelerdal)
+        public AnimelerManager(IAnimelerDal animelerDal)
         {
-                _animelerDal= animelerdal;
+            _animelerDal = animelerDal;
         }
 
-        public void TDelete(Animeler entity)
+         public void TDelete(Animeler entity)
         {
             _animelerDal.Delete(entity);
         }
 
-        public Task<Animeler> TGetByIDAsync(int id)
+        public Animeler TGetByID(int id)
         {
-            return _animelerDal.GetByIDAsync(id);
+            return _animelerDal.GetByID(id);
         }
 
-        public Task<List<Animeler>> TGetListAsync()
+        public List<Animeler> TGetList()
         {
-            return _animelerDal.GetListAsync();
+            return _animelerDal.GetList();
         }
 
         public void TInsert(Animeler entity)

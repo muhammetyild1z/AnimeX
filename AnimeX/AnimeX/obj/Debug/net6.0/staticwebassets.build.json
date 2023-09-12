@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kdbY92Ur+KxWNB1D0SMBA0Gnpxo/sYjW1kgSu3uUfWE=",
+  "Hash": "QHhRH4+Ly33NPiFWFFJ0Oh+qz4ZjrzrLlCvdBFvqt+4=",
   "Source": "AnimeX.UI",
   "BasePath": "_content/AnimeX.UI",
   "Mode": "Default",
@@ -1783,23 +1783,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\animeX\\main.html"
-    },
-    {
-      "Identity": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\readme.txt",
-      "SourceId": "AnimeX.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\",
-      "BasePath": "_content/AnimeX.UI",
-      "RelativePath": "animeX/readme.txt",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\animeX\\readme.txt"
     },
     {
       "Identity": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\sass\\_anime-details.scss",

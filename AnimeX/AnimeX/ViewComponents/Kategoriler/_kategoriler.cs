@@ -1,7 +1,8 @@
 ﻿
+using AnimeX.BusinnessLayer.Concrate;
 using AnimeX.DataAccessLayer.Abstract;
 using AnimeX.DataAccessLayer.Concrate;
-
+using AnimeX.DataAccessLayer.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AnimeX.UI.ViewComponents.Kategoriler
@@ -12,8 +13,9 @@ namespace AnimeX.UI.ViewComponents.Kategoriler
 
         public IViewComponentResult Invoke()
         {
-
-            return View();
+            CategoriesManager an = new CategoriesManager(new efCatagoriesRepository(new Context()));
+            var values =  an.GetListCategoies();
+            return View(values);
         }
     }
 }

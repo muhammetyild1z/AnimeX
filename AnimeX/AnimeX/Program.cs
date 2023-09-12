@@ -1,7 +1,9 @@
 
+using AnimeX.BusinnessLayer.Abstract;
+using AnimeX.BusinnessLayer.Concrate;
 using AnimeX.DataAccessLayer.Abstract;
 using AnimeX.DataAccessLayer.Concrate;
-
+using AnimeX.DataAccessLayer.EntityFramework;
 using AnimeX.EntityLayer;
 using EntityLayer;
 
@@ -25,7 +27,11 @@ builder.Services.AddIdentity<AppUser, AppRole>(
     //.AddErrorDescriber<CustomerIdentityValidation>()
     .AddEntityFrameworkStores<Context>();
 
-
+builder.Services.AddScoped<Context>();
+builder.Services.AddScoped<IAnimelerDal,efAnimelerRepository>();
+builder.Services.AddScoped<IAnimelerService,AnimelerManager>();
+builder.Services.AddScoped<ICategoriesService,CategoriesManager>();
+builder.Services.AddScoped<ICategoriesDal, efCatagoriesRepository>();
 
 
 
