@@ -1,8 +1,7 @@
-using AnimeX.BusinnessLayer.Abstract;
-using AnimeX.BusinnessLayer.Concrate;
+
 using AnimeX.DataAccessLayer.Abstract;
 using AnimeX.DataAccessLayer.Concrate;
-using AnimeX.DataAccessLayer.EntityFramwork;
+
 using AnimeX.EntityLayer;
 using EntityLayer;
 
@@ -30,13 +29,7 @@ builder.Services.AddIdentity<AppUser, AppRole>(
 
 
 
-builder.Services.AddScoped<IAnimelerServices, AnimelerManager>();
-builder.Services.AddScoped<ICategoriesServices, CategoriesManager>();
-builder.Services.AddScoped<ICategoryAnimeServices, CategoryAnimeManager>();
 
-builder.Services.AddScoped<IAnimelerDal, efAnimelerDal>();
-builder.Services.AddScoped<ICategoriesDal, efCategoriesDal>();
-builder.Services.AddScoped<ICategoryAnimeDal, efCategoryAnimeDal>();
 
 
 var app = builder.Build();
