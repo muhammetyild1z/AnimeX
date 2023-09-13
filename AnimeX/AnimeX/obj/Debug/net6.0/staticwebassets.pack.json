@@ -61,6 +61,22 @@
       "PackagePath": "staticwebassets\\animeX\\categories.html"
     },
     {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\_border-radius.css",
+      "PackagePath": "staticwebassets\\animeX\\css\\_border-radius.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\_media.css",
+      "PackagePath": "staticwebassets\\animeX\\css\\_media.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\_stretched-link.css",
+      "PackagePath": "staticwebassets\\animeX\\css\\_stretched-link.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\_visibility.css",
+      "PackagePath": "staticwebassets\\animeX\\css\\_visibility.css"
+    },
+    {
       "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\animate.css",
       "PackagePath": "staticwebassets\\animeX\\css\\animate.css"
     },
@@ -89,6 +105,10 @@
       "PackagePath": "staticwebassets\\animeX\\css\\owl.carousel.min.css"
     },
     {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\owl.theme.default.min.css",
+      "PackagePath": "staticwebassets\\animeX\\css\\owl.theme.default.min.css"
+    },
+    {
       "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\plyr.css",
       "PackagePath": "staticwebassets\\animeX\\css\\plyr.css"
     },
@@ -103,6 +123,10 @@
     {
       "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\style1.css",
       "PackagePath": "staticwebassets\\animeX\\css\\style1.css"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\styleSlider.css",
+      "PackagePath": "staticwebassets\\animeX\\css\\styleSlider.css"
     },
     {
       "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\fonts\\ElegantIcons.eot",
@@ -443,6 +467,10 @@
     {
       "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\main.html",
       "PackagePath": "staticwebassets\\animeX\\main.html"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\miniSlider.html",
+      "PackagePath": "staticwebassets\\animeX\\miniSlider.html"
     },
     {
       "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\sass\\_anime-details.scss",

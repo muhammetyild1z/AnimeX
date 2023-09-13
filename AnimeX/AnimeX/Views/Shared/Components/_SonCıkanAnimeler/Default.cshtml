@@ -1,4 +1,4 @@
-﻿
+﻿@model List<EntityLayer.Animeler>
 
 
 <div class="popular__product">
@@ -16,101 +16,33 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="product__item">
-                <div class="product__item__pic set-bg" data-setbg="/animeX/img/popular/popular-1.jpg">
-                    <div class="ep">18 / 18</div>
-                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-2 col-md-6 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="@item.AnimeImg">
+                        <div class="ep fa fa-star">&nbsp;@item.IMDb</div>
+                        <div class="comment"><i class="fa fa-comments"></i> 11</div>
+                        <div class="view"><i class="fa fa-calendar"></i> @item.AnimeCikisTarihi.Year</div>
+                    </div>
+                    <div class="product__item__text align-content-md-center">
+                        <ul class="float-left ml-1">
+                            @await Component.InvokeAsync("_AnimelerKategori", new{animeID=item.AnimeID})
+                            @if (item.AnimeAdi.Length>22)
+                            {
+                                <h5><a href="#">@item.AnimeAdi.Substring(0,22)..</a></h5>
+                            }else
+                            {
+                                    <h5><a href="#">@item.AnimeAdi</a></h5>
+                            }
+                            
+                        </ul>
+                    </div>
                 </div>
-                <div class="product__item__text">
-                    <ul>
-                        <li>Active</li>
-                        <li>Movie</li>
-                    </ul>
-                    <h5><a href="#">Sen to Chihiro no Kamikakushi</a></h5>
-                </div>
+
             </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="product__item">
-                <div class="product__item__pic set-bg" data-setbg="/animeX/img/popular/popular-2.jpg">
-                    <div class="ep">18 / 18</div>
-                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                </div>
-                <div class="product__item__text">
-                    <ul>
-                        <li>Active</li>
-                        <li>Movie</li>
-                    </ul>
-                    <h5><a href="#">Kizumonogatari III: Reiket su-hen</a></h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="product__item">
-                <div class="product__item__pic set-bg" data-setbg="/animeX/img/popular/popular-3.jpg">
-                    <div class="ep">18 / 18</div>
-                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                </div>
-                <div class="product__item__text">
-                    <ul>
-                        <li>Active</li>
-                        <li>Movie</li>
-                    </ul>
-                    <h5><a href="#">Shirogane Tamashii hen Kouhan sen</a></h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="product__item">
-                <div class="product__item__pic set-bg" data-setbg="/animeX/img/popular/popular-4.jpg">
-                    <div class="ep">18 / 18</div>
-                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                </div>
-                <div class="product__item__text">
-                    <ul>
-                        <li>Active</li>
-                        <li>Movie</li>
-                    </ul>
-                    <h5><a href="#">Rurouni Kenshin: Meiji Kenkaku Romantan</a></h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="product__item">
-                <div class="product__item__pic set-bg" data-setbg="/animeX/img/popular/popular-5.jpg">
-                    <div class="ep">18 / 18</div>
-                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                </div>
-                <div class="product__item__text">
-                    <ul>
-                        <li>Active</li>
-                        <li>Movie</li>
-                    </ul>
-                    <h5><a href="#">Mushishi Zoku Shou 2nd Season</a></h5>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="product__item">
-                <div class="product__item__pic set-bg" data-setbg="/animeX/img/popular/popular-6.jpg">
-                    <div class="ep">18 / 18</div>
-                    <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                    <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                </div>
-                <div class="product__item__text">
-                    <ul>
-                        <li>Active</li>
-                        <li>Movie</li>
-                    </ul>
-                    <h5><a href="#">Monogatari Series: Second Season</a></h5>
-                </div>
-            </div>
-        </div>
+        }
+
+
     </div>
 </div>

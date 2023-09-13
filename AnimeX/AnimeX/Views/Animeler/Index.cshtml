@@ -44,30 +44,33 @@
                     <div class="row">
                         @foreach (var item in Model)
                         {
+
                             <div class="col-lg-3 col-md-6 col-sm-6">
                                 <div class="product__item">
                                     <div class="product__item__pic set-bg" data-setbg="@item.AnimeImg">
 
-                                        <div class="ep">18 / 18</div>
+                                        <div class="ep fa fa-star">&nbsp;@item.IMDb</div>
                                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
-                                        <div class="view"><i class="fa fa-eye"></i> 9141</div>
+                                        <div class="view"><i class="fa fa-calendar"></i> @item.AnimeCikisTarihi.Year</div>
                                     </div>
-                                    <div class="product__item__text">
-
+                                    <div class="product__item__text align-content-md-center">
+                                        <ul class="float-left ml-1">
                                         @await Component.InvokeAsync("_AnimelerKategori", new{animeID=item.AnimeID})
 
                                         <h5><a href="#">@item.AnimeAdi</a></h5>
+                                        </ul>
                                     </div>
 
                                 </div>
                             </div>
+
                         }
 
-                      
-                        
 
                     </div>
-                      
+
+
+
                 </div>
             </div>
 

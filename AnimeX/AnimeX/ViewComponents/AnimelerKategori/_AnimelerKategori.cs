@@ -13,7 +13,7 @@ namespace AnimeX.UI.ViewComponents.AnimelerKategori
         {
             CategoriesManager cm = new CategoriesManager(new efCatagoriesRepository(new Context()));
             CategoryAnimeManeger cam = new CategoryAnimeManeger(new efCategoryAnimeRepository(new Context()));
-            var catID = cam.GetCategoriesIncludecategoryAnime().Where(x => x.AnimeID == animeID).ToList(); 
+            var catID = cam.GetCategoriesIncludecategoryAnime().Where(x => x.AnimeID == animeID).Take(2).ToList(); 
            
 
             return View(catID);

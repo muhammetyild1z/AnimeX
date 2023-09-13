@@ -21,16 +21,16 @@ namespace AnimeX.Controllers
 		//}
 
 		
-         AnimelerManager anm = new AnimelerManager(new efAnimelerRepository( new Context()));
-         CategoriesManager an = new CategoriesManager(new efCatagoriesRepository( new Context()));
-         CategoryAnimeManeger ann = new CategoryAnimeManeger(new efCategoryAnimeRepository( new Context()));
+         //AnimelerManager anm = new AnimelerManager(new efAnimelerRepository( new Context()));
+         //CategoriesManager an = new CategoriesManager(new efCatagoriesRepository( new Context()));
+         //CategoryAnimeManeger ann = new CategoryAnimeManeger(new efCategoryAnimeRepository( new Context()));
 		
 
         public IActionResult Index()
 		{
 		  
 			
-            return View( anm.TGetList());
+            return View();
 		}
 
 		public IActionResult Privacy()

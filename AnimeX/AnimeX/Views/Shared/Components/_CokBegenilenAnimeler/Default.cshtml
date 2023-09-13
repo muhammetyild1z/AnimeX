@@ -1,0 +1,25 @@
+﻿@model List<EntityLayer.Animeler>
+<div class="product__sidebar__view">
+    <div class="section-title">
+        <h5>Çok Beğenilen Animeler</h5>
+    </div>
+    <ul class="filter__controls">
+        <li class="active" data-filter="*">Gün</li>
+        <li data-filter=".week">Hafta</li>
+        <li data-filter=".month">Ay</li>
+        <li data-filter=".years">Yıl</li>
+    </ul>
+    <div class="filter__gallery">
+        @foreach (var item in Model)
+        {
+            <div class="product__sidebar__view__item set-bg mix day years"
+             data-setbg="@item.AnimeImg">
+                <div class="ep fa fa-star">@item.IMDb</div>
+                <div class="view"><i class="fa fa-calendar"></i> @item.AnimeCikisTarihi.Year</div>
+                <h5><a href="#">@item.AnimeAdi</a></h5>
+            </div>
+
+        }
+
+    </div>
+</div>
