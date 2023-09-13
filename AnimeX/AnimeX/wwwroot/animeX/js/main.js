@@ -58,9 +58,9 @@
         allowParentLinks: true
     });
 
-    /*------------------
+    ------------------
 		Hero Slider
-	--------------------*/
+	--------------------
     var hero_s = $(".hero__slider");
     hero_s.owlCarousel({
         loop: true,
