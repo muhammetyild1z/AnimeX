@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "w8MJ4wzDH6AjrKtDcLV6HWXWBCgB6J1paXKtU11U54ORh7cBin7EgP/8fl185DpL9vreLWnSlI1XJqcYBBqgXA==",
+  "dgSpecHash": "w2D7AqClKz8+7fx2K4NwGcWXNcuxQonvB/Jxuf4QpBivcLh4ffHmXsf4/+KWvDRNJT8CU/bN2WSQJRlOEjp+7w==",
   "success": true,
   "projectFilePath": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\AnimeX.UI.csproj",
   "expectedPackageFiles": [
@@ -54,6 +54,7 @@
     "C:\\Users\\muham\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\muham\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\muham\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "C:\\Users\\muham\\.nuget\\packages\\jetbrains.annotations\\2022.3.1\\jetbrains.annotations.2022.3.1.nupkg.sha512",
     "C:\\Users\\muham\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\muham\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\muham\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
@@ -243,7 +244,9 @@
     "C:\\Users\\muham\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\muham\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\muham\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\muham\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\muham\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\muham\\.nuget\\packages\\x.pagedlist\\8.4.7\\x.pagedlist.8.4.7.nupkg.sha512",
+    "C:\\Users\\muham\\.nuget\\packages\\x.pagedlist.mvc.core\\8.4.7\\x.pagedlist.mvc.core.8.4.7.nupkg.sha512"
   ],
   "logs": []
 }

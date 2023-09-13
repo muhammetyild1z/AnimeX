@@ -1,4 +1,7 @@
-﻿@model List<EntityLayer.Animeler>
+﻿@model IPagedList<EntityLayer.Animeler>
+@using X.PagedList
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/CustomerLayout/Index.cshtml";
@@ -76,15 +79,24 @@
 
         </div>
         <div class="product__pagination  " style="margin: 10% 35%">
-            <a href="#" class="current-page">1</a>
+        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions
+        {
+        LiElementClasses = new string[] { "page-item" },
+            //PageClasses=new string[] {"current-page"},
+        //UlElementClasses = new string[] { "pagination justify-content-center" },
+        PageClasses = new string[] { "page-link" },
+        //Display = PagedListDisplayMode.IfNeeded
+        })
+       
+            @*<a href="#" class="current-page">1</a>
             <a href="#">2</a>
             <a href="#">3</a>
             <a href="#">4</a>
             <a href="#">5</a>
-            <a href="#"><i class="fa fa-angle-double-right"></i></a>
+            <a href="#"><i class="fa fa-angle-double-right"></i></a>*@
         </div>
 
-    </div>
+  @*  </div>*@
     </div>
 </section>
 <!-- Product Section End -->

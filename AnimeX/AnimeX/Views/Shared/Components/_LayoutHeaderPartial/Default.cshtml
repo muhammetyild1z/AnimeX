@@ -1,6 +1,6 @@
 ﻿@*// header*@
 <div class="container">
-    <div class="row">
+    <div class="row bg-transparent">
         <div class="col-lg-2">
             <div class="header__logo">
                 <a href="./index.html">
@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="col-lg-8">
-            <div class="header__nav">
+            <div class="header__nav bg-transparent">
                 <nav class="header__menu mobile-menu">
                     <ul>
                         <li class="active"><a href="/Animeler/Index/">Animeler</a></li>
@@ -18,21 +18,44 @@
 
                         </li>
                         <li><a href="./blog.html">Random Anime</a></li>
-                      
+
                     </ul>
                 </nav>
             </div>
         </div>
         <div class="col-lg-2">
-            <div class="header__menu mobile-menu" >
+            <div class="header__menu mobile-menu">
                 <ul>
                     <li><a href="./index.html">Uye Ol</a></li>
-                    <li><a href="./index.html">Giris Yap</a></li>
+                    @* <li><a href="./index.html">Giris Yap</a></li>*@
 
                 </ul>
             </div>
         </div>
     </div>
+    @*back-frame ng-star-inserted*@
+    <div class="slide ng-star-inserted " >
+        <div>@* class="slide-cover slideAbs"*@ style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; /*z-index: 5;*/">
+            <iframe allowfullscreen; frameborder="0" class="videoContainer" src="https://www.youtube.com/embed/v3d_9mJBceU?controls=0&amp;
+showinfo=0
+&amp;rel=0
+&amp;autoplay=1
+&amp;loop=0
+&amp;mute=1
+&amp;playlist=v3d_9mJBceU "></iframe><!---->
+
+            <div class="slide-content container">
+                <div class="d-flex top-info justify-content-left"><!----><div class="item-type typeTitle"> Sezonun İncileri </div></div><a draggable="false" class="title" href="/titles/82/bleach">Bleach</a><div class="description">
+                    <span>
+                        Kurosaki Ichigo 15 yaşında normal bir öğrencidir, ancak ölülerle iletişim kurma becerisine sahiptir. Ichigo'nun babası ve kardeşleri aileye ait bir klinik işletmektedirler.
+
+                        Birgün, shinigami(ölüm tanrısı) olan Kuchiki Rukia, Ichigo'nun odasına camdan girer ve Ichigo'nun onu görebildiğine çok şaşırır. O anın kargaşasında çevreye gelen hollow(k...
+                    </span><button class="no-style more-less-button">more</button>
+                </div><genre-widget><span class="ng-star-inserted"><a draggable="false" trans="" class="genre" href="/browse?genre=action%20adventure">Aksiyon &amp; Macera</a><span class="separator default ng-star-inserted">/</span><!----></span><span class="ng-star-inserted"><a draggable="false" trans="" class="genre" href="/browse?genre=sci%20fi%20fantasy">Bilim Kurgu &amp; Fantezi</a><span class="separator default ng-star-inserted">/</span><!----></span><span class="ng-star-inserted"><a draggable="false" trans="" class="genre" href="/browse?genre=action%20%26%20adventure">Aksiyon &amp; Macera</a><span class="separator default ng-star-inserted">/</span><!----></span><span class="ng-star-inserted"><a draggable="false" trans="" class="genre" href="/browse?genre=sci-fi%20%26%20fantasy">Bilim Kurgu &amp; Fantezi</a><!----></span><!----></genre-widget><!---->
+            </div>
+        </div>
+    </div>
+
     <div id="mobile-menu-wrap"></div>
 </div>
 @*<header class="header">*@
