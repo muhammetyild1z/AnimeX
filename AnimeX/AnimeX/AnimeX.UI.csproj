@@ -7,6 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\animeX\js\bootstrap.min.js" />
+    <None Include="wwwroot\animeX\js\jquery-3.3.1.min.js" />
+    <None Include="wwwroot\animeX\js\jquery.nice-select.min.js" />
+    <None Include="wwwroot\animeX\js\jquery.slicknav.js" />
+    <None Include="wwwroot\animeX\js\main.js" />
+    <None Include="wwwroot\animeX\js\mixitup.min.js" />
+    <None Include="wwwroot\animeX\js\owl.carousel.min.js" />
+    <None Include="wwwroot\animeX\js\player.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.20" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.20" />

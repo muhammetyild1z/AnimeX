@@ -13,6 +13,7 @@ namespace AnimeX.UI.Controllers
         {          
             return View( am.TGetList().ToPagedList(page, 12));
         }
+        
 
 
     }

@@ -4,6 +4,9 @@ namespace AnimeX.ViewComponents.Slider
 {
     public class _Slider:ViewComponent
     {
-        public IViewComponentResult Invoke() { return View(); }
+        public IViewComponentResult Invoke() 
+        {
+            return View(); 
+        }
     }
 }
