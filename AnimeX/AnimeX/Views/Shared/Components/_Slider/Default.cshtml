@@ -1,13 +1,70 @@
 ﻿
 
 
-@*<section class="hero" >
-    <div class="">
-        <div class="hero__slider owl-carousel">*@
-           
+<section class="hero pt-0">
+   
 
-           @* <div class="videoContainer ">
-                <iframe onload="frameload()" marginheight="0" marginwidth="0" style="pointer-events:none" width="1920" height="1080" allowfullscreen="true" frameborder="0" src="https://www.youtube.com/embed/keti2rbgI6c?
+    <div class="hero__slider owl-carousel ">
+        
+        <div class="videoContainer  ml-0 ">
+
+            <iframe lazy marginheight="0" marginwidth="0" style="pointer-events:none" width="1920" height="1080" allowfullscreen="true" frameborder="0" src="https://www.youtube.com/embed/v3d_9mJBceU?
+controls=0&amp;
+showinfo=0&amp;
+rel=0&amp;
+autoplay=1&amp;
+loop=1&amp;
+mute=1&amp;
+playlist=v3d_9mJBceU ">
+            </iframe>
+
+            <div class="row mt-5 ml-5">
+                <div class="col-lg-6 ">
+                    <div class="hero__text align-items-center">
+                        <div class="label">Sezonun İncileri</div>
+                        <h2>Bleach</h2>
+                        <div class="row">
+                            @await Component.InvokeAsync("_SliderKategoriCekme" ,new {animeID=1})
+                            <a class="col-md-12 mt-4" href="#"><span>Şimdi İzle</span> <i class="fa fa-angle-right"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="videoContainer  ml-0 ">
+            <iframe onload="frameload()" marginheight="0" marginwidth="0" style="pointer-events:none" width="1920" height="1080" allowfullscreen="true" frameborder="0" src="https://www.youtube.com/embed/eqy85AL70PU?
+controls=0&amp;
+showinfo=0&amp;
+rel=0&amp;
+autoplay=1&amp;
+loop=1&amp;
+mute=1&amp;
+lazy=1&amp;
+playlist=eqy85AL70PU ">
+            </iframe>
+
+
+            <div class="row mt-5 ml-5">
+                <div class="col-lg-6 ">
+                    <div class="hero__text align-items-center">
+                        <div class="label">Sezonun İncileri</div>
+                        <h2>Solo Leveling</h2>
+                        <div class="row">
+                            @await Component.InvokeAsync("_SliderKategoriCekme" ,new {animeID=10})
+                            <a class="col-md-12 mt-4" href="#"><span>Şimdi İzle</span> <i class="fa fa-angle-right"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="videoContainer  ml-0 ">
+            <iframe onload="frameload()" marginheight="0" marginwidth="0" style="pointer-events:none" width="1920" height="1080" allowfullscreen="true" frameborder="0" src="https://www.youtube.com/embed/keti2rbgI6c?
 controls=0&amp;
 showinfo=0&amp;
 rel=0&amp;
@@ -16,47 +73,60 @@ loop=1&amp;
 mute=1&amp;
 lazy=1&amp;
 playlist=keti2rbgI6c ">
-                </iframe>
+            </iframe>
 
-                <div class="row " >
-                    <div class="col-lg-6">
-                        <div class="hero__text align-items-center" >
-                            <div class="label">Sezonun İncileri</div>
-                            <h2>Mushoku Tensei: Isekai Ittara Honki Dasu</h2>
-                            <p>Kategori gelecek</p>
-                            <a href="#"><span>Şimdi İzle</span> <i class="fa fa-angle-right"></i></a>
+
+            <div class="row mt-5 ml-5">
+                <div class="col-lg-6 ">
+                    <div class="hero__text align-items-center">
+                        <div class="label">Sezonun İncileri</div>
+                        <h2>Mushoku Tensei: Isekai Ittara Honki Dasu</h2>
+                        <div class="row">
+                            @await Component.InvokeAsync("_SliderKategoriCekme" ,new {animeID=2})
+                            <a class="col-md-12 mt-4" href="#"><span>Şimdi İzle</span> <i class="fa fa-angle-right"></i></a>
                         </div>
+
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="videoContainer " >
-
-                <iframe lazy marginheight="0" marginwidth="0" style="pointer-events:none" width="1920" height="1080" allowfullscreen="true" frameborder="0" src="https://www.youtube.com/embed/v3d_9mJBceU?
+        <div class="videoContainer  ml-0 ">
+            <iframe onload="frameload()" marginheight="0" marginwidth="0" style="pointer-events:none" width="1920" height="1080" allowfullscreen="true" frameborder="0" src="https://www.youtube.com/embed/fzwPgd-jnb0?
 controls=0&amp;
 showinfo=0&amp;
 rel=0&amp;
 autoplay=1&amp;
 loop=1&amp;
 mute=1&amp;
-playlist=v3d_9mJBceU ">
-                </iframe>
+lazy=1&amp;
+playlist=fzwPgd-jnb0 ">
+            </iframe>
 
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="hero__text">
-                            <div class="label">Sezonun İncileri</div>
-                            <h2>Bleach</h2>
-                            <p>Kategori gelecek</p>
-                            <a href="#"><span>Şimdi İzle</span> <i class="fa fa-angle-right"></i></a>
+
+            <div class="row mt-5 ml-5">
+                <div class="col-lg-6 ">
+                    <div class="hero__text align-items-center">
+                        <div class="label">Sezonun İncileri</div>
+                        <h2>The Rising of the Shield Hero </h2>
+                        <div class="row">
+                            @await Component.InvokeAsync("_SliderKategoriCekme" ,new {animeID=6})
+                            <a class="col-md-12 mt-4" href="#"><span>Şimdi İzle</span> <i class="fa fa-angle-right"></i></a>
                         </div>
+
                     </div>
                 </div>
-            </div>*@
+            </div>
+        </div>
 
-          
-@*        </div>
+      
+
     </div>
-
-</section>*@
+    <script>
+        // Eğer slider'ın belirttiğiniz süre dahilinde sürekli ileri ya da geri gitmesini istiyorsanız `setInterval()` kullanabilirsiniz.
+        setInterval(() => slider.next(), 15000); // 5 saniyede bir otomatik olarak bir sonraki slide'a geçer
+            // setInterval(() => slider.prev(), 5000); // 5 saniyede bir otomatik olarak bir önceki slide'a geçer
+    </script>
+  
+</section>
 

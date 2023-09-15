@@ -58,9 +58,9 @@
         allowParentLinks: true
     });
 
-    ------------------
+    /*------------------
 		Hero Slider
-	--------------------
+	--------------------*/
     var hero_s = $(".hero__slider");
     hero_s.owlCarousel({
         loop: true,
@@ -71,12 +71,14 @@
         navText: ["<span class='arrow_carrot-left'></span>", "<span class='arrow_carrot-right'></span>"],
         animateOut: 'fadeOut',
         animateIn: 'fadeIn',
-        smartSpeed: 1200,
+        /*smartSpeed: 1200,*/
         autoHeight: false,
         autoplay: true,
+        autoplayTimeout: 12000 ,
         mouseDrag: false
-    });
 
+    });
+   
     /*------------------
         Video Player
     --------------------*/

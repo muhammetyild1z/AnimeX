@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+RUYTLC1odrL2FHYxNwSeCze4Ph50B+EwipZ518gHjE=",
+  "Hash": "QHPFru7I4NTeJ2WUFGyrMUkZGpakO2WX11kljXQvlOA=",
   "Source": "AnimeX.UI",
   "BasePath": "_content/AnimeX.UI",
   "Mode": "Default",
@@ -1698,6 +1698,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\animeX\\js\\mixitup.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\js\\owl.carousel.js",
+      "SourceId": "AnimeX.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\",
+      "BasePath": "_content/AnimeX.UI",
+      "RelativePath": "animeX/js/owl.carousel.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\animeX\\js\\owl.carousel.js"
     },
     {
       "Identity": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\js\\owl.carousel.min.js",

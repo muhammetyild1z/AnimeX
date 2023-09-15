@@ -24,7 +24,8 @@ body {
     height: 80vh;
     overflow: hidden;
     position: relative;
-    margin-left: -20px
+    margin:0px;
+    
 }
     .videoContainer iframe {
        
@@ -447,7 +448,7 @@ ol {
 
 .hero {
     margin: 0;
-    padding-top: 20px;
+   
 }
 
 .hero__items {
@@ -456,8 +457,9 @@ ol {
 }
 
 .hero__text {
-    position: relative;
+    position: absolute;
     z-index: 9;
+    margin-top:36%
 }
 
     .hero__text .label {
@@ -467,7 +469,7 @@ ol {
         padding: 5px 14px 3px;
         display: inline-block;
         position: relative;
-        top: -100px;
+        top: 100px;
         opacity: 0;
         -webkit-transition: all, 0.2s;
         -o-transition: all, 0.2s;
@@ -493,7 +495,7 @@ ol {
     .hero__text p {
         color: #ffffff;
         font-size: 16px;
-        margin-bottom: 40px;
+        margin-bottom: -1px;
         position: relative;
         top: -100px;
         opacity: 0;
@@ -583,7 +585,7 @@ ol {
 
 .product {
     padding-bottom: 60px;
-    padding-top: 80px;
+    padding-top: 1%;
 }
 
 .product-page {

@@ -23,7 +23,9 @@
                     </div>
                     <div class="product__item__text">
                         <ul>
+                           
                             @await Component.InvokeAsync("_AnimelerKategori", new{animeID=item.AnimeID})
+                          
                             @if (item.AnimeAdi.Length>22)
                             {
                                 <h5><a href="#">@item.AnimeAdi.Substring(0,22)..</a></h5>

@@ -28,8 +28,7 @@ namespace AnimeX.Controllers
 
         public IActionResult Index()
 		{
-		  
-			
+		 		
             return View();
 		}
 
