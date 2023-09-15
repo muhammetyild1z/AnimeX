@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnimeX.EntityLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -23,6 +24,7 @@ namespace EntityLayer
         public DateTime AnimeCikisTarihi { get; set; }
 
         public List<CategoryAnime> categoryAnimes { get; set; }
+        public List<AnimeSezon> animeSezons { get; set; }
        
 
 

@@ -1,4 +1,6 @@
 ﻿@model List<EntityLayer.Animeler>
+
+
 <div class="product__sidebar__view">
     <div class="section-title">
         <h5>Çok Beğenilen Animeler</h5>
@@ -12,11 +14,10 @@
     <div class="filter__gallery">
         @foreach (var item in Model)
         {
-            <div class="product__sidebar__view__item set-bg mix day years"
-             data-setbg="@item.AnimeImg">
+            <div class="product__sidebar__view__item set-bg mix day years" data-setbg="@item.AnimeImg" href="/Animeİzle/Izle/@item.AnimeID/">
                 <div class="ep fa fa-star">@item.IMDb</div>
                 <div class="view"><i class="fa fa-calendar"></i> @item.AnimeCikisTarihi.Year</div>
-                <h5><a href="#">@item.AnimeAdi</a></h5>
+                <h5><a href="/AnimeIzle/Izle/@item.AnimeID/">@item.AnimeAdi</a></h5>
             </div>
 
         }

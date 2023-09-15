@@ -16,7 +16,7 @@
         {
             <div class="col-lg-2 col-md-6 col-sm-6">
                 <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="@item.AnimeImg">
+                    <div class="product__item__pic set-bg" data-setbg="@item.AnimeImg" href="/Animeİzle/Izle/@item.AnimeID/">
                         <div class="ep fa fa-star">&nbsp;@item.IMDb</div>
                         <div class="comment"><i class="fa fa-comments"></i> 11</div>
                         <div class="view"><i class="fa fa-calendar"></i> @item.AnimeCikisTarihi.Year</div>
@@ -26,10 +26,10 @@
                             @await Component.InvokeAsync("_AnimelerKategori", new{animeID=item.AnimeID})
                             @if (item.AnimeAdi.Length>22)
                             {
-                                <h5><a href="#">@item.AnimeAdi.Substring(0,22)..</a></h5>
+                                <h5><a href="AnimeIzle/Izle/@item.AnimeID">@item.AnimeAdi.Substring(0,22)..</a></h5>
                             }else
                             {
-                                    <h5><a href="#">@item.AnimeAdi</a></h5>
+                                <h5><a href="AnimeIzle/Izle/@item.AnimeID">@item.AnimeAdi</a></h5>
                             }
                             
                         </ul>

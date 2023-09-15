@@ -19,6 +19,7 @@ namespace AnimeX.DataAccessLayer.Concrate
         public DbSet<Animeler> Animelers { get; set; }
         public DbSet<Categories> Categories { get; set; }
         public DbSet<CategoryAnime> CategoryAnimes { get; set; }
+        public DbSet<AnimeSezon> animeSezons { get; set; }
 
 
         //protected override void OnModelCreating(ModelBuilder builder)
