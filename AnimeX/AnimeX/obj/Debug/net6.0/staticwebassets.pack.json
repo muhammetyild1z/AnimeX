@@ -77,6 +77,10 @@
       "PackagePath": "staticwebassets\\animeX\\css\\font-awesome.min.css"
     },
     {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\main.css",
+      "PackagePath": "staticwebassets\\animeX\\css\\main.css"
+    },
+    {
       "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\css\\nice-select.css",
       "PackagePath": "staticwebassets\\animeX\\css\\nice-select.css"
     },
@@ -405,6 +409,18 @@
       "PackagePath": "staticwebassets\\animeX\\js\\bootstrap.min.js"
     },
     {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\js\\extention\\choices.js",
+      "PackagePath": "staticwebassets\\animeX\\js\\extention\\choices.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\js\\extention\\custom-materialize.js",
+      "PackagePath": "staticwebassets\\animeX\\js\\extention\\custom-materialize.js"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\js\\extention\\flatpickr.js",
+      "PackagePath": "staticwebassets\\animeX\\js\\extention\\flatpickr.js"
+    },
+    {
       "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\js\\jquery-3.3.1.min.js",
       "PackagePath": "staticwebassets\\animeX\\js\\jquery-3.3.1.min.js"
     },
@@ -511,6 +527,10 @@
     {
       "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\sass\\style.scss",
       "PackagePath": "staticwebassets\\animeX\\sass\\style.scss"
+    },
+    {
+      "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\search.html",
+      "PackagePath": "staticwebassets\\animeX\\search.html"
     },
     {
       "Id": "C:\\Users\\muham\\OneDrive\\Belgeler\\GitHub\\AnimeX\\AnimeX\\AnimeX\\wwwroot\\animeX\\signup.html",

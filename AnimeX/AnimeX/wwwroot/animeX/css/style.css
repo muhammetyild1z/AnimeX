@@ -18,10 +18,18 @@ body {
     background-color: #1D1D1D;
 }
 
+
+
+
+
+
+
+
+
 .videoContainer {
     
     width: 100vw;
-    height: 80vh;
+    height: 90vh;
     overflow: hidden;
     position: relative;
     margin:0px;
