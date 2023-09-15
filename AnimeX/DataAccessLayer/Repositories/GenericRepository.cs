@@ -27,7 +27,7 @@ namespace AnimeX.DataAccessLayer.Repositories
 
         public T GetByID(int id)
         {
-            return  _context.Set<T>().Find(id);
+            return _context.Set<T>().Find(id);
         }
 
         public List<T> GetList()

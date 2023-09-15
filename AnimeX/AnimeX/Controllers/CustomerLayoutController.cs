@@ -8,9 +8,7 @@ namespace AnimeX.Controllers
 		{
 			return View();
 		}
-        public IActionResult Indexw()
-        {
-            return View();
-        }
+       
+       
     }
 }

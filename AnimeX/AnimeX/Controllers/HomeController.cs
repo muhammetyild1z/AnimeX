@@ -20,13 +20,7 @@ namespace AnimeX.Controllers
 		//	_logger = logger;
 		//}
 
-		
-         //AnimelerManager anm = new AnimelerManager(new efAnimelerRepository( new Context()));
-         //CategoriesManager an = new CategoriesManager(new efCatagoriesRepository( new Context()));
-         //CategoryAnimeManeger ann = new CategoryAnimeManeger(new efCategoryAnimeRepository( new Context()));
-		
-
-        public IActionResult Index()
+		public IActionResult Index()
 		{
 		 		
             return View();

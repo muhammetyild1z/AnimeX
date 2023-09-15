@@ -21,14 +21,5 @@ namespace AnimeX.DataAccessLayer.Concrate
         public DbSet<CategoryAnime> CategoryAnimes { get; set; }
         public DbSet<AnimeSezon> animeSezons { get; set; }
 
-
-        //protected override void OnModelCreating(ModelBuilder builder)
-        //{
-        //    builder.Entity<CategoryAnime>().HasNoKey();
-
-
-        //    base.OnModelCreating(builder);
-        //}
-
     }
 }

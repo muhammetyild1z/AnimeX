@@ -22,44 +22,6 @@ namespace AnimeX.DataAccessLayer.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("AnimeX.EntityLayer.AnimeSezon", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
-
-                    b.Property<int>("AnimeID")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("BolumCreateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Bolumler")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("SezonCreateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("SezonIzleUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SezonIzlekapakImg")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Sezonlar")
-                        .HasColumnType("int");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("AnimeID");
-
-                    b.ToTable("animeSezons");
-                });
-
             modelBuilder.Entity("AnimeX.EntityLayer.AppRole", b =>
                 {
                     b.Property<int>("Id")
@@ -205,6 +167,47 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.HasKey("AnimeID");
 
                     b.ToTable("Animelers");
+                });
+
+            modelBuilder.Entity("EntityLayer.AnimeSezon", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+
+                    b.Property<int>("AnimeID_SezonAnimeID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Anime_ID_Sezon")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("BolumCreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Bolumler")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("SezonCreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("SezonIzleUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SezonIzlekapakImg")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Sezonlar")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("AnimeID_SezonAnimeID");
+
+                    b.ToTable("animeSezons");
                 });
 
             modelBuilder.Entity("EntityLayer.Categories", b =>
@@ -359,15 +362,15 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("AnimeX.EntityLayer.AnimeSezon", b =>
+            modelBuilder.Entity("EntityLayer.AnimeSezon", b =>
                 {
-                    b.HasOne("EntityLayer.Animeler", "animeID")
+                    b.HasOne("EntityLayer.Animeler", "AnimeID_Sezon")
                         .WithMany("animeSezons")
-                        .HasForeignKey("AnimeID")
+                        .HasForeignKey("AnimeID_SezonAnimeID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("animeID");
+                    b.Navigation("AnimeID_Sezon");
                 });
 
             modelBuilder.Entity("EntityLayer.CategoryAnime", b =>

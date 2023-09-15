@@ -18,10 +18,10 @@ namespace AnimeX.BusinnessLayer.Concrate
             _animelerDal = animelerDal;
         }
 
-        public List<Animeler> GetAnimeAdiIncludeAnimeSezon()
-        {
-           return  _animelerDal.GetAnimeAdiIncludeAnimeSezon();
-        }
+        //public List<Animeler> GetAnimeAdiIncludeAnimeSezon()
+        //{
+        //   return  _animelerDal.GetAnimeAdiIncludeAnimeSezon();
+        //}
 
         public void TDelete(Animeler entity)
         {

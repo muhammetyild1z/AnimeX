@@ -26,12 +26,13 @@
                             @await Component.InvokeAsync("_AnimelerKategori", new{animeID=item.AnimeID})
                             @if (item.AnimeAdi.Length>22)
                             {
-                                <h5> @Html.ActionLink(@item.AnimeAdi.Substring(0,22), "Izle", "AnimeIzle", new { animeID=item.AnimeID})..
+                                <h5>
+                                    @Html.ActionLink(@item.AnimeAdi.Substring(0,22), "Izle", "AnimeIzle", new { AnimeID_Sezon=item.AnimeID})..
 
                                 </h5>
                             }else
                             {
-                                <h5> @Html.ActionLink(@item.AnimeAdi, "Izle", "AnimeIzle", new { animeID=item.AnimeID})</h5>
+                                <h5> @Html.ActionLink(@item.AnimeAdi, "Izle", "AnimeIzle", new { AnimeID_Sezon=item.AnimeID})</h5>
                             }
                             
                         </ul>

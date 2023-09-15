@@ -1,4 +1,4 @@
-﻿
+﻿@model List<EntityLayer.AnimeSezon>
 
 @{
     ViewData["Title"] = "Izle";
@@ -6,10 +6,7 @@
 }
 
 <style>
-    section {
-        text-align: center;
-        
-    }
+
 
     img {
         border: 1px solid black;
@@ -28,7 +25,7 @@
 
 <section class="base cover">
 
-    <img src="https://r.resimlink.com/aWBLnUP.png" ." class="img-fluid" alt="Responsive image">
+    <img src="https://r.resimlink.com/W2K3t-gaJPqd.jpg" class="img-fluid" alt="Responsive image">
 
 
 </section>
@@ -41,7 +38,7 @@
                 <div class="breadcrumb__links">
                     <a href="./index.html"><i class="fa fa-home"></i> Anasayfa</a>
                     <a href="./categories.html">Anime İzle</a>
-                    <span>Anime adı gelcek</span>
+                    <span>@ViewBag.AnimeName</span>
 
                 </div>
             </div>
@@ -60,22 +57,38 @@
                         <!-- Captions are optional -->
                         <track kind="captions" label="English captions" src="#" srclang="en" default />
                     </video>
-                  
                 </div>
+
                 <div class="anime__details__episodes">
                     <div class="section-title">
                         <h5>Sezonlar</h5>
                     </div>
-                    <a href="#">Sezon 01</a>
+                   @foreach (var item in ViewBag.Sezonlar)
+                    {
+                        <a href="#">Sezon @item</a>
+
+                    }
+
+          
 
                 </div>
                 <div class="anime__details__episodes">
                     <div class="section-title">
                         <h5>Bölümler</h5>
                     </div>
-                    <a href="#">Bölüm 01</a>
+                    @foreach (var item in Model)
+                    {
+                       @* 1.sezon vwe 2, sezon ilk bolumlerini aynianda getiriyor *@
+                        
+                            <a href="#">Bölüm @item.Bolumler</a>
+                        
+                        
+                    }
+
 
                 </div>
+
+
             </div>
         </div>
 
