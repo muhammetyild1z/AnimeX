@@ -1,4 +1,5 @@
 ﻿using AnimeX.EntityLayer;
+using EntityLayer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,5 +10,6 @@ namespace AnimeX.DataAccessLayer.Abstract
 {
     public interface IAnimeSezonDal:IGenericDal<AnimeSezon>
     {
+        
     }
 }

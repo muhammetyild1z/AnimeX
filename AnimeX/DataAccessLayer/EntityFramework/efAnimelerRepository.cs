@@ -2,6 +2,7 @@
 using AnimeX.DataAccessLayer.Concrate;
 using AnimeX.DataAccessLayer.Repositories;
 using EntityLayer;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,12 @@ namespace AnimeX.DataAccessLayer.EntityFramework
     {
         public efAnimelerRepository(Context context) : base(context)
         {
+        }
+
+        public List<Animeler> GetAnimeAdiIncludeAnimeSezon()
+        {
+            Context c = new Context();
+            return c.Animelers.Include(x => x.animeSezons).ToList();
         }
     }
 }

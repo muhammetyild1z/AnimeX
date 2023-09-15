@@ -7,7 +7,7 @@ namespace AnimeX.ViewComponents.CokIzlenenAnimeler
 {
     public class _CokBegenilenAnimeler:ViewComponent
     {
-        public IViewComponentResult Invoke()
+        public IViewComponentResult Invoke( int id)
         {
             AnimelerManager am = new AnimelerManager(new efAnimelerRepository(new Context()));
           

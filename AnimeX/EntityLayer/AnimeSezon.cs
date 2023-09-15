@@ -14,6 +14,8 @@ namespace AnimeX.EntityLayer
         public int Bolumler { get; set; }
         public string SezonIzlekapakImg { get; set; }
         public string SezonIzleUrl{ get; set; }
+        public DateTime BolumCreateDate{ get; set; }
+        public DateTime SezonCreateDate{ get; set; }
         public Animeler animeID { get; set; }
     }
 }

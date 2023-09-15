@@ -2,6 +2,8 @@
 using AnimeX.DataAccessLayer.Concrate;
 using AnimeX.DataAccessLayer.Repositories;
 using AnimeX.EntityLayer;
+using EntityLayer;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,5 +17,7 @@ namespace AnimeX.DataAccessLayer.EntityFramework
         public efAnimeSezonRepository(Context context) : base(context)
         {
         }
+
+        
     }
 }

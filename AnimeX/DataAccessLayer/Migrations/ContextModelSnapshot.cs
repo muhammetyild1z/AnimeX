@@ -33,8 +33,14 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.Property<int>("AnimeID")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("BolumCreateDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("Bolumler")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("SezonCreateDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("SezonIzleUrl")
                         .IsRequired()

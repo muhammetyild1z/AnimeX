@@ -17,7 +17,10 @@
             <div class="product__sidebar__view__item set-bg mix day years" data-setbg="@item.AnimeImg" href="/Animeİzle/Izle/@item.AnimeID/">
                 <div class="ep fa fa-star">@item.IMDb</div>
                 <div class="view"><i class="fa fa-calendar"></i> @item.AnimeCikisTarihi.Year</div>
-                <h5><a href="/AnimeIzle/Izle/@item.AnimeID/">@item.AnimeAdi</a></h5>
+                <h5>
+                   
+                    @Html.ActionLink(@item.AnimeAdi, "Izle", "AnimeIzle", new { animeID=item.AnimeID})
+                    </h5>
             </div>
 
         }
