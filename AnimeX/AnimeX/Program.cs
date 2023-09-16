@@ -16,7 +16,7 @@ builder.Services.AddIdentity<AppUser, AppRole>(
     opt =>
     {
         opt.Password.RequireNonAlphanumeric = false;
-        opt.Password.RequiredLength = 3;
+        opt.Password.RequiredLength = 1;
         opt.Password.RequireUppercase = false;
         opt.Password.RequireLowercase = false;
         opt.Password.RequireDigit = false;

@@ -15,6 +15,7 @@ namespace AnimeX.UI.Controllers
             AnimeSezonManager am = new AnimeSezonManager(new efAnimeSezonRepository(new Context()));      
            var values = am.TGetList().Where(x=>x.Anime_ID_Sezon==AnimeID_Sezon).ToList();
             ViewBag.AnimeName = anm.TGetByID(AnimeID_Sezon).AnimeAdi;
+            ViewBag.AnimeID = anm.TGetByID(AnimeID_Sezon).AnimeID;
             ViewBag.AnimeImg= values.Select(x=>x.SezonIzlekapakImg).FirstOrDefault();
             ViewBag.Sezonlar =values.Select(x=>x.Sezonlar).Distinct().ToList();
             return View(values);

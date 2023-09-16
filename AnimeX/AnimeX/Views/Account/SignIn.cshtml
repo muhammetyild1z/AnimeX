@@ -1,0 +1,59 @@
+﻿@model SignInDto
+@{
+    ViewData["Title"] = "SignIn";
+    Layout = "~/Views/CustomerLayout/Index.cshtml";
+}
+
+
+<!-- Login Section Begin -->
+<section class="login spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="login__form">
+                    <h3>Giris Yap</h3>
+                    <form method="post" >
+                        <div class="input__item">
+                            <input type="text" placeholder="Kullanici adi" asp-for="UserName">
+                            <span class="icon_mail"></span>
+                        </div>
+                        <div class="input__item">
+                            <input type="password" placeholder="Sifre" asp-for="Password">
+                            <span class="icon_lock"></span>
+                        </div>
+                        <button type="submit" class="site-btn">GİRİŞ YAP</button>
+                        <br />
+                      <span class="text-danger">@ViewBag.loginFailed</span>  
+                    </form>
+                    <a href="#" class="forget_pass">Şifreni Mi Unuttun?</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="login__register">
+                    <h3>Hesabın Yok Mu?</h3>
+                    <a href="/Account/SignUp" class="primary-btn">Şimdi Kayıt Ol</a>
+                </div>
+            </div>
+        </div>
+        <div class="login__social">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-6">
+                    <div class="login__social__links">
+                        <span>Veya</span>
+                        <ul>
+                            <li>
+                                <a href="#" class="facebook">
+                                    <i class="fa fa-facebook"></i> Facebook İle Giriş Yap
+                                    
+                                </a>
+                            </li>
+                            <li><a href="#" class="google"><i class="fa fa-google"></i>  Google İle Giriş Yap</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Login Section End -->
