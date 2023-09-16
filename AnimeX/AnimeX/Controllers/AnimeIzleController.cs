@@ -13,11 +13,15 @@ namespace AnimeX.UI.Controllers
         {
             AnimelerManager anm = new AnimelerManager(new efAnimelerRepository(new Context()));
             AnimeSezonManager am = new AnimeSezonManager(new efAnimeSezonRepository(new Context()));      
-           var values = am.TGetList().Where(x=>x.Anime_ID_Sezon==AnimeID_Sezon).ToList();
+          
             ViewBag.AnimeName = anm.TGetByID(AnimeID_Sezon).AnimeAdi;
             ViewBag.AnimeID = anm.TGetByID(AnimeID_Sezon).AnimeID;
-            ViewBag.AnimeImg= values.Select(x=>x.SezonIzlekapakImg).FirstOrDefault();
-            ViewBag.Sezonlar =values.Select(x=>x.Sezonlar).Distinct().ToList();
+            var values = am.TGetList().Where(x => x.Anime_ID_Sezon == AnimeID_Sezon).ToList();
+            var sezon=values.DistinctBy(x=>x.Sezonlar).ToList();
+        
+            // ViewBag.AnimeImg= values.Select(x=>x.SezonIzlekapakImg).FirstOrDefault();
+             ViewBag.Sezonlar =values.Select(x=>x.Sezonlar).Distinct().ToList();
+             ViewBag.Sezonlar =values.Select(x=>x.Bolumler).Distinct().ToList();
             return View(values);
         }
     }
