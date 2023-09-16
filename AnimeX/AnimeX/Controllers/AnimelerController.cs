@@ -11,7 +11,7 @@ namespace AnimeX.UI.Controllers
         AnimelerManager am = new AnimelerManager(new efAnimelerRepository(new Context()));
         public  IActionResult Index(int page = 1)
         {          
-            return View( am.TGetList().ToPagedList(page, 12));
+            return View( am.TGetList().ToPagedList(page, 18));
         }
         
 

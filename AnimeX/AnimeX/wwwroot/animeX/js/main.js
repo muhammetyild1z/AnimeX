@@ -74,7 +74,7 @@
         /*smartSpeed: 1200,*/
         autoHeight: false,
         autoplay: true,
-        autoplayTimeout: 12000 ,
+        autoplayTimeout: 20000,
         mouseDrag: false
 
     });
