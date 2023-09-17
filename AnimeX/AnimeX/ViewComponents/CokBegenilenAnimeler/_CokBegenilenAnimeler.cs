@@ -11,7 +11,7 @@ namespace AnimeX.ViewComponents.CokIzlenenAnimeler
         {
             AnimelerManager am = new AnimelerManager(new efAnimelerRepository(new Context()));
           
-            return View(am.TGetList().OrderByDescending(x => x.Like).Take(5).ToList());
+            return View(am.TGetList().OrderByDescending(x => x.Like).Take(6).ToList());
         }
     }
 }

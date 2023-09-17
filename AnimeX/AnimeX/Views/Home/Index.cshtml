@@ -9,23 +9,25 @@
  <section class="product spad" style="max-width:80%; position: relative;  margin: auto;">
         <div class="container">
             <div class="row">
-
-                <div class="col-lg-8">
-                           
-                @await Component.InvokeAsync("_SonEklenenBolumler")
-                
-                </div>
+                                        
+                @await Component.InvokeAsync("_SonEklenenBolumler")                         
            
-                <div class="col-lg-4 col-md-6 col-sm-8">
+               @* <div class="col-lg-4 col-md-6 col-sm-8">
                     <div class="product__sidebar">
-                    @await Component.InvokeAsync("_CokBegenilenAnimeler")
-                  @*  @await Component.InvokeAsync("_EnYuksekPuanliAnimeler")*@
+                    
+                   
+                    @await Component.InvokeAsync("_EnYuksekPuanliAnimeler")
 
                     </div>
-                </div>
+                </div>*@
+            @await Component.InvokeAsync("_CokBegenilenAnimeler")
+            @await Component.InvokeAsync("_CokOyAlanAnimeler")
             @await Component.InvokeAsync("_SonCıkanAnimeler")
             @await Component.InvokeAsync("_GelecekAnimeler")
-            @await Component.InvokeAsync("_CokOyAlanAnimeler")
+           
             </div>
         </div>
     </section>
+
+
+
