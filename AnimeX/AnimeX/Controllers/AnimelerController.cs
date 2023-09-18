@@ -15,6 +15,7 @@ namespace AnimeX.UI.Controllers
         public  IActionResult Index(int page = 1)
         {
             ViewBag.category = amn.TGetList().Select(x=>x.KategoriAdi);
+            ViewBag.categoryDate = am.TGetList().Select(x=>x.AnimeCikisTarihi);
             return View( am.TGetList().ToPagedList(page, 18));
             
         }

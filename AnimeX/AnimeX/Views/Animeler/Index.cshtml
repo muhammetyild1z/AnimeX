@@ -37,11 +37,7 @@
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="product__page__filter">
                             Sırala
-                            <select>
-                                @foreach (var item in collection)
-                                {
-                                    
-                                }
+                            <select>                              
                                 <option value="">IDMb Puanına Göre</option>
                                 <option value="">Alfabetik</option>
                                 <option value="">Eklenme Tarihine Göre</option>
@@ -49,11 +45,31 @@
                         </div>
                     </div>
 
+                    <input type="text"  />
+                    <input type="text"  />
+
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="product__page__filter">
+                            
+                            <select size="8">
+                                <option value="">Çıkış Tarihi</option>
+                                @foreach (var item in ViewBag.categoryDate)
+                                {
+                                    <option value="">@item</option>
+                                }
+                               
+                                
+                            </select>
+                        </div>
+                    </div>
+
                     <div class="col-lg-4 col-md-4 col-sm-6">
                         <div class="product__page__filter">                          
-                            <select>
-                                @foreach (var item in collection)
+                            <select style="height:60px" size="8">
+                                <option value="">Kategori seç</option>
+                                @foreach (var item in ViewBag.category)
                                 {
+                                     
                                     <option value="">@item</option>
                                 }                                                           
                             </select>
