@@ -31,31 +31,31 @@
 
 
 
-            <form method="post ">
+            <form class="col-md-9 d-flex justify-content-center" method="post">
                 <div class="input-group mt-3 mb-3 col-md-10 d-flex justify-content-center">
-                                                          
-                    <div class="col-lg-4 col-md-4 col-sm-6">
+                    <p class="mt-2 text-white font-weight-bold"> Sırala</p>
+                    <div class="col-md-3 ">
                         <div class="product__page__filter">
-                            Sırala
-                            <select>                              
-                                <option value="">IDMb Puanına Göre</option>
-                                <option value="">Alfabetik</option>
-                                <option value="">Eklenme Tarihine Göre</option>
+                           
+                            <select name="sirlaSelect" class="bg-transparent text-dark" >
+                                <option value="Alfabetik">Alfabetik</option>
+                                <option value="IDMb Puanına Göre">IDMb Puanına Göre</option>
+                                <option value="Eklenme Tarihine Göre">Eklenme Tarihine Göre</option>
                             </select>
                         </div>
                     </div>
 
-                    <input type="text"  />
-                    <input type="text"  />
+                    <input name="idmb" type="number" placeholder="IDMb" maxlength="1"  class="form-control bg-transparent border-0 col-md-1"/>
+                    <input name="animeadi" type="text" placeholder="Anime adı" class="form-control bg-transparent border-0 col-md-3" />
 
-                    <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="col-md-2">
                         <div class="product__page__filter">
                             
-                            <select size="8">
-                                <option value="">Çıkış Tarihi</option>
+                            <select name="dateSelect" class="bg-transparent text-dark" size="3" >
+                                <option  selected>Çıkış Tarihi</option>
                                 @foreach (var item in ViewBag.categoryDate)
                                 {
-                                    <option value="">@item</option>
+                                    <option value="@item">@item</option>
                                 }
                                
                                 
@@ -63,24 +63,23 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class=" col-md-2">
                         <div class="product__page__filter">                          
-                            <select style="height:60px" size="8">
-                                <option value="">Kategori seç</option>
+                            <select name="kategoriSelect" class="bg-transparent text-dark" size="3">
+                                <option  selected>Kategori seç</option>
                                 @foreach (var item in ViewBag.category)
                                 {
-                                     
-                                    <option value="">@item</option>
+                                    <option value="@item">@item</option>
                                 }                                                           
                             </select>
                         </div>
                     </div>
-                    
-                    <input type="submit" class="form-control btn btn-warning col-md-1" value="Filtrele">
+
+                    <button type="submit" style="border-radius: 5%; margin-left: 2%; margin-top:2px" class="form-control btn btn-warning col-md-2">Filtrele</button>
+                 
                     </div>
+                    
             </form>
-
-
 
             <div class="col-lg-10">
                 <div class="product__page__content">
@@ -116,10 +115,7 @@
 
                                 </div>
                             </div>
-
                         }
-
-
                     </div>
 
                 </div>
