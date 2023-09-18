@@ -1,4 +1,5 @@
 ﻿@model IPagedList<EntityLayer.Animeler>
+
 @using X.PagedList
 @using X.PagedList.Mvc.Core
 @using X.PagedList.Web.Common
@@ -8,25 +9,62 @@
 }
 
 <!-- Breadcrumb Begin -->
-<div class="breadcrumb-option mt-9">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb__links">
-                    <a href="/Home/Index/"><i class="fa fa-home"></i> Anasayfa</a>
-                    <span >Kategoriler</span>
-                   @* <span>Romance</span>*@
+<!-- Breadcrumb End -->
+<!-- Product Section Begin -->
+<section class="product-page spad">
+
+    <div class="breadcrumb-option mt-9">
+        <div class="container">
+            <div class="row  ">
+                <div class="col-lg-12">
+                    <div class="breadcrumb__links">
+                        <a href="/Home/Index/"><i class="fa fa-home"></i> Anasayfa</a>
+                        <span>Kategoriler</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- Breadcrumb End -->
-<!-- Product Section Begin -->
-<section class="product-page spad">
+
     <div class="container">
-        <div class="row">
-            @await Component.InvokeAsync("_kategoriler")
+        <div class="row d-flex justify-content-center mt-4">
+
+
+
+            <form method="post ">
+                <div class="input-group mt-3 mb-3 col-md-10 d-flex justify-content-center">
+                                                          
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="product__page__filter">
+                            Sırala
+                            <select>
+                                @foreach (var item in collection)
+                                {
+                                    
+                                }
+                                <option value="">IDMb Puanına Göre</option>
+                                <option value="">Alfabetik</option>
+                                <option value="">Eklenme Tarihine Göre</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6">
+                        <div class="product__page__filter">                          
+                            <select>
+                                @foreach (var item in collection)
+                                {
+                                    <option value="">@item</option>
+                                }                                                           
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <input type="submit" class="form-control btn btn-warning col-md-1" value="Filtrele">
+                    </div>
+            </form>
+
+
 
             <div class="col-lg-10">
                 <div class="product__page__content">
@@ -54,9 +92,9 @@
                                     </div>
                                     <div class="product__item__text align-content-md-center">
                                         <ul class="float-left ml-1">
-                                        @await Component.InvokeAsync("_AnimelerKategori", new{animeID=item.AnimeID})
+                                            @await Component.InvokeAsync("_AnimelerKategori", new{animeID=item.AnimeID})
 
-                                        <h5><a href="#">@item.AnimeAdi</a></h5>
+                                            <h5><a href="#">@item.AnimeAdi</a></h5>
                                         </ul>
                                     </div>
 
@@ -68,22 +106,20 @@
 
                     </div>
 
-
-
                 </div>
             </div>
 
         </div>
         <div class="product__pagination  " style="margin: 10% 35%">
-        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions
-        {
-        LiElementClasses = new string[] { "page-item" },
+            @Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }), new PagedListRenderOptions
+            {
+            LiElementClasses = new string[] { "page-item" },
             PageClasses=new string[] {"current-page"},
-        UlElementClasses = new string[] { "pagination justify-content-center" },
-        //PageClasses = new string[] { "page-link" },
-        //Display = PagedListDisplayMode.IfNeeded
-        })
-       
+            UlElementClasses = new string[] { "pagination justify-content-center" },
+            //PageClasses = new string[] { "page-link" },
+            //Display = PagedListDisplayMode.IfNeeded
+            })
+
             @*<a href="#" class="current-page">1</a>
             <a href="#">2</a>
             <a href="#">3</a>
@@ -92,7 +128,7 @@
             <a href="#"><i class="fa fa-angle-double-right"></i></a>*@
         </div>
 
-  @*  </div>*@
+        @*  </div>*@
     </div>
 </section>
 <!-- Product Section End -->

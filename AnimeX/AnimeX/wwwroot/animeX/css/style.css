@@ -592,13 +592,13 @@ ol {
 -----------------------*/
 
 .product {
-    padding-bottom: 60px;
+    padding-bottom: 80px;
     padding-top: 1%;
 }
 
-.product-page {
+/*.product-page {
     padding-top: 60px;
-}
+}*/
 
 .btn__all {
     text-align: right;
