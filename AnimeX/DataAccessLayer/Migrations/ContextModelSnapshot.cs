@@ -139,7 +139,7 @@ namespace AnimeX.DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("AnimeEklenmeTarihi")
+                    b.Property<DateTime?>("AnimeEklenmeTarihi")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("AnimeImg")
@@ -147,15 +147,15 @@ namespace AnimeX.DataAccessLayer.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnimeKisaDetay")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnimeUyarlamasi")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<double>("IMDb")
-                        .HasColumnType("float");
+                    b.Property<string>("IMDb")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Like")
                         .HasColumnType("int");
