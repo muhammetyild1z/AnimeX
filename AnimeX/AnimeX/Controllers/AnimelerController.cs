@@ -2,8 +2,10 @@
 using AnimeX.DataAccessLayer.Concrate;
 using AnimeX.DataAccessLayer.EntityFramework;
 using EntityLayer;
+using Humanizer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Globalization;
 using System.Linq;
 using X.PagedList;
 
@@ -13,6 +15,7 @@ namespace AnimeX.UI.Controllers
     {
         AnimelerManager am = new AnimelerManager(new efAnimelerRepository(new Context()));
         CategoriesManager amn = new CategoriesManager(new efCatagoriesRepository(new Context()));
+        CategoryAnimeManeger amnn = new CategoryAnimeManeger(new efCategoryAnimeRepository(new Context()));
         [HttpGet]
         public IActionResult Index(int page = 1)
         {
@@ -25,29 +28,35 @@ namespace AnimeX.UI.Controllers
         public IActionResult Index(int idmb, string animeadi, string sirlaSelect, string dateSelect, string kategoriSelect, int page = 1)
         {
             var categoryID = amn.TGetList().Where(x => x.KategoriAdi == kategoriSelect).Select(x => x.kategoriID).FirstOrDefault();
-
-
-            var values = new List<Animeler>();
-            values = am.TGetList();
+       
+           var values = am.TGetList();
 
 
             if (animeadi != null)
             {
-                values.OrderBy(x => x.AnimeAdi==animeadi).ToList();
+                values = values.Where(x=>x.AnimeAdi.Contains(animeadi)).OrderBy(x => x.AnimeAdi).ToList();
             }
             else if (idmb != 0)
             {
-                values.Where(x =>Convert.ToInt32( x.IMDb) >= idmb).OrderBy(x=>x.IMDb).ToList();
+               
+                values = values.Where(x =>float.Parse(x.IMDb, CultureInfo.InvariantCulture.NumberFormat) >=idmb).OrderByDescending(x=>x.IMDb).ToList();              
             }
 
             else if (dateSelect != "Çıkış Tarihi")
             {
-                values.Where(x => x.AnimeCikisTarihi.Year.ToString() == dateSelect).ToList();
+                values = values.Where(x => x.AnimeCikisTarihi.Year.ToString() == dateSelect).ToList();
             }
             else if (kategoriSelect != "Kategori seç")
             {
-            //  var animeler= values.Where(x => x.categoryAnimes.Where(x=>x.KategoriID==categoryID).Select(x => x.AnimeID));
-              //  values.Where(x=>x.AnimeID==animeler).ToList();
+               
+                var catID= amn.TGetList().Where(x=>x.KategoriAdi==kategoriSelect).Select(x=>x.kategoriID).FirstOrDefault();
+                
+              var a= amnn.TGetList().Where(x=>x.KategoriID==catID).Select(x=>x.AnimeID).ToList();
+                
+              //     values = values.Find().ToList();
+                
+               
+
             }
             else if (sirlaSelect == "Alfabetik")
             {
@@ -55,7 +64,7 @@ namespace AnimeX.UI.Controllers
             }
             else if (sirlaSelect == "IDMb Puanına Göre")
             {
-                values = values.OrderBy(x => x.IMDb).ToList();
+                values = values.OrderByDescending(x => x.IMDb).ToList();
             }
             else if (sirlaSelect == "Eklenme Tarihine Göre")
             {

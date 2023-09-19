@@ -154,9 +154,8 @@ namespace AnimeX.DataAccessLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("IMDb")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<double>("IMDb")
+                        .HasColumnType("float");
 
                     b.Property<int>("Like")
                         .HasColumnType("int");
