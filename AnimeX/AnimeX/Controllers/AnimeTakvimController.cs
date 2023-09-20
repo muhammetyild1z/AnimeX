@@ -11,7 +11,7 @@ namespace AnimeX.UI.Controllers
         AnimelerManager am = new AnimelerManager(new efAnimelerRepository(new Context()));
         public IActionResult Index()
         {
-            var values=am.TGetList().Where(x=>x.AnimeCikisTarihi>DateTime.Now).ToList();
+            var values=am.TGetList().Where(x=>x.AnimeCikisTarihi>DateTime.Now).OrderByDescending(x => x.AnimeCikisTarihi).ToList();
             return View(values);
         }
     }

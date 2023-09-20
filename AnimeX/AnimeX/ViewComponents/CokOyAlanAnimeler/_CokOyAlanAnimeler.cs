@@ -11,7 +11,7 @@ namespace AnimeX.ViewComponents.CokOyAlanAnimeler
         {
             AnimelerManager am = new AnimelerManager(new efAnimelerRepository(new Context()));
 
-            return View(am.TGetList().OrderByDescending(x => x.IMDb).Take(10).ToList());
+            return View(am.TGetList().OrderByDescending(x => x.IMDb).Where(x=>x.AnimeCikisTarihi<DateTime.Now).Take(10).ToList());
         }
     }
 }

@@ -5,76 +5,138 @@
 }
 
 <section class="blog spad">
-    <div class="container">
-        <div class="row">
-
-            <div class="col-lg-6">
-                <div class="row">
-                    @foreach (var item in Model)
-                    {
-                        <div class="col-lg-12">
-                            <div class="blog__item set-bg" data-setbg="@item.AnimeImg">
-                                <div class="blog__item__text">
-                                    <p><span class="icon_calendar"></span> @item.AnimeCikisTarihi.ToString("dd MMMM yyyy")</p>
-                                    <h4><a href="#">@item.AnimeAdi</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="blog__item small__item set-bg" data-setbg="@item.AnimeImg">
-                                <div class="blog__item__text">
-                                    <p><span class="icon_calendar"></span> @item.AnimeCikisTarihi.ToString("dd MMMM yyyy")</p>
-                                    <h4><a href="#">@item.AnimeAdi</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="blog__item small__item set-bg" data-setbg="@item.AnimeImg">
-                                <div class="blog__item__text">
-                                    <p><span class="icon_calendar"></span>@item.AnimeCikisTarihi.ToString("dd MMMM yyyy")</p>
-                                    <h4><a href="#">@item.AnimeAdi</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    }
+    <section class="normal-breadcrumb set-bg " style="margin-top: -5%;  width: 100%;  z-index: 1;  position: absolute; "
+             data-setbg="https://r.resimlink.com/4VTe2hdaq.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="normal__breadcrumb__text">
+                        <h2>Yeni Sezonda Gelecek Animeler</h2>
+                        <p>Takipte Kalın..</p>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <div class="container" style="margin-top:25%; max-width: 95%;">
 
+      
 
-
-          @*   <div class="col-lg-6">
-            <div class="row">
-                @foreach (var item in Model)
-                    {
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="blog__item small__item set-bg" data-setbg="@item.AnimeImg">
+        <div class="row">
+            @for (int i = 0; i <1; i++)
+            {
+            <div class="col-lg-6">
+                <div class="row">
+                   
+                        <div class="col-lg-12">
+                            <div class="blog__item set-bg" data-setbg="@Model[i].AnimeImg">
                                 <div class="blog__item__text">
-                                    <p><span class="icon_calendar"></span> @item.AnimeCikisTarihi.ToString("dd MMMM yyyy")</p>
-                                    <h4><a href="#">@item.AnimeAdi</a></h4>
+                                    <p><span class="icon_calendar"></span> @Model[i].AnimeCikisTarihi.ToString("dd MMMM yyyy")</p>
+                                    <h4><a href="/AnimeIzle/Izle/@Model[i].AnimeID">@Model[i].AnimeAdi</a></h4>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="blog__item small__item set-bg" data-setbg="@item.AnimeImg">
+                            <div class="blog__item small__item set-bg" data-setbg="@Model[i+1].AnimeImg">
                                 <div class="blog__item__text">
-                                    <p><span class="icon_calendar"></span> @item.AnimeCikisTarihi.ToString("dd MMMM yyyy")</p>
-                                    <h4><a href="#">@item.AnimeAdi</a></h4>
+                                    <p><span class="icon_calendar"></span> @Model[i+1].AnimeCikisTarihi.ToString("dd MMMM yyyy")</p>
+                                    <h4><a href="/AnimeIzle/Izle/@Model[i+1].AnimeID">@Model[i+1].AnimeAdi</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="blog__item small__item set-bg" data-setbg="@Model[i+2].AnimeImg">
+                                <div class="blog__item__text">
+                                    <p><span class="icon_calendar"></span>@Model[i+2].AnimeCikisTarihi.ToString("dd MMMM yyyy")</p>
+                                    <h4><a href="/AnimeIzle/Izle/@Model[i+2].AnimeID">@Model[i+2].AnimeAdi</a></h4>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-12">
-                            <div class="blog__item set-bg" data-setbg="@item.AnimeImg">
+                            <div class="blog__item set-bg" data-setbg="@Model[i+3].AnimeImg">
                                 <div class="blog__item__text">
-                                    <p><span class="icon_calendar"></span> @item.AnimeCikisTarihi.ToString("dd MMMM yyyy")</p>
-                                    <h4><a href="#">@item.AnimeAdi</a></h4>
+                                    <p><span class="icon_calendar"></span> @Model[i+3].AnimeCikisTarihi.ToString("dd MMMM yyyy")</p>
+                                    <h4><a href="/AnimeIzle/Izle/@Model[i+3].AnimeID">@Model[i+3].AnimeAdi</a></h4>
                                 </div>
                             </div>
                         </div>
-                    }
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="blog__item small__item set-bg" data-setbg="@Model[i+4].AnimeImg">
+                                <div class="blog__item__text">
+                                    <p><span class="icon_calendar"></span> @Model[i+4].AnimeCikisTarihi.ToString("dd MMMM yyyy")</p>
+                                    <h4><a href="/AnimeIzle/Izle/@Model[i+4].AnimeID">@Model[i+4].AnimeAdi</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="blog__item small__item set-bg" data-setbg="@Model[i+5].AnimeImg">
+                                <div class="blog__item__text">
+                                    <p><span class="icon_calendar"></span>@Model[i+5].AnimeCikisTarihi.ToString("dd MMMM yyyy")</p>
+                                    <h4><a href="/AnimeIzle/Izle/@Model[i+5].AnimeID">@Model[i+5].AnimeAdi</a></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
            
-            </div>
-            </div>*@
+                <div class="col-lg-6">
+                    <div class="row">
 
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="blog__item small__item set-bg" data-setbg="@Model[i+6].AnimeImg">
+                            <div class="blog__item__text">
+                                <p><span class="icon_calendar"></span> @Model[i+6].AnimeCikisTarihi.ToString("dd MMMM yyyy")</p>
+                                    <h4><a href="/AnimeIzle/Izle/@Model[i+6].AnimeID">@Model[i+6].AnimeAdi</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="blog__item small__item set-bg" data-setbg="@Model[i+7].AnimeImg">
+                            <div class="blog__item__text">
+                                <p><span class="icon_calendar"></span> @Model[i+7].AnimeCikisTarihi.ToString("dd MMMM yyyy")</p>
+                                    <h4><a href="/AnimeIzle/Izle/@Model[i+7].AnimeID">@Model[i+7].AnimeAdi</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="blog__item set-bg" data-setbg="@Model[i+8].AnimeImg">
+                            <div class="blog__item__text">
+                                <p><span class="icon_calendar"></span> @Model[i+8].AnimeCikisTarihi.ToString("dd MMMM yyyy")</p>
+                                    <h4><a href="/AnimeIzle/Izle/@Model[i+8].AnimeID">@Model[i+8].AnimeAdi</a></h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="blog__item small__item set-bg" data-setbg="@Model[i+9].AnimeImg">
+                            <div class="blog__item__text">
+                                <p><span class="icon_calendar"></span> @Model[i+9].AnimeCikisTarihi.ToString("dd MMMM yyyy")</p>
+                                    <h4><a href="/AnimeIzle/Izle/@Model[i+9].AnimeID">@Model[i+9].AnimeAdi</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="blog__item small__item set-bg" data-setbg="@Model[i+10].AnimeImg">
+                            <div class="blog__item__text">
+                                <p><span class="icon_calendar"></span> @Model[i+10].AnimeCikisTarihi.ToString("dd MMMM yyyy")</p>
+                                    <h4><a href="/AnimeIzle/Izle/@Model[i+10].AnimeID">@Model[i+10].AnimeAdi</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="blog__item set-bg" data-setbg="@Model[i+11].AnimeImg">
+                            <div class="blog__item__text">
+                                <p><span class="icon_calendar"></span> @Model[i+11].AnimeCikisTarihi.ToString("dd MMMM yyyy")</p>
+                                    <h4><a href="/AnimeIzle/Izle/@Model[i+11].AnimeID">@Model[i+11].AnimeAdi</a></h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+
+
+            }
         </div>
     </div>
 </section>
