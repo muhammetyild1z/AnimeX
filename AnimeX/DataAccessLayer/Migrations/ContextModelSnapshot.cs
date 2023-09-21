@@ -120,6 +120,42 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("AnimeX.EntityLayer.Comments", b =>
+                {
+                    b.Property<int>("CommentID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CommentID"), 1L, 1);
+
+                    b.Property<int>("AnimeCommentID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CommentContent")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CommentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserImg")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("animelerAnimeID")
+                        .HasColumnType("int");
+
+                    b.HasKey("CommentID");
+
+                    b.HasIndex("animelerAnimeID");
+
+                    b.ToTable("comments");
+                });
+
             modelBuilder.Entity("EntityLayer.Animeler", b =>
                 {
                     b.Property<int>("AnimeID")
@@ -361,6 +397,17 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("AnimeX.EntityLayer.Comments", b =>
+                {
+                    b.HasOne("EntityLayer.Animeler", "animeler")
+                        .WithMany("comments")
+                        .HasForeignKey("animelerAnimeID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("animeler");
+                });
+
             modelBuilder.Entity("EntityLayer.AnimeSezon", b =>
                 {
                     b.HasOne("EntityLayer.Animeler", "AnimeID_Sezon")
@@ -447,6 +494,8 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.Navigation("animeSezons");
 
                     b.Navigation("categoryAnimes");
+
+                    b.Navigation("comments");
                 });
 
             modelBuilder.Entity("EntityLayer.Categories", b =>

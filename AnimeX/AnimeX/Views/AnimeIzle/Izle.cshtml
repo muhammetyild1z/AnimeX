@@ -1,4 +1,4 @@
-﻿@model List<EntityLayer.AnimeSezon>
+﻿
 
 @{
     ViewData["Title"] = "Izle";
@@ -90,8 +90,7 @@
             </div>
         </div>
 
-
-        <p>BU KISIMA YORUMLAR GELECEK</p>
+        @await Component.InvokeAsync("_Comments" ,new { animeID=ViewBag.AnimeID})
     </div>
 </section>
 <!-- Anime Section End -->

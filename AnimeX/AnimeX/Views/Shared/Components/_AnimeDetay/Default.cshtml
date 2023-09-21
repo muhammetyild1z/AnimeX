@@ -8,7 +8,7 @@
                     <div class="anime__details__pic set-bg" data-setbg="@Model.AnimeImg">
                         <div class="comment"><i class="fa fa-heart"></i> @Model.Like</div>
                         <div class="view"><i class="fa fa-eye"></i> 9141</div>
-                          <div class="anime__details__btn  " >
+                          <div class="anime__details__btn d-flex justify-content-center " >
                         <a href="#" class="follow-btn"><i class="fa fa-heart-o"></i> Favoriye Ekle</a>
                     </div>
                     </div>
@@ -40,9 +40,14 @@
                                         <li><span>Uyarlama:</span> @Model.AnimeUyarlamasi</li>
                                         <li><span>IMDb:</span> @Model.IMDb</li>
                                         <li><span>Çıkış Yılı:</span> @(((DateTime)Model.AnimeCikisTarihi).ToString("MMMM yyyy"))</li>
-                                        <li><span>Kategori:</span> @await Component.InvokeAsync("_AnimeDetayKategori",new {animeID=Model.AnimeID})</li>
-                                       
+
                                     </ul>
+                                    <span class="text-white font-weight-bold">Kategori:</span>
+                                    <ul class="row">
+                                        @await Component.InvokeAsync("_AnimeDetayKategori",new {animeID=Model.AnimeID})
+                                    </ul>
+                                      
+                                  
                                    
                                 </div>
                               

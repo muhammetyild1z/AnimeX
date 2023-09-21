@@ -1,0 +1,39 @@
+﻿@model List<EntityLayer.Comments>
+
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="anime__details__review">
+            <div class="section-title">
+                <h5>Yorumlar</h5>
+            </div>
+            @foreach (var item in Model)
+            {
+                <div class="anime__review__item">
+                    <div class="anime__review__item__pic">
+                        <img src="@item.UserImg" alt="">
+                    </div>
+                    <div class="anime__review__item__text">
+                        <h6>@item.UserName - <span>@item.CommentDate.ToString("dddd MMM yy")</span></h6>
+                        <p>
+                            @item.CommentContent
+                        </p>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+        <div class="anime__details__form">
+            <div class="section-title">
+                <h5>Yorum Yaz</h5>
+            </div>
+            <form method="post" asp-action="CommentAdd" asp-controller="AnimeIzle" asp-route-data="1">
+                <textarea name="CommentContent" placeholder="Yorum.."></textarea>
+                <button type="submit"><i class="fa fa-location-arrow"></i> Gönder</button>
+            </form>
+        </div>
+       
+    </div>
+</div>
+

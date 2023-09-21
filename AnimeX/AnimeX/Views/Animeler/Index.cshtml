@@ -34,7 +34,7 @@
             <form class="col-md-9 d-flex justify-content-center" method="post">
                 <div class="input-group mt-3 mb-3 col-md-10 d-flex justify-content-center">
                     <p class="mt-2 text-white font-weight-bold"> Sırala</p>
-                    <div class="col-md-3 ">
+                    <div class="col-md-2 ">
                         <div class="product__page__filter">
                            
                             <select name="sirlaSelect" class="bg-transparent text-dark" >
@@ -45,7 +45,7 @@
                         </div>
                     </div>
 
-                    <input name="idmb" type="number" placeholder="IDMb" maxlength="1"  class="form-control bg-transparent border-0 col-md-1"/>
+                    <input name="idmb" type="number" placeholder="IDMb" maxlength="1"  class="form-control bg-transparent border-0 col-md-2"/>
                     <input name="animeadi" type="text" placeholder="Anime adı" class="form-control bg-transparent border-0 col-md-3" />
 
                     <div class="col-md-2">
@@ -109,7 +109,7 @@
                                         <ul class="float-left ml-1">
                                             @await Component.InvokeAsync("_AnimelerKategori", new{animeID=item.AnimeID})
 
-                                            <h5><a href="#">@item.AnimeAdi</a></h5>
+                                            <h5>@Html.ActionLink(@item.AnimeAdi, "Izle", "AnimeIzle", new { AnimeID_Sezon=item.AnimeID})</h5>
                                         </ul>
                                     </div>
 
