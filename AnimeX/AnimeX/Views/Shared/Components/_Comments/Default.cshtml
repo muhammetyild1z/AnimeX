@@ -24,15 +24,23 @@
 
 
         </div>
-        <div class="anime__details__form">
+
+        @if (User.Identities!=null)
+        {
+               <div class="anime__details__form">
             <div class="section-title">
                 <h5>Yorum Yaz</h5>
             </div>
-            <form method="post" asp-action="CommentAdd" asp-controller="AnimeIzle" asp-route-data="1">
+
+            <form method="post" asp-action="CommentAdd" asp-controller="AnimeIzle">
+                <input type="hidden" name="AnimeCommentID" value="@ViewBag.AnimeID"/>
+                <input type="hidden" name="AnimeCommentID" value="@User.Identity.Name.Trim()"/>
                 <textarea name="CommentContent" placeholder="Yorum.."></textarea>
                 <button type="submit"><i class="fa fa-location-arrow"></i> Gönder</button>
             </form>
         </div>
+        }
+     
        
     </div>
 </div>

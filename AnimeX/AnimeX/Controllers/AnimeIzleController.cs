@@ -3,6 +3,7 @@ using AnimeX.BusinnessLayer.Concrate;
 using AnimeX.DataAccessLayer.Concrate;
 using AnimeX.DataAccessLayer.EntityFramework;
 using EntityLayer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AnimeX.UI.Controllers
@@ -24,20 +25,17 @@ namespace AnimeX.UI.Controllers
              ViewBag.Sezonlar =values.Select(x=>x.Bolumler).Distinct().ToList();
             return View(values);
         }
+        [Authorize]
         [HttpPost]
-        public IActionResult CommentAdd(string CommentContent, int animeID)
+        public IActionResult CommentAdd( Comments p, int animeID)
         {
+            var a = ViewBag.AnimeID;
             CommentManager cm= new CommentManager(new efCommentRepository(new Context()));
-            Comments comment = new Comments()
-            {
-                CommentContent = CommentContent,
-                CommentDate = DateTime.Now,
-                UserImg = "https://r.resimlink.com/W2K3t-gaJPqd.jpg",
-                UserName = "test",
-                AnimeCommentID = 1
-            };
-            cm.TInsert(comment);
-            return View();
+              
+            p.animeler.AnimeID = p.AnimeCommentID;        
+            p.CommentDate = DateTime.Now;          
+            cm.TInsert(p);
+            return RedirectToAction("Izle","AnimeIzle",new {animeID});
         }
     }
 }
