@@ -12,11 +12,12 @@ namespace EntityLayer
     {
         [Key]
         public int CommentID { get; set; }
-        public string UserImg { get; set; }
         public string UserName { get; set; }
+        public string UserImg { get; set; }
         public string CommentContent { get; set; }
         public DateTime CommentDate { get; set; }
         public int AnimeCommentID { get; set; }
-        public Animeler animeler { get; set; }
+        public bool CommentStatus { get; set; }
+        public Animeler? animeler { get; set; }
     }
 }

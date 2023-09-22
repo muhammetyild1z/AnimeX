@@ -9,6 +9,6 @@ namespace AnimeX.EntityLayer
 {
     public class AppUser: IdentityUser<int>
     {
-
+        public string UserImg { get; set; }
     }
 }

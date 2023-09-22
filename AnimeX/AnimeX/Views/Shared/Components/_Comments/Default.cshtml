@@ -11,37 +11,48 @@
             {
                 <div class="anime__review__item">
                     <div class="anime__review__item__pic">
-                        <img src="@item.UserImg" alt="">
+
+                
+                            <img src="@item.UserImg" alt="">
+                        
+                       
                     </div>
                     <div class="anime__review__item__text">
-                        <h6>@item.UserName - <span>@item.CommentDate.ToString("dddd MMM yy")</span></h6>
+                        <h6>@item.UserName - <span>@item.CommentDate.ToString(" MMM yy HH:MM")</span></h6>
                         <p>
                             @item.CommentContent
                         </p>
                     </div>
                 </div>
             }
-
-
         </div>
 
-        @if (User.Identities!=null)
-        {
-               <div class="anime__details__form">
+        <div class="anime__details__form">
             <div class="section-title">
                 <h5>Yorum Yaz</h5>
             </div>
+            @if (User.Identity.IsAuthenticated == true)
+            {
+                <form method="post" asp-action="CommentAdd" asp-controller="AnimeIzle">
+                    <input type="hidden" name="animeID" value="@ViewBag.animeID" />              
+                    <input type="hidden" name="UserName" value="@User.Identity.Name.Trim()" />
+                    <textarea name="CommentContent" placeholder="Yorum.."></textarea>
+                    <button class="mb-5" type="submit"><i class="fa fa-location-arrow "></i> Gönder</button>
+                </form>
+            }
+            else
+            {
+                <div class="anime__details__form">
+                    <div class="section-title">
+                        <h5>Yorum Yazabilmek İçin Giriş Yapmalısın..</h5>
+                        <a href="/Account/SignIn/">Hemen Giriş Yap</a>
+                    </div>
+                    
+                </div>
+            }
 
-            <form method="post" asp-action="CommentAdd" asp-controller="AnimeIzle">
-                <input type="hidden" name="AnimeCommentID" value="@ViewBag.AnimeID"/>
-                <input type="hidden" name="AnimeCommentID" value="@User.Identity.Name.Trim()"/>
-                <textarea name="CommentContent" placeholder="Yorum.."></textarea>
-                <button type="submit"><i class="fa fa-location-arrow"></i> Gönder</button>
-            </form>
+
+
+            </div>
         </div>
-        }
-     
-       
-    </div>
-</div>
 
