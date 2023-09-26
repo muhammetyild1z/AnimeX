@@ -124,6 +124,27 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("AnimeX.EntityLayer.Sezons", b =>
+                {
+                    b.Property<int>("SezonID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SezonID"), 1L, 1);
+
+                    b.Property<int>("AnimeBolumID_SezonID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("BolumID")
+                        .HasColumnType("int");
+
+                    b.HasKey("SezonID");
+
+                    b.HasIndex("AnimeBolumID_SezonID");
+
+                    b.ToTable("sezons");
+                });
+
             modelBuilder.Entity("EntityLayer.Animeler", b =>
                 {
                     b.Property<int>("AnimeID")
@@ -148,6 +169,9 @@ namespace AnimeX.DataAccessLayer.Migrations
 
                     b.Property<string>("AnimeImg")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AnimeKapakImg")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AnimeKisaDetay")
@@ -404,6 +428,17 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("AnimeX.EntityLayer.Sezons", b =>
+                {
+                    b.HasOne("EntityLayer.AnimeSezon", "AnimeBolumID_Sezon")
+                        .WithMany("sezons")
+                        .HasForeignKey("AnimeBolumID_SezonID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AnimeBolumID_Sezon");
+                });
+
             modelBuilder.Entity("EntityLayer.AnimeSezon", b =>
                 {
                     b.HasOne("EntityLayer.Animeler", "AnimeID_Sezon")
@@ -501,6 +536,11 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.Navigation("categoryAnimes");
 
                     b.Navigation("comments");
+                });
+
+            modelBuilder.Entity("EntityLayer.AnimeSezon", b =>
+                {
+                    b.Navigation("sezons");
                 });
 
             modelBuilder.Entity("EntityLayer.Categories", b =>

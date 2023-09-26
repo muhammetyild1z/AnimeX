@@ -21,6 +21,7 @@ namespace AnimeX.DataAccessLayer.Concrate
         public DbSet<CategoryAnime> CategoryAnimes { get; set; }
         public DbSet<AnimeSezon> animeSezons { get; set; }
         public DbSet<Comments> comments { get; set; }
+        public DbSet<Sezons> sezons { get; set; }
 
     }
 }

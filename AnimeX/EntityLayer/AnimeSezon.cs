@@ -1,4 +1,5 @@
-﻿using EntityLayer;
+﻿using AnimeX.EntityLayer;
+using EntityLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -20,5 +21,6 @@ namespace EntityLayer
         public DateTime SezonCreateDate { get; set; }
         public Animeler AnimeID_Sezon { get; set; }
         public int Anime_ID_Sezon { get; set; }
+        public List<Sezons> sezons { get; set; }
     }
 }
