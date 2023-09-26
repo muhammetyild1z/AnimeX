@@ -27,13 +27,15 @@ namespace AnimeX.UI.Controllers
         AnimeSezonManager am = new AnimeSezonManager(new efAnimeSezonRepository(new Context()));
         AnimelerManager anm = new AnimelerManager(new efAnimelerRepository(new Context()));
         SezonsManager sm=new SezonsManager(new efSezonsRepository(new Context()));
+        CommentManager cm=new CommentManager(new efCommentRepository(new Context()));
 
         public IActionResult Izle(int AnimeID_Sezon)
         {
            
             ViewBag.AnimeName = anm.TGetByID(AnimeID_Sezon).AnimeAdi;
             ViewBag.AnimeID = anm.TGetByID(AnimeID_Sezon).AnimeID;
-            ViewBag.AnimeKapakImg = anm.TGetByID(AnimeID_Sezon).AnimeKapakImg;   
+            ViewBag.AnimeKapakImg = anm.TGetByID(AnimeID_Sezon).AnimeKapakImg; 
+            ViewBag.CommentCount=cm.TGetList().Where(x=>x.AnimeCommentID==AnimeID_Sezon).Count();
             
             return View();
         }
