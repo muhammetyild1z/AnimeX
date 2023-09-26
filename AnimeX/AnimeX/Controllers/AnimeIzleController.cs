@@ -26,20 +26,16 @@ namespace AnimeX.UI.Controllers
         }
         AnimeSezonManager am = new AnimeSezonManager(new efAnimeSezonRepository(new Context()));
         AnimelerManager anm = new AnimelerManager(new efAnimelerRepository(new Context()));
+        SezonsManager sm=new SezonsManager(new efSezonsRepository(new Context()));
 
         public IActionResult Izle(int AnimeID_Sezon)
         {
            
             ViewBag.AnimeName = anm.TGetByID(AnimeID_Sezon).AnimeAdi;
             ViewBag.AnimeID = anm.TGetByID(AnimeID_Sezon).AnimeID;
-            ViewBag.AnimeKapakImg = anm.TGetByID(AnimeID_Sezon).AnimeKapakImg;
-            var values = am.TGetList().Where(x => x.Anime_ID_Sezon == AnimeID_Sezon).ToList();
-            var sezon = values.DistinctBy(x => x.Sezonlar).ToList();
-
-            ViewBag.AnimeImg = values.Select(x => x.SezonIzlekapakImg).FirstOrDefault();
-            ViewBag.Sezonlar = values.Select(x => x.Sezonlar).Distinct().ToList();
-            ViewBag.Sezonlar = values.Select(x => x.Bolumler).Distinct().ToList();
-            return View(values);
+            ViewBag.AnimeKapakImg = anm.TGetByID(AnimeID_Sezon).AnimeKapakImg;   
+            
+            return View();
         }
         [Authorize]
         [HttpPost]

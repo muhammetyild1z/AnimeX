@@ -126,21 +126,24 @@ namespace AnimeX.DataAccessLayer.Migrations
 
             modelBuilder.Entity("AnimeX.EntityLayer.Sezons", b =>
                 {
-                    b.Property<int>("SezonID")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SezonID"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
-                    b.Property<int>("AnimeBolumID_SezonID")
+                    b.Property<int>("Anime_id")
                         .HasColumnType("int");
 
-                    b.Property<int>("BolumID")
+                    b.Property<int>("Sezon_SezonID")
                         .HasColumnType("int");
 
-                    b.HasKey("SezonID");
+                    b.Property<int?>("animeSezonID")
+                        .HasColumnType("int");
 
-                    b.HasIndex("AnimeBolumID_SezonID");
+                    b.HasKey("ID");
+
+                    b.HasIndex("animeSezonID");
 
                     b.ToTable("sezons");
                 });
@@ -207,27 +210,17 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.Property<int>("AnimeID_SezonAnimeID")
                         .HasColumnType("int");
 
-                    b.Property<int>("Anime_ID_Sezon")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("BolumCreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("Bolumler")
+                    b.Property<string>("BolumIzleUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("BolumNo")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("SezonCreateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("SezonIzleUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SezonIzlekapakImg")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Sezonlar")
+                    b.Property<int>("SezonID")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
@@ -430,13 +423,11 @@ namespace AnimeX.DataAccessLayer.Migrations
 
             modelBuilder.Entity("AnimeX.EntityLayer.Sezons", b =>
                 {
-                    b.HasOne("EntityLayer.AnimeSezon", "AnimeBolumID_Sezon")
+                    b.HasOne("EntityLayer.AnimeSezon", "animeSezon")
                         .WithMany("sezons")
-                        .HasForeignKey("AnimeBolumID_SezonID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("animeSezonID");
 
-                    b.Navigation("AnimeBolumID_Sezon");
+                    b.Navigation("animeSezon");
                 });
 
             modelBuilder.Entity("EntityLayer.AnimeSezon", b =>

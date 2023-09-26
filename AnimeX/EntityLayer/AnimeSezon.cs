@@ -12,15 +12,12 @@ namespace EntityLayer
     public class AnimeSezon
     {
         [Key]
-        public int ID { get; set; }
-        public int Sezonlar { get; set; }
-        public int Bolumler { get; set; }
-        public string SezonIzlekapakImg { get; set; }
-        public string SezonIzleUrl { get; set; }
+        public int ID { get; set; }     
+        public int BolumNo { get; set; }      
+        public string BolumIzleUrl { get; set; }
         public DateTime BolumCreateDate { get; set; }
-        public DateTime SezonCreateDate { get; set; }
         public Animeler AnimeID_Sezon { get; set; }
-        public int Anime_ID_Sezon { get; set; }
+        public int SezonID{ get; set; }
         public List<Sezons> sezons { get; set; }
     }
 }
