@@ -23,9 +23,7 @@ namespace EntityLayer
         public string? AnimeKapakImg { get; set; }
         public DateTime? AnimeEklenmeTarihi { get; set; }
         public DateTime AnimeCikisTarihi { get; set; }
-
-        public List<CategoryAnime> categoryAnimes { get; set; }
-        public List<AnimeSezon> animeSezons { get; set; }
+        public List<CategoryAnime> categoryAnimes { get; set; }      
         public List<Comments> comments { get; set; }
        
 

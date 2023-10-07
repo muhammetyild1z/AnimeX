@@ -28,18 +28,18 @@ namespace AnimeX.UI.Controllers
         public IActionResult Index(int idmb, string animeadi, string sirlaSelect, string dateSelect, string kategoriSelect, int page = 1)
         {
             var categoryID = amn.TGetList().Where(x => x.KategoriAdi == kategoriSelect).Select(x => x.kategoriID).FirstOrDefault();
-       
-           var values = am.TGetList();
+
+            var values = am.TGetList();
 
 
             if (animeadi != null)
             {
-                values = values.Where(x=>x.AnimeAdi.Contains(animeadi)).OrderBy(x => x.AnimeAdi).ToList();
+                values = values.Where(x => x.AnimeAdi.Contains(animeadi)).OrderBy(x => x.AnimeAdi).ToList();
             }
             else if (idmb != 0)
             {
-               
-                values = values.Where(x =>float.Parse(x.IMDb, CultureInfo.InvariantCulture.NumberFormat) >=idmb).OrderByDescending(x=>x.IMDb).ToList();              
+
+                values = values.Where(x => float.Parse(x.IMDb, CultureInfo.InvariantCulture.NumberFormat) >= idmb).OrderByDescending(x => x.IMDb).ToList();
             }
 
             else if (dateSelect != "Çıkış Tarihi")
@@ -48,14 +48,19 @@ namespace AnimeX.UI.Controllers
             }
             else if (kategoriSelect != "Kategori seç")
             {
-               
-                var catID= amn.TGetList().Where(x=>x.KategoriAdi==kategoriSelect).Select(x=>x.kategoriID).FirstOrDefault();
+
+                var catID = amn.TGetList().Where(x => x.KategoriAdi == kategoriSelect).Select(x => x.kategoriID).FirstOrDefault();
+
+                var animeid = amnn.TGetList().Where(x => x.KategoriID == catID).Select(x => x.AnimeID).ToList();
                 
-              var a= amnn.TGetList().Where(x=>x.KategoriID==catID).Select(x=>x.AnimeID).ToList();
-                
-              //     values = values.Find().ToList();
-                
-               
+                for (int i = 0; i < animeid.Count; i++)
+                {
+
+                    var animeler = am.TGetList().Where(x => x.AnimeID == animeid[i]).ToList();
+                    values = animeler;
+                    
+                }
+                var b = values;
 
             }
             else if (sirlaSelect == "Alfabetik")

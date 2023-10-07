@@ -24,9 +24,9 @@ namespace AnimeX.UI.Controllers
         {
             _userManager = userManager;
         }
-        AnimeSezonManager am = new AnimeSezonManager(new efAnimeSezonRepository(new Context()));
+        
         AnimelerManager anm = new AnimelerManager(new efAnimelerRepository(new Context()));
-        SezonsManager sm=new SezonsManager(new efSezonsRepository(new Context()));
+       
         CommentManager cm=new CommentManager(new efCommentRepository(new Context()));
 
         public IActionResult Izle(int AnimeID_Sezon)
@@ -35,8 +35,7 @@ namespace AnimeX.UI.Controllers
             ViewBag.AnimeName = anm.TGetByID(AnimeID_Sezon).AnimeAdi;
             ViewBag.AnimeID = anm.TGetByID(AnimeID_Sezon).AnimeID;
             ViewBag.AnimeKapakImg = anm.TGetByID(AnimeID_Sezon).AnimeKapakImg; 
-            ViewBag.CommentCount=cm.TGetList().Where(x=>x.AnimeCommentID==AnimeID_Sezon).Count();
-            
+            ViewBag.CommentCount=cm.TGetList().Where(x=>x.AnimeCommentID==AnimeID_Sezon).Count();        
             return View();
         }
         [Authorize]
@@ -44,12 +43,9 @@ namespace AnimeX.UI.Controllers
         public async Task<IActionResult> CommentAdd(Comments p, int animeID)
         {
             CommentManager cm = new CommentManager(new efCommentRepository(new Context()));
-            var user = await _userManager.FindByNameAsync(User.Identity.Name);
-            
-            p.UserImg = user.UserImg;
-            
-            p.AnimeCommentID = animeID;
-            
+            var user = await _userManager.FindByNameAsync(User.Identity.Name);        
+            p.UserImg = user.UserImg;      
+            p.AnimeCommentID = animeID;           
             p.CommentDate = DateTime.Now;
             cm.TInsert(p);
             return RedirectToAction("Izle", "AnimeIzle", new { AnimeID_Sezon= animeID });
