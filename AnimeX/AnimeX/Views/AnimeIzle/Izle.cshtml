@@ -1,5 +1,4 @@
 ﻿
-
 @{
     ViewData["Title"] = "Izle";
     Layout = "~/Views/CustomerLayout/Index.cshtml";
@@ -56,17 +55,18 @@
               
                 <div class="anime__video__player">
 
-                 <iframe width="100%" height="600" frameborder="0" src="https://mega.nz/embed/sP8WGIiI#uSRdYSzRbw83_MSh563XUot9r1Vy8lrAlE-kuKK1B_g" allowfullscreen ></iframe>                     
-                    
+                    <iframe width="100%" height="600" frameborder="0" src="@ViewBag.bolumUrl" allowfullscreen></iframe>
+
                 </div>
 
                 <div class="anime__details__episodes">
                     <div class="section-title">
                         <h5>Sezonlar</h5>
                     </div>
-                    
-                        <a>Sezon</a>
-                    
+                   
+                 
+                    @await Component.InvokeAsync("_AnimeIzleSezonlar" ,new { animeID=ViewBag.AnimeID})
+
 
 
 
@@ -75,8 +75,10 @@
                     <div class="section-title">
                         <h5>Bölümler</h5>
                     </div>
+
+                    @await Component.InvokeAsync("_AnimeIzleBolumler" ,new { animeID=ViewBag.AnimeID})
                    
-                        <a href="/AnimeIzle/Bolum/"> Bölüm</a>
+                        
                     
                 </div>
 

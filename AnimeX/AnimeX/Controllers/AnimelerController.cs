@@ -34,7 +34,7 @@ namespace AnimeX.UI.Controllers
 
             if (animeadi != null)
             {
-                values = values.Where(x => x.AnimeAdi.Contains(animeadi)).OrderBy(x => x.AnimeAdi).ToList();
+                values = values.Where(x => x.AnimeAdi.ToLower().Contains(animeadi.ToLower())).OrderBy(x => x.AnimeAdi).ToList();
             }
             else if (idmb != 0)
             {
@@ -52,15 +52,7 @@ namespace AnimeX.UI.Controllers
                 var catID = amn.TGetList().Where(x => x.KategoriAdi == kategoriSelect).Select(x => x.kategoriID).FirstOrDefault();
 
                 var animeid = amnn.TGetList().Where(x => x.KategoriID == catID).Select(x => x.AnimeID).ToList();
-                
-                for (int i = 0; i < animeid.Count; i++)
-                {
-
-                    var animeler = am.TGetList().Where(x => x.AnimeID == animeid[i]).ToList();
-                    values = animeler;
-                    
-                }
-                var b = values;
+                // anime id geliyor anime tablosunda sorgu yapip liste halinde gelmiyor valuese eklenecek         
 
             }
             else if (sirlaSelect == "Alfabetik")

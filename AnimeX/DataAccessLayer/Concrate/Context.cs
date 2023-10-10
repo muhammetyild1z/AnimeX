@@ -18,9 +18,10 @@ namespace AnimeX.DataAccessLayer.Concrate
         }
         public DbSet<Animeler> Animelers { get; set; }
         public DbSet<Categories> Categories { get; set; }
-        public DbSet<CategoryAnime> CategoryAnimes { get; set; }
-      
+        public DbSet<CategoryAnime> CategoryAnimes { get; set; }     
         public DbSet<Comments> comments { get; set; }
+        public DbSet<AnimeSezonlar> animeSezonlars { get; set; }
+        public DbSet<AnimeBolumler> animeBolumlers { get; set; }
        
 
     }
