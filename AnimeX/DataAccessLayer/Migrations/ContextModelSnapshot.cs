@@ -22,53 +22,6 @@ namespace AnimeX.DataAccessLayer.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("AnimeX.EntityLayer.AnimeBolumler", b =>
-                {
-                    b.Property<int>("AnimelerBolumId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AnimelerBolumId"), 1L, 1);
-
-                    b.Property<int>("AnimeID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("BolumNo")
-                        .HasColumnType("int");
-
-                    b.Property<string>("BolumUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("AnimelerBolumId");
-
-                    b.ToTable("animeBolumlers");
-                });
-
-            modelBuilder.Entity("AnimeX.EntityLayer.AnimeSezonlar", b =>
-                {
-                    b.Property<int>("AnimelerSezonId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AnimelerSezonId"), 1L, 1);
-
-                    b.Property<int>("AnimeID")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("BolumAnimelerBolumId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("BolumNo")
-                        .HasColumnType("int");
-
-                    b.HasKey("AnimelerSezonId");
-
-                    b.HasIndex("BolumAnimelerBolumId");
-
-                    b.ToTable("animeSezonlars");
-                });
-
             modelBuilder.Entity("AnimeX.EntityLayer.AppRole", b =>
                 {
                     b.Property<int>("Id")
@@ -171,6 +124,29 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("EntityLayer.AnimeBolumler", b =>
+                {
+                    b.Property<int>("AnimelerBolumId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AnimelerBolumId"), 1L, 1);
+
+                    b.Property<int>("AnimeID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("BolumNo")
+                        .HasColumnType("int");
+
+                    b.Property<string>("BolumUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AnimelerBolumId");
+
+                    b.ToTable("animeBolumlers");
+                });
+
             modelBuilder.Entity("EntityLayer.Animeler", b =>
                 {
                     b.Property<int>("AnimeID")
@@ -230,6 +206,30 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.HasIndex("AnimeSezonlarAnimelerSezonId");
 
                     b.ToTable("Animelers");
+                });
+
+            modelBuilder.Entity("EntityLayer.AnimeSezonlar", b =>
+                {
+                    b.Property<int>("AnimelerSezonId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AnimelerSezonId"), 1L, 1);
+
+                    b.Property<int>("AnimeID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("BolumAnimelerBolumId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SezonNo")
+                        .HasColumnType("int");
+
+                    b.HasKey("AnimelerSezonId");
+
+                    b.HasIndex("BolumAnimelerBolumId");
+
+                    b.ToTable("animeSezonlars");
                 });
 
             modelBuilder.Entity("EntityLayer.Categories", b =>
@@ -423,24 +423,24 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("AnimeX.EntityLayer.AnimeSezonlar", b =>
+            modelBuilder.Entity("EntityLayer.Animeler", b =>
                 {
-                    b.HasOne("AnimeX.EntityLayer.AnimeBolumler", "Bolum")
+                    b.HasOne("EntityLayer.AnimeBolumler", null)
+                        .WithMany("Animelers")
+                        .HasForeignKey("AnimeBolumlerAnimelerBolumId");
+
+                    b.HasOne("EntityLayer.AnimeSezonlar", null)
+                        .WithMany("Animelers")
+                        .HasForeignKey("AnimeSezonlarAnimelerSezonId");
+                });
+
+            modelBuilder.Entity("EntityLayer.AnimeSezonlar", b =>
+                {
+                    b.HasOne("EntityLayer.AnimeBolumler", "Bolum")
                         .WithMany("AnimeSezon")
                         .HasForeignKey("BolumAnimelerBolumId");
 
                     b.Navigation("Bolum");
-                });
-
-            modelBuilder.Entity("EntityLayer.Animeler", b =>
-                {
-                    b.HasOne("AnimeX.EntityLayer.AnimeBolumler", null)
-                        .WithMany("Animelers")
-                        .HasForeignKey("AnimeBolumlerAnimelerBolumId");
-
-                    b.HasOne("AnimeX.EntityLayer.AnimeSezonlar", null)
-                        .WithMany("Animelers")
-                        .HasForeignKey("AnimeSezonlarAnimelerSezonId");
                 });
 
             modelBuilder.Entity("EntityLayer.CategoryAnime", b =>
@@ -522,15 +522,10 @@ namespace AnimeX.DataAccessLayer.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("AnimeX.EntityLayer.AnimeBolumler", b =>
+            modelBuilder.Entity("EntityLayer.AnimeBolumler", b =>
                 {
                     b.Navigation("AnimeSezon");
 
-                    b.Navigation("Animelers");
-                });
-
-            modelBuilder.Entity("AnimeX.EntityLayer.AnimeSezonlar", b =>
-                {
                     b.Navigation("Animelers");
                 });
 
@@ -539,6 +534,11 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.Navigation("categoryAnimes");
 
                     b.Navigation("comments");
+                });
+
+            modelBuilder.Entity("EntityLayer.AnimeSezonlar", b =>
+                {
+                    b.Navigation("Animelers");
                 });
 
             modelBuilder.Entity("EntityLayer.Categories", b =>

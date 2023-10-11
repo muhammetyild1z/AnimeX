@@ -1,33 +1,32 @@
-﻿
-
-@{
+﻿@{
     ViewData["Title"] = "Anasayfa";
     Layout = "~/Views/CustomerLayout/Index.cshtml";
 }
 
 @await Component.InvokeAsync("_Slider")
- <section class="product spad" style="max-width:80%; position: relative;  margin: auto;">
-        <div class="container">
-            <div class="row">
-                                        
-                @await Component.InvokeAsync("_SonEklenenBolumler")                         
-           
-               @* <div class="col-lg-4 col-md-6 col-sm-8">
-                    <div class="product__sidebar">
-                    
-                   
-                    @await Component.InvokeAsync("_EnYuksekPuanliAnimeler")
+<section class="product spad" style="max-width:80%; position: relative;  margin: auto;">
+    <div class="container">
+        <div class="row">
 
-                    </div>
-                </div>*@
+         
+            @await Component.InvokeAsync("_SonEklenenBolumler")
+
+            @* <div class="col-lg-4 col-md-6 col-sm-8">
+            <div class="product__sidebar">
+
+
+            @await Component.InvokeAsync("_EnYuksekPuanliAnimeler")
+
+            </div>
+            </div>*@
             @await Component.InvokeAsync("_CokBegenilenAnimeler")
             @await Component.InvokeAsync("_CokOyAlanAnimeler")
             @await Component.InvokeAsync("_SonCıkanAnimeler")
-           @* @await Component.InvokeAsync("_GelecekAnimeler")*@
-           
-            </div>
+            @* @await Component.InvokeAsync("_GelecekAnimeler")*@
+
         </div>
-    </section>
+    </div>
+</section>
 
 
 

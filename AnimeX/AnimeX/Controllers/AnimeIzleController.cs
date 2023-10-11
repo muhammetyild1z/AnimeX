@@ -28,11 +28,13 @@ namespace AnimeX.UI.Controllers
 
         AnimelerManager animeManager = new AnimelerManager(new efAnimelerRepository(new Context()));
         AnimeBolumlerManager animeBolumManager = new AnimeBolumlerManager(new efAnimeBolumlerRepository(new Context()));
+        AnimeSezonlarManager animeSezonManager = new AnimeSezonlarManager(new efAnimeSezonlarRepository(new Context()));
         CommentManager commentManager = new CommentManager(new efCommentRepository(new Context()));
 
-        public IActionResult Izle(int AnimeID_Sezon , int bolumNo)
+        public IActionResult Izle(int AnimeID_Sezon , int bolumNo , int SezonNo)
         {
             ViewBag.bolumUrl=string.Empty;
+            ViewBag.sezonsBolum=string.Empty;
 
             ViewBag.AnimeName = animeManager.TGetByID(AnimeID_Sezon).AnimeAdi;
             ViewBag.AnimeID = animeManager.TGetByID(AnimeID_Sezon).AnimeID;
@@ -44,12 +46,11 @@ namespace AnimeX.UI.Controllers
                 ViewBag.bolumUrl = animeBolumManager.TGetByID(AnimeID_Sezon).BolumUrl;
             }
             else
-
             {
                 ViewBag.bolumUrl = animeBolumManager.TGetList().Where(x => x.AnimeID == AnimeID_Sezon).Where(x=>x.BolumNo== bolumNo).Select(x => x.BolumUrl).FirstOrDefault();
                 
-
             }
+          
 
             return View();
         }

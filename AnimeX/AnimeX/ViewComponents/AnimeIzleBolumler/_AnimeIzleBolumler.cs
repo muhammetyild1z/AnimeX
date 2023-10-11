@@ -10,7 +10,7 @@ namespace AnimeX.UI.ViewComponents.AnimeIzleBolumler
         AnimeBolumlerManager animeBolumManager = new AnimeBolumlerManager(new efAnimeBolumlerRepository(new Context()));
         public IViewComponentResult Invoke(int animeID)
         {
-            // bolumlere tiklayince bolum degiusiyor sezonlara tiklayinca o sezonun kac bolumu varsa onlari getirmeyi yapacagiz.
+           
            var values = animeBolumManager.TGetList().Where(x => x.AnimeID == animeID).ToList();
             return View(values);
         }
