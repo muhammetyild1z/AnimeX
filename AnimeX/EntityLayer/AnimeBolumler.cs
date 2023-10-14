@@ -16,7 +16,8 @@ namespace EntityLayer
         public string BolumUrl { get; set; }
         public int BolumNo { get; set; }
         public List<AnimeSezonlar> AnimeSezon { get; set; }
-        public int AnimeID { get; set; }
-        public List<Animeler> Animelers { get; set; }
+        public int SezonsNo { get; set; }
+        public int AnimeID_Bolum { get; set; }      
+        public DateTime BolumCreateDate { get; set; }
     }
 }

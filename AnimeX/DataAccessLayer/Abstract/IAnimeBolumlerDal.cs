@@ -10,5 +10,6 @@ namespace AnimeX.DataAccessLayer.Abstract
 {
     public interface IAnimeBolumlerDal:IGenericDal<AnimeBolumler>
     {
+        List<AnimeBolumler> GetListBolumler();
     }
 }

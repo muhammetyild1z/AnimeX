@@ -3,6 +3,7 @@ using AnimeX.DataAccessLayer.Concrate;
 using AnimeX.DataAccessLayer.Repositories;
 using AnimeX.EntityLayer;
 using EntityLayer;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +17,16 @@ namespace AnimeX.DataAccessLayer.EntityFramework
         public efAnimeBolumlerRepository(Context context) : base(context)
         {
         }
+
+        public List<AnimeBolumler> GetListBolumler()
+        {
+            throw new NotImplementedException();
+        }
+
+        //public List<AnimeBolumler> GetListBolumler()
+        //{
+        //    //Context c = new Context();
+        //    //return c.animeBolumlers.Include(x=>x.Animelers).ToList();
+        //}
     }
 }

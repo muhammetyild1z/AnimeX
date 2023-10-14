@@ -10,5 +10,6 @@ namespace AnimeX.BusinnessLayer.Abstract
 {
     public interface IAnimeBolumlerService:IGenericService<AnimeBolumler>
     {
+        List<AnimeBolumler> GetListBolumler();
     }
 }

@@ -19,6 +19,11 @@ namespace AnimeX.BusinnessLayer.Concrate
             _animeBolumDal = animeBolumDal;
         }
 
+        public List<AnimeBolumler> GetListBolumler()
+        {
+           return _animeBolumDal.GetListBolumler(); 
+        }
+
         public void TDelete(AnimeBolumler entity)
         {
             _animeBolumDal.Delete(entity);

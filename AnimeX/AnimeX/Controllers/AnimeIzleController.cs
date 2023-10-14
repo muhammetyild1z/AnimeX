@@ -47,7 +47,7 @@ namespace AnimeX.UI.Controllers
             }
             else
             {
-                ViewBag.bolumUrl = animeBolumManager.TGetList().Where(x => x.AnimeID == AnimeID_Sezon).Where(x=>x.BolumNo== bolumNo).Select(x => x.BolumUrl).FirstOrDefault();
+                ViewBag.bolumUrl = animeBolumManager.TGetList().Where(x => x.AnimeID_Bolum == AnimeID_Sezon).Where(x=>x.BolumNo== bolumNo).Select(x => x.BolumUrl).FirstOrDefault();
                 
             }
           
