@@ -13,23 +13,23 @@ namespace AnimeX.UI.Controllers
 {
     public class AnimelerController : Controller
     {
-        AnimelerManager am = new AnimelerManager(new efAnimelerRepository(new Context()));
-        CategoriesManager amn = new CategoriesManager(new efCatagoriesRepository(new Context()));
-        CategoryAnimeManeger amnn = new CategoryAnimeManeger(new efCategoryAnimeRepository(new Context()));
+        AnimelerManager aniemlerManager = new AnimelerManager(new efAnimelerRepository(new Context()));
+        CategoriesManager categoriesManager = new CategoriesManager(new efCatagoriesRepository(new Context()));
+        CategoryAnimeManeger categoryManger = new CategoryAnimeManeger(new efCategoryAnimeRepository(new Context()));
         [HttpGet]
         public IActionResult Index(int page = 1)
         {
-            ViewBag.category = amn.TGetList().OrderBy(x => x.KategoriAdi).Select(x => x.KategoriAdi);
-            ViewBag.categoryDate = am.TGetList().OrderByDescending(x => x.AnimeCikisTarihi.Year).Select(x => x.AnimeCikisTarihi.Year).Distinct();
-            return View(am.TGetList().ToPagedList(page, 18));
+            ViewBag.category = categoriesManager.TGetList().OrderBy(x => x.KategoriAdi).Select(x => x.KategoriAdi);
+            ViewBag.categoryDate = aniemlerManager.TGetList().OrderByDescending(x => x.AnimeCikisTarihi.Year).Select(x => x.AnimeCikisTarihi.Year).Distinct();
+            return View(aniemlerManager.TGetList().ToPagedList(page, 18));
 
         }
         [HttpPost]
         public IActionResult Index(int idmb, string animeadi, string sirlaSelect, string dateSelect, string kategoriSelect, int page = 1)
         {
-            var categoryID = amn.TGetList().Where(x => x.KategoriAdi == kategoriSelect).Select(x => x.kategoriID).FirstOrDefault();
+           // var categoryID = categoriesManager.TGetList().Where(x => x.KategoriAdi == kategoriSelect).Select(x => x.kategoriID).FirstOrDefault();
 
-            var values = am.TGetList();
+            var values = aniemlerManager.TGetList();
 
 
             if (animeadi != null)
@@ -49,10 +49,10 @@ namespace AnimeX.UI.Controllers
             else if (kategoriSelect != "Kategori seç")
             {
 
-                var catID = amn.TGetList().Where(x => x.KategoriAdi == kategoriSelect).Select(x => x.kategoriID).FirstOrDefault();
+                var catID = categoriesManager.TGetList().Where(x => x.KategoriAdi == kategoriSelect).Select(x => x.kategoriID).FirstOrDefault();
 
-                var animeid = amnn.TGetList().Where(x => x.KategoriID == catID).Select(x => x.AnimeID).ToList();
-                // anime id geliyor anime tablosunda sorgu yapip liste halinde gelmiyor valuese eklenecek         
+                var animeid = categoryManger.TGetList().Where(x => x.KategoriID == catID).Select(x => x.AnimeID).ToList();
+                //siralanacak animelerin ID si geliyor animelers taplosunda sorgu yap ciktiyi valuese aktar
 
             }
             else if (sirlaSelect == "Alfabetik")
@@ -67,8 +67,8 @@ namespace AnimeX.UI.Controllers
             {
                 values = values.OrderBy(x => x.AnimeEklenmeTarihi).ToList();
             }
-            ViewBag.category = amn.TGetList().OrderBy(x => x.KategoriAdi).Select(x => x.KategoriAdi);
-            ViewBag.categoryDate = am.TGetList().OrderByDescending(x => x.AnimeCikisTarihi.Year).Select(x => x.AnimeCikisTarihi.Year).Distinct();
+            ViewBag.category = categoriesManager.TGetList().OrderBy(x => x.KategoriAdi).Select(x => x.KategoriAdi);
+            ViewBag.categoryDate = aniemlerManager.TGetList().OrderByDescending(x => x.AnimeCikisTarihi.Year).Select(x => x.AnimeCikisTarihi.Year).Distinct();
             return View(values.ToPagedList(page, 10));
         }
 

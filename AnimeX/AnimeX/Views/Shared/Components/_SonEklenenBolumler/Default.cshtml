@@ -1,52 +1,53 @@
-﻿@model List<EntityLayer.AnimeBolumler>
+﻿@model List<EntityLayer.AnimeBolums>
 
 
-<div class="popular__product">
+
     <div class="row">
         <div class="col-lg-8 col-md-8 col-sm-8">
             <div class="section-title">
-                <h4>Son Çıkan Animeler</h4>
+                <h4>Yeni Eklenen Bölümler</h4>
               
             </div>
         </div>
 
     </div>
-    <div class="row">
-        @foreach (var item in Model)
-        {
-          
-           
-            <div class="col-lg-2 col-md-6 col-sm-6">
-                <div class="product__item">
-                    <div class=" row product__item__pic set-bg" data-setbg="img" href="/Animeİzle/Izle/@item.AnimeID_Bolum/">
-                        <div class="ep fa fa-star">&nbsp;idmb</div>
-                        @*  <div class="comment"><i class="fa fa-comments"></i> 11</div>*@
-                        <div class="view col-md-6"><i class="fa fa-calendar"></i> @item.BolumCreateDate.ToString("dd-MMMM")</div>
-                        <div class="view col-md-6"><i class="fa fa-tv"></i>&nbsp;@item.SezonsNo Sezon @item.BolumNo Bölüm</div>
-                    </div>
-                    <div class="product__item__text align-content-md-center">
-                        <ul class="float-left ml-1">
-                            @await Component.InvokeAsync("_AnimelerKategori", new{animeID=item.AnimeID_Bolum})
-                         @*   @if (item.Animelers.Select(x=>x.AnimeAdi) > 22)
-                            {
-                                <h5>
-                                    @Html.ActionLink(@item.AnimeAdi.Substring(0,22), "Izle", "AnimeIzle", new { AnimeID_Sezon=item.AnimeID})..
+    
 
-                                </h5>
-                            }*@
-                           @* else
-                            {*@
-                            <h5> @Html.ActionLink("animeadi", "Izle", "AnimeIzle", new { AnimeID_Sezon=item.AnimeID_Bolum})</h5>
-                            @*}*@
+@foreach (var item in Model)
+{
 
-                        </ul>
-                    </div>
-                </div>
+
+    <div class="col-lg-2 col-md-6 col-sm-6 ">
+
+        <div class="product__item">
+            <div class="product__item__pic set-bg" data-setbg="@item.animeler.AnimeImg" href="/Animeİzle/Izle/@item.BolumAnimeID/">
+                <div class="ep fa fa-calendar">&nbsp;@item.BolumCreateDate.ToString("dd MMMM")</div>
+                @*<div class="comment col-md-6"><i class="fa fa-calendar"></i> @item.BolumCreateDate.ToString("dd-MMMM")</div>*@
+                @* <div class="comment"><i class="fa fa-comments"></i> 11</div>*@
+
+                <div class="comment col-md-11 opacity-50"><i class="fa fa-tv"></i>&nbsp;@item.SezonsNo .Sezon @item.BolumNo .Bölüm</div>
+            </div>
+            <div class="product__item__text">
+                <ul>
+
+                    @await Component.InvokeAsync("_AnimelerKategori", new{animeID=item.BolumAnimeID})
+
+                    @if (item.animeler.AnimeAdi.Length > 22)
+                    {
+                        <h5>
+                            @Html.ActionLink(@item.animeler.AnimeAdi.Substring(0,22), "Izle", "AnimeIzle", new { AnimeID_Sezon=item.BolumAnimeID})..
+
+                        </h5>
+                    }
+                    else
+                    {
+                        <h5> @Html.ActionLink(@item.animeler.AnimeAdi, "Izle", "AnimeIzle", new { AnimeID_Sezon=item.BolumAnimeID})</h5>
+                    }
+                </ul>
 
             </div>
-        }
-
+        </div>
 
     </div>
-</div>
+}
 

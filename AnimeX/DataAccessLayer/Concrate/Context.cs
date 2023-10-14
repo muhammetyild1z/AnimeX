@@ -14,14 +14,14 @@ namespace AnimeX.DataAccessLayer.Concrate
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=DESKTOP-CH9SD0T;initial catalog=AnimeXDb; integrated Security=true");
+            optionsBuilder.UseSqlServer("server=DESKTOP-CH9SD0T;initial catalog=AnimeX; integrated Security=true");
         }
         public DbSet<Animeler> Animelers { get; set; }
         public DbSet<Categories> Categories { get; set; }
         public DbSet<CategoryAnime> CategoryAnimes { get; set; }     
         public DbSet<Comments> comments { get; set; }
         public DbSet<AnimeSezonlar> animeSezonlars { get; set; }
-        public DbSet<AnimeBolumler> animeBolumlers { get; set; }
+        public DbSet<AnimeBolums> AnimeBolums { get; set; }
        
 
     }

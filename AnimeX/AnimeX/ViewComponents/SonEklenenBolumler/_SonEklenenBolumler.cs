@@ -11,10 +11,12 @@ namespace AnimeX.ViewComponents.SonEklenenBolumler
         public IViewComponentResult Invoke()
         {
             
-            AnimeBolumlerManager animeBolumManager = new AnimeBolumlerManager(new efAnimeBolumlerRepository(new Context()));
+            AnimeBolumsManager animeBolumManager = new AnimeBolumsManager(new efAnimeBolumsRepository(new Context()));
             AnimelerManager animeManager = new AnimelerManager(new efAnimelerRepository(new Context()));
             
-            var values = animeBolumManager.GetListBolumler().OrderByDescending(x=>x.BolumCreateDate).Take(6).ToList();
+            var values = animeBolumManager.TGetListIncludeBolumler().OrderByDescending(x=>x.BolumCreateDate).Take(6).ToList();
+
+
            // var animeID = animeManager.TGetList().Where(x => x.AnimeID == values.Select(x => x.AnimeID).ToList();
             return View(values);
         }

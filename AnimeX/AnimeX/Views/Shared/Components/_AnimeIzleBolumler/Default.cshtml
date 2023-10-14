@@ -1,9 +1,9 @@
-﻿@model List<EntityLayer.AnimeBolumler>
+﻿@model List<EntityLayer.AnimeBolums>
 
 
     
 @foreach (var item in Model)
 {
-    @Html.ActionLink(@item.BolumNo+ ".Bolüm", "Izle", "AnimeIzle", new { AnimeID_Sezon=item.AnimeID_Bolum , bolumNo=item.BolumNo})
+    @Html.ActionLink(@item.BolumNo+ ".Bolüm", "Izle", "AnimeIzle", new { AnimeID_Sezon=item.BolumAnimeID , bolumNo=item.BolumNo})
    
 }

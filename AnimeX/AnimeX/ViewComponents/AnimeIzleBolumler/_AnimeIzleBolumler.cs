@@ -7,11 +7,11 @@ namespace AnimeX.UI.ViewComponents.AnimeIzleBolumler
 {
     public class _AnimeIzleBolumler:ViewComponent
     {
-        AnimeBolumlerManager animeBolumManager = new AnimeBolumlerManager(new efAnimeBolumlerRepository(new Context()));
+        AnimeBolumsManager animeBolumManager = new AnimeBolumsManager(new efAnimeBolumsRepository(new Context()));
         public IViewComponentResult Invoke(int animeID)
         {
            
-           var values = animeBolumManager.TGetList().Where(x => x.AnimeID_Bolum == animeID).ToList();
+           var values = animeBolumManager.TGetList().Where(x => x.BolumAnimeID == animeID).ToList();
             return View(values);
         }
     }
