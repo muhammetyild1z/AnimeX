@@ -17,10 +17,10 @@ namespace AnimeX.DataAccessLayer.EntityFramework
         {
         }
 
-        //public List<Animeler> GetAnimeAdiIncludeAnimeSezon()
-        //{
-        //    Context c = new Context();
-        //    return c.Animelers.Include(x => x.animeSezons).ToList();
-        //}
+        public List<Animeler> GetCommentIncludeAnimeler()
+        {
+            Context c = new Context();
+            return c.Animelers.Include(x => x.comments).ToList();
+        }
     }
 }

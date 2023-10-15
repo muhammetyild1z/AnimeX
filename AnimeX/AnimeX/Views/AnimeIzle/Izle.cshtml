@@ -55,9 +55,10 @@
 
 
                 <div class="anime__video__player">
+                    <iframe width="100%" height="600" frameborder="0" src="@ViewBag.BolumUrl" allowfullscreen></iframe>
 
-                    @await Component.InvokeAsync("_AnimeIzleVideoPlayer")
-                  
+                 @*   @await Component.InvokeAsync("_AnimeIzleVideoPlayer")
+                  *@
                 </div>
 
 
@@ -65,8 +66,7 @@
                     <div class="section-title">
                         <h5>Sezonlar</h5>
                     </div>
-
-
+             
                     @await Component.InvokeAsync("_AnimeIzleSezonlar" ,new { animeID=ViewBag.AnimeID})
 
 
@@ -82,7 +82,7 @@
                     {
 
 
-                        @Html.ActionLink(@item.BolumNo+ ".Bolüm", "Izle", "AnimeIzle", new { AnimeID_Sezon=item.BolumAnimeID, bolumNo=item.BolumNo, SezonNo=item.SezonsNo})
+                        @Html.ActionLink(@item.BolumNo+ ".Bolüm", "Izle", "AnimeIzle", new { AnimeID_Sezon=item.BolumAnimeID, bolumUrl=item.BolumUrl})
 
                     }
                     @*  @await Component.InvokeAsync("_AnimeIzleBolumler" ,new { animeID=ViewBag.AnimeID , BolumNo})*@

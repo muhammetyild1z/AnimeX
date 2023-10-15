@@ -11,6 +11,6 @@ namespace AnimeX.DataAccessLayer.Abstract
 {
     public interface IAnimelerDal:IGenericDal<Animeler>
     {
-        //List<Animeler> GetAnimeAdiIncludeAnimeSezon();
+        List<Animeler> GetCommentIncludeAnimeler();
     }
 }

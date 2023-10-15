@@ -15,13 +15,15 @@ namespace AnimeX.UI.Controllers
     {
         AnimelerManager aniemlerManager = new AnimelerManager(new efAnimelerRepository(new Context()));
         CategoriesManager categoriesManager = new CategoriesManager(new efCatagoriesRepository(new Context()));
+        CommentManager commentManager = new CommentManager(new efCommentRepository(new Context()));
         CategoryAnimeManeger categoryManger = new CategoryAnimeManeger(new efCategoryAnimeRepository(new Context()));
         [HttpGet]
         public IActionResult Index(int page = 1)
         {
-            ViewBag.category = categoriesManager.TGetList().OrderBy(x => x.KategoriAdi).Select(x => x.KategoriAdi);
+            ViewBag.category = categoriesManager.TGetList().OrderBy(x => x.KategoriAdi).Select(x => x.KategoriAdi);          
             ViewBag.categoryDate = aniemlerManager.TGetList().OrderByDescending(x => x.AnimeCikisTarihi.Year).Select(x => x.AnimeCikisTarihi.Year).Distinct();
-            return View(aniemlerManager.TGetList().ToPagedList(page, 24));
+        
+            return View(aniemlerManager.GetCommentIncludeAnimeler().ToPagedList(page, 24));
 
         }
         [HttpPost]
@@ -30,7 +32,7 @@ namespace AnimeX.UI.Controllers
             // var categoryID = categoriesManager.TGetList().Where(x => x.KategoriAdi == kategoriSelect).Select(x => x.kategoriID).FirstOrDefault();
             ViewBag.category = categoriesManager.TGetList().OrderBy(x => x.KategoriAdi).Select(x => x.KategoriAdi);
             ViewBag.categoryDate = aniemlerManager.TGetList().OrderByDescending(x => x.AnimeCikisTarihi.Year).Select(x => x.AnimeCikisTarihi.Year).Distinct();
-            var values = aniemlerManager.TGetList();
+            var values = aniemlerManager.GetCommentIncludeAnimeler();
 
 
             if (animeadi != null)
@@ -56,7 +58,7 @@ namespace AnimeX.UI.Controllers
                  List<Animeler> value= new List<Animeler>();
                 for (int i = 0; i < animeid.Count; i++)
                 {
-                    value.Add(aniemlerManager.TGetList().Where(x => x.AnimeID == animeid[i]).FirstOrDefault());
+                    value.Add(aniemlerManager.GetCommentIncludeAnimeler().Where(x => x.AnimeID == animeid[i]).FirstOrDefault());
                 }
 
                 return View(value.ToPagedList(page, 10));

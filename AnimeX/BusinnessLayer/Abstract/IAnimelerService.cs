@@ -9,6 +9,6 @@ namespace AnimeX.BusinnessLayer.Abstract
 {
     public interface IAnimelerService:IGenericService<Animeler>
     {
-        //List<Animeler> GetAnimeAdiIncludeAnimeSezon();
+        List<Animeler> GetCommentIncludeAnimeler();
     }
 }
