@@ -1,40 +1,40 @@
-﻿@model List<EntityLayer.Animeler>
+﻿@model List<EntityLayer.AnimeBolums>
 
 
 
-<div class="live__product">
+
     <div class="row">
         <div class="col-lg-8 col-md-8 col-sm-8">
             <div class="section-title">
-                <h4>Öne Çıkan Animeler</h4>
+                <h4><i class="fa fa-line-chart"> </i>&nbsp;Öne Çıkan Animeler</h4>
             </div>
         </div>
        
     </div>
-    <div class="row">
+  
         @foreach (var item in Model)
         {
             <div class="col-lg-2 col-md-6 col-sm-6">
                 <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="@item.AnimeImg" href="/Animeİzle/Izle/@item.AnimeID/">
-                        <div class="ep fa fa-star">&nbsp;@item.IMDb</div>
+                    <div class="product__item__pic set-bg" data-setbg="@item.animeler.AnimeImg" href="/Animeİzle/Izle/@item.BolumAnimeID/">
+                        <div class="ep fa fa-star">&nbsp;@item.animeler.IMDb</div>
                       @*  <div class="comment"><i class="fa fa-comments"></i> 11</div>*@
-                        <div class="view"><i class="fa fa-calendar"></i> @item.AnimeCikisTarihi.Year</div>
+                        <div class="view"><i class="fa fa-calendar"></i> @item.animeler.AnimeCikisTarihi.Year</div>
                     </div>
                     <div class="product__item__text">
                         <ul>
                            
-                            @await Component.InvokeAsync("_AnimelerKategori", new{animeID=item.AnimeID})
-                          
-                            @if (item.AnimeAdi.Length>22)
+                            @await Component.InvokeAsync("_AnimelerKategori", new{animeID=item.BolumAnimeID})
+
+                            @if (item.animeler.AnimeAdi.Length > 22)
                             {
                                 <h5>
-                                    @Html.ActionLink(@item.AnimeAdi.Substring(0,22), "Izle", "AnimeIzle", new { AnimeID_Sezon=item.AnimeID})..
+                                    @Html.ActionLink(@item.animeler.AnimeAdi.Substring(0,22), "Izle", "AnimeIzle", new { AnimeID_Sezon=item.BolumAnimeID})..
 
                                 </h5>
                             }else
                             {
-                                <h5> @Html.ActionLink(@item.AnimeAdi, "Izle", "AnimeIzle", new { AnimeID_Sezon=item.AnimeID})</h5>
+                                <h5> @Html.ActionLink(@item.animeler.AnimeAdi, "Izle", "AnimeIzle", new { AnimeID_Sezon=item.BolumAnimeID})</h5>
                             }
                         </ul>
                         
@@ -44,7 +44,7 @@
         }
         
         
-    </div>
-</div>
+    
+
 
 

@@ -9,9 +9,10 @@ namespace AnimeX.ViewComponents.CokOyAlanAnimeler
     {
         public IViewComponentResult Invoke()
         {
-            AnimelerManager am = new AnimelerManager(new efAnimelerRepository(new Context()));
-
-            return View(am.TGetList().OrderByDescending(x => x.IMDb).Where(x=>x.AnimeCikisTarihi<DateTime.Now).Take(10).ToList());
+           
+            AnimeBolumsManager animeBolumManager = new AnimeBolumsManager(new efAnimeBolumsRepository(new Context()));        
+            var values= animeBolumManager.TGetListIncludeBolumler().Where(x=>x.BolumCreateDate<DateTime.Now).DistinctBy(x=>x.animeler.AnimeAdi).Take(6).ToList();
+            return View(values);
         }
     }
 }

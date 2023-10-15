@@ -10,7 +10,7 @@ namespace AnimeX.ViewComponents.SonCıkanAnimeler
         public IViewComponentResult Invoke()
         {
             AnimelerManager am = new AnimelerManager(new efAnimelerRepository(new Context()));
-            var values = am.TGetList().OrderByDescending(x => x.AnimeEklenmeTarihi).Take(8).ToList();
+            var values = am.TGetList().OrderByDescending(x => x.AnimeEklenmeTarihi).Take(6).ToList();
             return View(values);
         }
     }

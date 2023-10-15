@@ -11,7 +11,7 @@ namespace AnimeX.UI.ViewComponents.AnimeIzleBolumler
         public IViewComponentResult Invoke(int animeID)
         {
            
-           var values = animeBolumManager.TGetList().Where(x => x.BolumAnimeID == animeID).ToList();
+           var values = animeBolumManager.TGetList().Where(x => x.BolumAnimeID == animeID).Distinct().ToList();
             return View(values);
         }
     }

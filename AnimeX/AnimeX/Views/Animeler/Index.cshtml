@@ -8,9 +8,7 @@
     Layout = "~/Views/CustomerLayout/Index.cshtml";
 }
 
-<!-- Breadcrumb Begin -->
-<!-- Breadcrumb End -->
-<!-- Product Section Begin -->
+
 <section class="product-page spad">
 
     <div class="breadcrumb-option mt-9">
@@ -29,15 +27,14 @@
     <div class="container">
         <div class="row d-flex justify-content-center mt-4">
 
-
-
             <form class="col-md-9 d-flex justify-content-center" method="post">
                 <div class="input-group mt-3 mb-3 col-md-10 d-flex justify-content-center">
-                    <p class="mt-2 text-white font-weight-bold"> Sırala</p>
+                 
                     <div class="col-md-2 ">
-                        <div class="product__page__filter">
-                           
-                            <select name="sirlaSelect" class="bg-transparent text-dark" >
+                        <div class="product__page__filter text-white">
+
+                            <select name="sirlaSelect" class="bg-transparent text-dark">
+                                <option value="Sırala">Sırala</option>
                                 <option value="Alfabetik">Alfabetik</option>
                                 <option value="IDMb Puanına Göre">IDMb Puanına Göre</option>
                                 <option value="Eklenme Tarihine Göre">Eklenme Tarihine Göre</option>
@@ -45,40 +42,40 @@
                         </div>
                     </div>
 
-                    <input name="idmb" type="number" placeholder="IDMb" maxlength="1"  class="form-control bg-transparent border-0 col-md-2"/>
-                    <input name="animeadi" type="text" placeholder="Anime adı" class="form-control bg-transparent border-0 col-md-3" />
+                    <input name="idmb" type="number" placeholder="IDMb" maxlength="1" class="form-control bg-transparent border-0 col-md-2 text-white" />
+                    <input name="animeadi" type="text" placeholder="Anime adı" class=" form-control bg-transparent border-0 col-md-3 text-white " />
 
                     <div class="col-md-2">
-                        <div class="product__page__filter">
-                            
-                            <select name="dateSelect" class="bg-transparent text-dark" size="3" >
-                                <option  selected>Çıkış Tarihi</option>
+                        <div class="product__page__filter text-white">
+
+                            <select name="dateSelect" class="bg-transparent text-dark" size="3">
+                                <option selected>Çıkış Tarihi</option>
                                 @foreach (var item in ViewBag.categoryDate)
                                 {
                                     <option value="@item">@item</option>
                                 }
-                               
-                                
+
+
                             </select>
                         </div>
                     </div>
 
                     <div class=" col-md-2">
-                        <div class="product__page__filter">                          
+                        <div class="product__page__filter text-white">
                             <select name="kategoriSelect" class="bg-transparent text-dark" size="3">
-                                <option  selected>Kategori seç</option>
+                                <option selected>Kategori seç</option>
                                 @foreach (var item in ViewBag.category)
                                 {
                                     <option value="@item">@item</option>
-                                }                                                           
+                                }
                             </select>
                         </div>
                     </div>
 
                     <button type="submit" style="border-radius: 5%; margin-left: 2%; margin-top:2px" class="form-control btn btn-warning col-md-2">Filtrele</button>
-                 
-                    </div>
-                    
+
+                </div>
+
             </form>
 
             <div class="col-lg-10">

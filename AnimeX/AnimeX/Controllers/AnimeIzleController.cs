@@ -8,6 +8,7 @@ using EntityLayer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
 
 namespace AnimeX.UI.Controllers
 {
@@ -27,35 +28,37 @@ namespace AnimeX.UI.Controllers
         }
 
         AnimelerManager animeManager = new AnimelerManager(new efAnimelerRepository(new Context()));
-        AnimeBolumsManager animeBolumManager= new AnimeBolumsManager(new efAnimeBolumsRepository(new Context()));
+        AnimeBolumsManager animeBolumManager = new AnimeBolumsManager(new efAnimeBolumsRepository(new Context()));
         AnimeSezonlarManager animeSezonManager = new AnimeSezonlarManager(new efAnimeSezonlarRepository(new Context()));
         CommentManager commentManager = new CommentManager(new efCommentRepository(new Context()));
 
-        public IActionResult Izle(int AnimeID_Sezon , int bolumNo , int SezonNo)
+        public IActionResult Izle(int AnimeID_Sezon, int bolumNo, int sezonNo)
         {
-            ViewBag.bolumUrl=string.Empty;
-            ViewBag.sezonsBolum=string.Empty;
+            
+            ViewBag.bolumUrl = string.Empty;
+            ViewBag.sezonsBolum = string.Empty;
 
             ViewBag.AnimeName = animeManager.TGetByID(AnimeID_Sezon).AnimeAdi;
             ViewBag.AnimeID = animeManager.TGetByID(AnimeID_Sezon).AnimeID;
             ViewBag.AnimeKapakImg = animeManager.TGetByID(AnimeID_Sezon).AnimeKapakImg;
             ViewBag.CommentCount = commentManager.TGetList().Where(x => x.AnimeCommentID == AnimeID_Sezon).Count();
 
-            if (bolumNo == 0)
+            if (sezonNo != 0)
             {
-                ViewBag.bolumUrl = animeBolumManager.TGetList().Where(x=>x.BolumAnimeID== AnimeID_Sezon).Select(x=>x.BolumUrl).FirstOrDefault();
+                var values = animeBolumManager.TGetList().Where(x => x.BolumAnimeID == AnimeID_Sezon).Where(x => x.SezonsNo == sezonNo).ToList();             
+                return View(values);
             }
-            else
-            {
-                ViewBag.bolumUrl = animeBolumManager.TGetList().Where(x => x.BolumAnimeID == AnimeID_Sezon).Where(x => x.BolumNo == bolumNo).Select(x => x.BolumUrl).FirstOrDefault();
-
+            if (sezonNo == 0)
+            {               
+                sezonNo = 1;
+                var values = animeBolumManager.TGetList().Where(x => x.BolumAnimeID == AnimeID_Sezon).Where(x => x.SezonsNo == sezonNo).ToList();              
+                return View(values);
             }
-
 
             return View();
         }
 
-       
+
 
         [Authorize]
         [HttpPost]

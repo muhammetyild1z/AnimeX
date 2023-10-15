@@ -4,6 +4,6 @@
     
 @foreach (var item in Model)
 {
-    @Html.ActionLink(@item.BolumNo+ ".Bolüm", "Izle", "AnimeIzle", new { AnimeID_Sezon=item.BolumAnimeID , bolumNo=item.BolumNo})
+    @Html.ActionLink(@item.BolumNo+ ".Bolüm", "Izle", "AnimeIzle", new { AnimeID_Sezon=item.BolumAnimeID , bolumNo=item.BolumNo , SezonNo=item.SezonsNo})
    
 }

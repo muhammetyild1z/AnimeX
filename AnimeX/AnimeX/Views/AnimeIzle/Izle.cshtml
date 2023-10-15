@@ -1,4 +1,4 @@
-﻿
+﻿@model List<EntityLayer.AnimeBolums>
 @{
     ViewData["Title"] = "Izle";
     Layout = "~/Views/CustomerLayout/Index.cshtml";
@@ -14,7 +14,7 @@
 
     .base img {
         width: 100%;
-      max-height:900px
+        max-height: 900px
     }
 
     .cover img {
@@ -22,10 +22,10 @@
     }
 </style>
 
-<section class="base cover" style="    max-height: 340px;">
-   
-    <img style="" src="@ViewBag.AnimeKapakImg" class="img-fluid" alt="Responsive image">
 
+<section class="base cover" style="    max-height: 340px;">
+
+    <img style="" src="@ViewBag.AnimeKapakImg" class="img-fluid" alt="Responsive image">
 
 </section>
 
@@ -52,19 +52,21 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 ">
-              
+
+
                 <div class="anime__video__player">
 
-                    <iframe width="100%" height="600" frameborder="0" src="@ViewBag.bolumUrl" allowfullscreen></iframe>
-
+                    @await Component.InvokeAsync("_AnimeIzleVideoPlayer")
+                  
                 </div>
+
 
                 <div class="anime__details__episodes">
                     <div class="section-title">
                         <h5>Sezonlar</h5>
                     </div>
-                   
-                 
+
+
                     @await Component.InvokeAsync("_AnimeIzleSezonlar" ,new { animeID=ViewBag.AnimeID})
 
 
@@ -76,10 +78,16 @@
                         <h5>Bölümler</h5>
                     </div>
 
-                    @await Component.InvokeAsync("_AnimeIzleBolumler" ,new { animeID=ViewBag.AnimeID})
-                   
-                        
-                    
+                    @foreach (var item in Model)
+                    {
+
+
+                        @Html.ActionLink(@item.BolumNo+ ".Bolüm", "Izle", "AnimeIzle", new { AnimeID_Sezon=item.BolumAnimeID, bolumNo=item.BolumNo, SezonNo=item.SezonsNo})
+
+                    }
+                    @*  @await Component.InvokeAsync("_AnimeIzleBolumler" ,new { animeID=ViewBag.AnimeID , BolumNo})*@
+
+
                 </div>
 
 
