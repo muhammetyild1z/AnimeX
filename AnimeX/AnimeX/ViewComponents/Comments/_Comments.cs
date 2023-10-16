@@ -1,7 +1,7 @@
 ﻿using AnimeX.BusinnessLayer.Concrate;
 using AnimeX.DataAccessLayer.Concrate;
 using AnimeX.DataAccessLayer.EntityFramework;
-using AnimeX.EntityLayer;
+using EntityLayer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;

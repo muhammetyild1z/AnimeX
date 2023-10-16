@@ -22,6 +22,7 @@ namespace AnimeX.DataAccessLayer.Concrate
         public DbSet<Comments> comments { get; set; }
         public DbSet<AnimeSezonlar> animeSezonlars { get; set; }
         public DbSet<AnimeBolums> AnimeBolums { get; set; }
+        public DbSet<UserFavori> userFavoris { get; set; }
        
 
     }

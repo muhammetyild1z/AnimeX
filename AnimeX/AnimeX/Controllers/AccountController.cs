@@ -1,5 +1,5 @@
 ﻿using AnimeX.DtoLayer.AccountDto;
-using AnimeX.EntityLayer;
+using EntityLayer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -39,7 +39,7 @@ namespace AnimeX.UI.Controllers
             return View();
         }
         [HttpGet]
-        public async Task<IActionResult> SignUp( )
+        public async Task<IActionResult> SignUp()
         {
 
             return View();
@@ -52,7 +52,10 @@ namespace AnimeX.UI.Controllers
                 AppUser user = new AppUser
                 {
                     UserName = p.UserName,
-                    Email = p.Email
+                    Email = p.Email,
+                    UserImg = "https://r.resimlink.com/liu8Qk.jpg",
+                    Details = " Henuz Kendini Bize Anlatmamis..",
+                    UserCreateDate= DateTime.Now
                 };
                 var result = await _userManager.CreateAsync(user,p.Password);
                 if (result.Succeeded)

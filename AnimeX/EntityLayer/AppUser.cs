@@ -5,10 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AnimeX.EntityLayer
+namespace EntityLayer
 {
     public class AppUser: IdentityUser<int>
     {
         public string UserImg { get; set; }
+        public string Details { get; set; }
+        public DateTime UserCreateDate { get; set; }
+        public List<UserFavori> userFavori { get; set; }
     }
 }

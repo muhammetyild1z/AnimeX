@@ -1,0 +1,43 @@
+﻿@model List<EntityLayer.UserFavori>
+
+
+
+
+@foreach (var item in Model)
+{
+
+
+    <div class="col-lg-2 col-md-6 col-sm-6 ">
+
+        <div class="product__item">
+            <div class="product__item__pic set-bg" data-setbg="@item.animeler.AnimeImg" href="/Animeİzle/Izle/@item.BolumAnimeID/">
+                        
+
+
+            </div>
+            <div class="product__item__text">
+                <ul>
+                    @await Component.InvokeAsync("_AnimelerKategori", new{animeID=item.UserFavAnimeID})
+
+                    @if (item.animeler.AnimeAdi.Length > 22)
+                    {
+                        <h5>
+                            @Html.ActionLink(@item.animeler.AnimeAdi.Substring(0,22), "Izle", "AnimeIzle",
+                    new { AnimeID_Sezon=item.UserFavAnimeID})..
+
+                        </h5>
+                    }
+                    else
+                    {
+                        <h5>
+                            @Html.ActionLink(@item.animeler.AnimeAdi, "Izle", "AnimeIzle",
+                    new {AnimeID_Sezon=item.UserFavAnimeID})
+                        </h5>
+                    }
+                </ul>
+
+            </div>
+        </div>
+
+    </div>
+}
