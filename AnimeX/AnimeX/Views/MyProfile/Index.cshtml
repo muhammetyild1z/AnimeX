@@ -29,7 +29,9 @@
                         </p>
                         <div class="anime__details__btn mt-5">
                             <a href="#" class="follow-btn"><i class="fa fa-heart-o"></i> Follow</a>
-                            <a href="#" class="watch-btn">
+                            
+                            <a>
+                                @Html.ActionLink("","ProfileEdit", "MyProfile", new {animeid=1, @class="watch-btn"})
                                 <span>Profili Düzenle</span> <i class="fa fa-edit"></i>
                             </a>
                         </div>

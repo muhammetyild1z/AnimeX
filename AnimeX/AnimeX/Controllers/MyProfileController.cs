@@ -17,11 +17,26 @@ namespace AnimeX.UI.Controllers
             _userManager = userManager;
         }
 
-        public async Task< IActionResult> Index()
+        public async Task<IActionResult> Index()
         {
-           var values= await _userManager.FindByIdAsync(User.Claims.Where(x => x.Type == ClaimTypes.NameIdentifier).FirstOrDefault().Value);
+            var values = await _userManager.FindByIdAsync(User.Claims.Where(x => x.Type == ClaimTypes.NameIdentifier).FirstOrDefault().Value);
 
             return View(values);
+        }
+        [HttpGet]
+        public IActionResult ProfileEdit(string userId )
+        {
+
+            var user = _userManager.FindByIdAsync(userId);
+            
+            return View(user);
+        }
+        [HttpPost]
+        public IActionResult ProfileEdit()
+        {
+
+           
+            return View();
         }
     }
 }

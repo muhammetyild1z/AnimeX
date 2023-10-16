@@ -1,0 +1,36 @@
+﻿@model EntityLayer.AppUser
+@{
+    ViewData["Title"] = "ProfileEdit";
+    Layout = "~/Views/CustomerLayout/Index.cshtml";
+}
+
+ 
+<form>
+    <p> <i class="fa fa-inicon_info"></i>Kişisel Bilgiler</p>
+    <div class="form-group">      
+        <input type="text" disabled class="form-control" value="@Model.UserName">
+    </div>
+
+    <div class="form-group">
+        <textarea name="Details" placeholder="Kendini Bize Anlat.."></textarea>
+    </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control"  placeholder=" Email Adresiniz">
+        <small id="emailHelp" class="form-text text-muted">E-postanızı asla başkasıyla paylaşmayacağız.</small>
+  </div>
+ 
+
+  <p> <i class="fa fa-key"></i>Parola Değiştir</p>
+   <div class="form-group">
+        <input type="password"  class="form-control" name="password">
+    </div>
+
+     <div class="form-group">
+        <input type="password"  class="form-control" name="passwordR">
+    </div>
+
+  <button type="submit" class="btn btn-primary">Profili Güncelle</button>
+</form>
+
