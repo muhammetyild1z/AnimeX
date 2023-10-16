@@ -2,6 +2,7 @@
 using AnimeX.DataAccessLayer.Concrate;
 using AnimeX.DataAccessLayer.Repositories;
 using EntityLayer;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,12 @@ namespace AnimeX.DataAccessLayer.EntityFramework
     {
         public efCommentRepository(Context context) : base(context)
         {
+        }
+
+        public List<Comments> CommentAnimelerInclude()
+        {
+            Context c = new Context();
+            return c.comments.Include(x => x.animeler).ToList();
         }
     }
 }

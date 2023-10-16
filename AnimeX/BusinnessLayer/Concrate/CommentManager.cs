@@ -18,6 +18,11 @@ namespace AnimeX.BusinnessLayer.Concrate
             _commentDal = commentDal;
         }
 
+        public List<Comments> CommentAnimelerInclude()
+        {
+            return _commentDal.CommentAnimelerInclude();
+        }
+
         public void TDelete(Comments entity)
         {
             _commentDal.Delete(entity);

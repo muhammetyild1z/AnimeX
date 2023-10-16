@@ -9,6 +9,6 @@ namespace AnimeX.DataAccessLayer.Abstract
 {
     public interface ICommentDal:IGenericDal<Comments>
     {
-
+        List<Comments> CommentAnimelerInclude();
     }
 }

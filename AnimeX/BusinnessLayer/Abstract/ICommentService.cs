@@ -9,6 +9,6 @@ namespace AnimeX.BusinnessLayer.Abstract
 {
     public interface ICommentService:IGenericService<Comments>
     {
-
+        List<Comments> CommentAnimelerInclude();
     }
 }
