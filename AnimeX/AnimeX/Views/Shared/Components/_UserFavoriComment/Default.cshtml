@@ -3,15 +3,16 @@
 
 
 <div class="row">
+    <div class="col-lg-8 col-md-8">
+        <div class="anime__details__review">
+            <div class="section-title">
+                <h5>Son Yaptığın Yorumlar</h5>
+            </div>
     @foreach (var item in Model)
     {
         
     
-            <div class="col-lg-8 col-md-8">
-                <div class="anime__details__review">
-                    <div class="section-title">
-                        <h5>Son Yaptığın Yorumlar</h5>
-                    </div>
+           
                     <div class="anime__review__item">
                         <div class="anime__review__item__pic">
                             <img src="@item.UserImg" alt="">
@@ -25,11 +26,11 @@
                             </p>
                         </div>
                     </div>
-
+            }
                 </div>
 
             </div>
-    }
+   
         </div>
 
         

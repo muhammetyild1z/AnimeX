@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
+using System.Security.Claims;
 
 namespace AnimeX.UI.Controllers
 {
@@ -31,13 +32,27 @@ namespace AnimeX.UI.Controllers
         AnimeBolumsManager animeBolumManager = new AnimeBolumsManager(new efAnimeBolumsRepository(new Context()));
         AnimeSezonlarManager animeSezonManager = new AnimeSezonlarManager(new efAnimeSezonlarRepository(new Context()));
         CommentManager commentManager = new CommentManager(new efCommentRepository(new Context()));
+        UserFavoriManager favoriUserManager = new UserFavoriManager(new efUserFavoriRepository(new Context()));
 
-        public IActionResult Izle(int AnimeID_Sezon, int bolumNo, int sezonNo , string bolumUrl)
+        public  async Task< IActionResult> Izle(int AnimeID_Sezon, int bolumNo, int sezonNo , string bolumUrl , int id)
         {
-            
+
+            if (AnimeID_Sezon==0)
+            {
+                AnimeID_Sezon = id;
+                UserFavori userFavori = new UserFavori();
+               userFavori.UserFavAnimeID = id;
+                userFavori.animeler = animeManager.TGetByID(id);
+                userFavori.appUser= await _userManager.FindByNameAsync(User.Identity.Name);
+                userFavori.UserFavUserID = userFavori.appUser.Id;
+
+                Context c = new Context();
+                c.userFavoris.Add(userFavori);
+                c.SaveChanges();
+            }
+
             ViewBag.bolumUrl = string.Empty;
             ViewBag.sezonsBolum = string.Empty;
-
             ViewBag.AnimeName = animeManager.TGetByID(AnimeID_Sezon).AnimeAdi;
             ViewBag.AnimeID = animeManager.TGetByID(AnimeID_Sezon).AnimeID;
             ViewBag.AnimeKapakImg = animeManager.TGetByID(AnimeID_Sezon).AnimeKapakImg;
@@ -45,7 +60,6 @@ namespace AnimeX.UI.Controllers
 
             if (sezonNo != 0)
             {
-               
                 var values = animeBolumManager.TGetList().Where(x => x.BolumAnimeID == AnimeID_Sezon).Where(x => x.SezonsNo == sezonNo).ToList();
                 if (bolumUrl == null)
                 {

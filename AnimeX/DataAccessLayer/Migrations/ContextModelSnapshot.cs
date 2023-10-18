@@ -336,23 +336,23 @@ namespace AnimeX.DataAccessLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserFavoriID"), 1L, 1);
 
-                    b.Property<int?>("AnimelerAnimeID")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("AppUserId")
-                        .HasColumnType("int");
-
                     b.Property<int>("UserFavAnimeID")
                         .HasColumnType("int");
 
                     b.Property<int>("UserFavUserID")
                         .HasColumnType("int");
 
+                    b.Property<int>("animelerAnimeID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("appUserId")
+                        .HasColumnType("int");
+
                     b.HasKey("UserFavoriID");
 
-                    b.HasIndex("AnimelerAnimeID");
+                    b.HasIndex("animelerAnimeID");
 
-                    b.HasIndex("AppUserId");
+                    b.HasIndex("appUserId");
 
                     b.ToTable("userFavoris");
                 });
@@ -508,13 +508,21 @@ namespace AnimeX.DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.UserFavori", b =>
                 {
-                    b.HasOne("EntityLayer.Animeler", null)
+                    b.HasOne("EntityLayer.Animeler", "animeler")
                         .WithMany("userFavori")
-                        .HasForeignKey("AnimelerAnimeID");
+                        .HasForeignKey("animelerAnimeID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("EntityLayer.AppUser", null)
+                    b.HasOne("EntityLayer.AppUser", "appUser")
                         .WithMany("userFavori")
-                        .HasForeignKey("AppUserId");
+                        .HasForeignKey("appUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("animeler");
+
+                    b.Navigation("appUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>

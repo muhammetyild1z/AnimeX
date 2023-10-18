@@ -1,36 +1,39 @@
-﻿@model EntityLayer.AppUser
+﻿
+@model EntityLayer.AppUser
 @{
     ViewData["Title"] = "ProfileEdit";
     Layout = "~/Views/CustomerLayout/Index.cshtml";
 }
 
- 
-<form>
-    <p> <i class="fa fa-inicon_info"></i>Kişisel Bilgiler</p>
-    <div class="form-group">      
-        <input type="text" disabled class="form-control" value="@Model.UserName">
+
+<form asp-action="ProfileEdit" asp-controller="MyProfile" method="post" class="container" style="margin:200px">
+    <p class ="text-white mr-1"> <i class="fa fa-info mr-1"></i>Kişisel Bilgiler</p>
+    <div class="form-group col-md-5" style="cursor:no-drop">
+        <input disabled class="form-control" value="@Model.UserName">
     </div>
 
-    <div class="form-group">
-        <textarea name="Details" placeholder="Kendini Bize Anlat.."></textarea>
+    <div class="form-group col-md-5">
+        <textarea class="col-md-12" name="Details" >@Model.Details</textarea>
     </div>
 
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control"  placeholder=" Email Adresiniz">
+    <div class="form-group col-md-5">
+        <input type="email" class="form-control" value="@Model.Email" name="Email">
         <small id="emailHelp" class="form-text text-muted">E-postanızı asla başkasıyla paylaşmayacağız.</small>
   </div>
  
 
-  <p> <i class="fa fa-key"></i>Parola Değiştir</p>
-   <div class="form-group">
-        <input type="password"  class="form-control" name="password">
+  <p class="text-white mr-1"> <i class="fa fa-key mr-1"></i>Parola Değiştir</p>
+    <div class="form-group col-md-5">
+        <input type="password"  class="form-control" name="password" placeholder="Yeni Şifrenizi Girin..">
     </div>
 
-     <div class="form-group">
-        <input type="password"  class="form-control" name="passwordR">
+    <div class="form-group col-md-5">
+        <input type="password" class="form-control" name="passwordR" placeholder="Yeni Şifrenizi Tekrar Girin..">
     </div>
 
-  <button type="submit" class="btn btn-primary">Profili Güncelle</button>
+  <button type="submit" class="btn btn-primary ml-3">Profili Güncelle</button>
+    <h6 class="text-danger ">@Html.ValidationSummary()</h6>
+        
+    
 </form>
 

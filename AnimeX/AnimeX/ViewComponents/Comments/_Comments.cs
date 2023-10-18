@@ -19,7 +19,7 @@ namespace AnimeX.UI.ViewComponents.Comments
         {
 
             CommentManager cm = new CommentManager(new efCommentRepository(new Context()));
-            var comment = cm.TGetList().Where(x => x.AnimeCommentID == animeID).OrderBy(x => x.CommentDate).ToList();
+            var comment = cm.TGetList().Where(x => x.AnimeCommentID == animeID).Where(x=>x.CommentStatus==true).OrderBy(x => x.CommentDate).ToList();
             ViewBag.animeID = animeID;       
              
            

@@ -5,6 +5,7 @@ using AnimeX.DataAccessLayer.Abstract;
 using AnimeX.DataAccessLayer.Concrate;
 using AnimeX.DataAccessLayer.EntityFramework;
 using AnimeX.EntityLayer;
+using AnimeX.UI.Models;
 using EntityLayer;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,7 +25,7 @@ builder.Services.AddIdentity<AppUser, AppRole>(
 
     }
     )
-    //.AddErrorDescriber<CustomerIdentityValidation>()
+    .AddErrorDescriber<CustomerIdentityValidation>()
     .AddEntityFrameworkStores<Context>();
 
 builder.Services.AddScoped<Context>();
