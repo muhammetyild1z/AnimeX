@@ -25,28 +25,28 @@
     <div class="col-lg-2 col-md-6 col-sm-6 ">
 
         <div class="product__item">
-            <div class="product__item__pic set-bg" data-setbg="@item.animeler.AnimeImg" href="/Animeİzle/Izle/@item.UserFavAnimeID/">
+            <div class="product__item__pic set-bg" data-setbg="@item.Animelers.AnimeImg" href="/Animeİzle/Izle/@*@item.UserFavAnimeID*@/">
                         
 
 
             </div>
             <div class="product__item__text">
                 <ul>
-                    @await Component.InvokeAsync("_AnimelerKategori", new{animeID=item.UserFavAnimeID})
+                    @await Component.InvokeAsync("_AnimelerKategori", new{animeID=1/*item.UserFavAnimeID*/})
 
-                    @if (item.animeler.AnimeAdi.Length > 22)
+                    @if (item.Animelers.AnimeAdi.Length > 22)
                     {
                         <h5>
-                            @Html.ActionLink(@item.animeler.AnimeAdi.Substring(0,22), "Izle", "AnimeIzle",
-                    new { AnimeID_Sezon=item.UserFavAnimeID})..
+                            @Html.ActionLink(@item.Animelers.AnimeAdi.Substring(0,22), "Izle", "AnimeIzle",
+                    new { AnimeID_Sezon=1/*item.UserFavAnimeID*/})..
 
                         </h5>
                     }
                     else
                     {
                         <h5>
-                            @Html.ActionLink(@item.animeler.AnimeAdi, "Izle", "AnimeIzle",
-                    new {AnimeID_Sezon=item.UserFavAnimeID})
+                            @Html.ActionLink(@item.Animelers.AnimeAdi, "Izle", "AnimeIzle",
+                    new {AnimeID_Sezon=1/*item.UserFavAnimeID*/})
                         </h5>
                     }
                 </ul>

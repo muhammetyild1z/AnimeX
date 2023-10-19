@@ -10,12 +10,11 @@ namespace EntityLayer
 {
     public class UserFavori
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         public int UserFavoriID { get; set; }
-        public int UserFavAnimeID { get; set; }
-          public Animeler animeler { get; set; }
-        
-        public int UserFavUserID { get; set; }
-        public AppUser appUser { get; set; }
+        public int FavAnimeID { get; set; }
+        public virtual Animeler? Animelers { get; set; }       
+        public int FavUserId { get; set; }
+        public virtual AppUser? AppUser { get; set; }
     }
 }

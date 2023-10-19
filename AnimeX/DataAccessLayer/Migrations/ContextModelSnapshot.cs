@@ -336,23 +336,23 @@ namespace AnimeX.DataAccessLayer.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserFavoriID"), 1L, 1);
 
-                    b.Property<int>("UserFavAnimeID")
+                    b.Property<int?>("AnimelersAnimeID")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserFavUserID")
+                    b.Property<int?>("AppUserId")
                         .HasColumnType("int");
 
-                    b.Property<int>("animelerAnimeID")
+                    b.Property<int>("FavAnimeID")
                         .HasColumnType("int");
 
-                    b.Property<int>("appUserId")
+                    b.Property<int>("FavUserId")
                         .HasColumnType("int");
 
                     b.HasKey("UserFavoriID");
 
-                    b.HasIndex("animelerAnimeID");
+                    b.HasIndex("AnimelersAnimeID");
 
-                    b.HasIndex("appUserId");
+                    b.HasIndex("AppUserId");
 
                     b.ToTable("userFavoris");
                 });
@@ -508,21 +508,17 @@ namespace AnimeX.DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.UserFavori", b =>
                 {
-                    b.HasOne("EntityLayer.Animeler", "animeler")
-                        .WithMany("userFavori")
-                        .HasForeignKey("animelerAnimeID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("EntityLayer.Animeler", "Animelers")
+                        .WithMany("userFavoris")
+                        .HasForeignKey("AnimelersAnimeID");
 
-                    b.HasOne("EntityLayer.AppUser", "appUser")
-                        .WithMany("userFavori")
-                        .HasForeignKey("appUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("EntityLayer.AppUser", "AppUser")
+                        .WithMany("userFavoris")
+                        .HasForeignKey("AppUserId");
 
-                    b.Navigation("animeler");
+                    b.Navigation("Animelers");
 
-                    b.Navigation("appUser");
+                    b.Navigation("AppUser");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -584,7 +580,7 @@ namespace AnimeX.DataAccessLayer.Migrations
 
                     b.Navigation("comments");
 
-                    b.Navigation("userFavori");
+                    b.Navigation("userFavoris");
                 });
 
             modelBuilder.Entity("EntityLayer.AnimeSezonlar", b =>
@@ -594,7 +590,7 @@ namespace AnimeX.DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.AppUser", b =>
                 {
-                    b.Navigation("userFavori");
+                    b.Navigation("userFavoris");
                 });
 
             modelBuilder.Entity("EntityLayer.Categories", b =>

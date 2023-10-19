@@ -26,7 +26,7 @@ namespace EntityLayer
         public List<CategoryAnime> categoryAnimes { get; set; }      
         public List<Comments> comments { get; set; }
         public List<AnimeBolums> animeBolums { get; set; }
-        public List<UserFavori> userFavori { get; set; }
+        public List<UserFavori> userFavoris { get; set; }
 
     }
 }

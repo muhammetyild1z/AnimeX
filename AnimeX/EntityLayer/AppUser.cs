@@ -12,6 +12,6 @@ namespace EntityLayer
         public string UserImg { get; set; }
         public string Details { get; set; }
         public DateTime UserCreateDate { get; set; }
-        public List<UserFavori> userFavori { get; set; }
+        public List<UserFavori> userFavoris { get; set; }
     }
 }
