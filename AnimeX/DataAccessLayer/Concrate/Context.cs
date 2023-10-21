@@ -16,7 +16,7 @@ namespace AnimeX.DataAccessLayer.Concrate
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=DESKTOP-CH9SD0T;initial catalog=AnimeX_DB; integrated Security=true");
+            optionsBuilder.UseSqlServer("server=DESKTOP-CH9SD0T;initial catalog=AnimeX; integrated Security=true");
         }
         public DbSet<Animeler> Animelers { get; set; }
         public DbSet<Categories> Categories { get; set; }
@@ -30,12 +30,12 @@ namespace AnimeX.DataAccessLayer.Concrate
         {
 
 
-            modelBuilder.Entity<UserFavori>().HasKey(x => new { x.FavAnimeID, x.FavUserId  });
+            modelBuilder.Entity<UserFavori>().HasKey(x => new { x.FavAnimeID, x.FavUserId, x.FavoriID });
             modelBuilder.Entity<UserFavori>().HasOne(x => x.Animelers)
                  .WithMany(x => x.userFavoris).HasForeignKey(x => x.FavAnimeID);
             modelBuilder.Entity<UserFavori>().HasOne(x => x.AppUser)
                 .WithMany(x => x.userFavoris).HasForeignKey(x => x.FavUserId);
-       
+
 
             modelBuilder.Entity<AnimeSezonlar>().HasKey(x => new { x.AnimeID , x.AnimelerSezonId});
             modelBuilder.Entity<AnimeSezonlar>().HasOne(x => x.animeler)

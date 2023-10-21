@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AnimeX.DataAccessLayer.Migrations
 {
-    public partial class fluentAPI : Migration
+    public partial class animeXMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -132,29 +132,6 @@ namespace AnimeX.DataAccessLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "comments",
-                columns: table => new
-                {
-                    CommentID = table.Column<int>(type: "int", nullable: false),
-                    AnimeCommentID = table.Column<int>(type: "int", nullable: false),
-                    UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserImg = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CommentContent = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CommentDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    CommentStatus = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_comments", x => new { x.AnimeCommentID, x.CommentID });
-                    table.ForeignKey(
-                        name: "FK_comments_Animelers_AnimeCommentID",
-                        column: x => x.AnimeCommentID,
-                        principalTable: "Animelers",
-                        principalColumn: "AnimeID",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -261,16 +238,46 @@ namespace AnimeX.DataAccessLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "userFavoris",
+                name: "comments",
                 columns: table => new
                 {
-                    FavAnimeID = table.Column<int>(type: "int", nullable: false),
-                    FavUserId = table.Column<int>(type: "int", nullable: false),
-                    UserFavoriID = table.Column<int>(type: "int", nullable: false)
+                    CommentID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    AnimeCommentID = table.Column<int>(type: "int", nullable: false),
+                    CommentUserId = table.Column<int>(type: "int", nullable: false),
+                    CommentContent = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CommentDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CommentStatus = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_userFavoris", x => new { x.FavAnimeID, x.FavUserId });
+                    table.PrimaryKey("PK_comments", x => new { x.AnimeCommentID, x.CommentID, x.CommentUserId });
+                    table.ForeignKey(
+                        name: "FK_comments_Animelers_AnimeCommentID",
+                        column: x => x.AnimeCommentID,
+                        principalTable: "Animelers",
+                        principalColumn: "AnimeID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_comments_AspNetUsers_CommentUserId",
+                        column: x => x.CommentUserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "userFavoris",
+                columns: table => new
+                {
+                    FavoriID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    FavAnimeID = table.Column<int>(type: "int", nullable: false),
+                    FavUserId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_userFavoris", x => new { x.FavAnimeID, x.FavUserId, x.FavoriID });
                     table.ForeignKey(
                         name: "FK_userFavoris_Animelers_FavAnimeID",
                         column: x => x.FavAnimeID,
@@ -353,6 +360,11 @@ namespace AnimeX.DataAccessLayer.Migrations
                 name: "IX_CategoryAnimes_AnimeID",
                 table: "CategoryAnimes",
                 column: "AnimeID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_comments_CommentUserId",
+                table: "comments",
+                column: "CommentUserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_userFavoris_FavUserId",

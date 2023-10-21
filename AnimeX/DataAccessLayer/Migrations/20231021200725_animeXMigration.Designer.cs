@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AnimeX.DataAccessLayer.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20231019225856_fluentAPI")]
-    partial class fluentAPI
+    [Migration("20231021200725_animeXMigration")]
+    partial class animeXMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -270,6 +270,12 @@ namespace AnimeX.DataAccessLayer.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("CommentID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CommentID"), 1L, 1);
+
+                    b.Property<int>("CommentUserId")
                         .HasColumnType("int");
 
                     b.Property<string>("CommentContent")
@@ -282,15 +288,9 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.Property<bool>("CommentStatus")
                         .HasColumnType("bit");
 
-                    b.Property<string>("UserImg")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.HasKey("AnimeCommentID", "CommentID", "CommentUserId");
 
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("AnimeCommentID", "CommentID");
+                    b.HasIndex("CommentUserId");
 
                     b.ToTable("comments");
                 });
@@ -303,10 +303,13 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.Property<int>("FavUserId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserFavoriID")
+                    b.Property<int>("FavoriID")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.HasKey("FavAnimeID", "FavUserId");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FavoriID"), 1L, 1);
+
+                    b.HasKey("FavAnimeID", "FavUserId", "FavoriID");
 
                     b.HasIndex("FavUserId");
 
@@ -465,7 +468,15 @@ namespace AnimeX.DataAccessLayer.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("EntityLayer.AppUser", "appUser")
+                        .WithMany("comments")
+                        .HasForeignKey("CommentUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("animeler");
+
+                    b.Navigation("appUser");
                 });
 
             modelBuilder.Entity("EntityLayer.UserFavori", b =>
@@ -553,6 +564,8 @@ namespace AnimeX.DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.AppUser", b =>
                 {
+                    b.Navigation("comments");
+
                     b.Navigation("userFavoris");
                 });
 

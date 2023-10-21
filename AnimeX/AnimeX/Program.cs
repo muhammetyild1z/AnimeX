@@ -21,6 +21,7 @@ builder.Services.AddIdentity<AppUser, AppRole>(
         opt.Password.RequireUppercase = false;
         opt.Password.RequireLowercase = false;
         opt.Password.RequireDigit = false;
+        
         // opt.SignIn.RequireConfirmedEmail = true;//mail doðrulamasý olsun mu
 
     }

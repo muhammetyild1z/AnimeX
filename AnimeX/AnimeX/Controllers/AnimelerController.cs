@@ -29,7 +29,7 @@ namespace AnimeX.UI.Controllers
         [HttpPost]
         public IActionResult Index(int idmb, string animeadi, string sirlaSelect, string dateSelect, string kategoriSelect, int page = 1)
         {
-            // var categoryID = categoriesManager.TGetList().Where(x => x.KategoriAdi == kategoriSelect).Select(x => x.kategoriID).FirstOrDefault();
+            
             ViewBag.category = categoriesManager.TGetList().OrderBy(x => x.KategoriAdi).Select(x => x.KategoriAdi);
             ViewBag.categoryDate = aniemlerManager.TGetList().OrderByDescending(x => x.AnimeCikisTarihi.Year).Select(x => x.AnimeCikisTarihi.Year).Distinct();
             var values = aniemlerManager.GetCommentIncludeAnimeler();

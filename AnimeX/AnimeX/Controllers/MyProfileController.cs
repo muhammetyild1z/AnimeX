@@ -20,7 +20,7 @@ namespace AnimeX.UI.Controllers
 
         public async Task<IActionResult> Index()
         {
-            // giris yapan kullaniciyi bulamiyor null geliyor
+            
             if (User.Identity.IsAuthenticated == true)
             {
                 var values = await _userManager.FindByIdAsync(User.Claims.Where(x => x.Type == ClaimTypes.NameIdentifier).FirstOrDefault().Value);
@@ -49,39 +49,42 @@ namespace AnimeX.UI.Controllers
 
         }
         [HttpPost]
-        public async Task<IActionResult> ProfileEdit(ProfileEditDto user)
+        public async Task<IActionResult> ProfileEdit(ProfileEditDto userDto)
         {
 
             if (User.Identity.IsAuthenticated == true)
             {
-                var loginUser = await _userManager.FindByNameAsync(User.Identity.Name);
-                loginUser.Email = user.Email;
-                loginUser.Details = user.Details;
-                await _userManager.UpdateAsync(loginUser);
+                var user = await _userManager.FindByNameAsync(User.Identity.Name);
+                user.Email = user.Email;
+                user.Details = user.Details;
+                await _userManager.UpdateAsync(user);
 
-
-                var result = await _userManager.ChangePasswordAsync(loginUser, user.password, user.passwordR);
-                if (result.Succeeded)
+                if (userDto.password != null || userDto.passwordR != null && userDto.passwordR== userDto.password)
                 {
-                    return RedirectToAction("Index");
-                }
-                else
-                {
-                    foreach (var item in result.Errors)
+                    
+                    var result = await _userManager.ChangePasswordAsync(user, userDto.Oldpassword, userDto.passwordR);
+                    if (result.Succeeded)
                     {
-
-                        ModelState.AddModelError("", item.Description);
+                        return RedirectToAction("Index");
                     }
-                    return View(loginUser);
+                    else
+                    {
+                        foreach (var item in result.Errors)
+                        {
+
+                            ModelState.AddModelError("", item.Description);
+                        }
+                        return View(user);
+                    }
                 }
-                
+                return RedirectToAction("Index");
             }
             else
             {
                 return View("Error");
             }
 
-           
+
         }
     }
 }

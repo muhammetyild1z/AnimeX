@@ -9,8 +9,8 @@
                         <div class="comment"><i class="fa fa-heart"></i> @Model.Like</div>
                         <div class="view"><i class="fa fa-comment"></i> @Model.comments.Count</div>
                           <div class="anime__details__btn d-flex justify-content-center " >
-
-                            <a href="/AnimeIzle/Fav?AnimeID_Sezon=@Model.AnimeID " class="follow-btn"><i class="fa fa-heart-o"></i> Favoriye Ekle</a>
+                         
+                            @await Component.InvokeAsync("_AnimeFavControl",new {animeID=Model.AnimeID , userName= User.Identity.Name})
                            
                     </div>
                     </div>

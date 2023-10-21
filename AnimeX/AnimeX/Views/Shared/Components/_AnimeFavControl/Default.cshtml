@@ -1,0 +1,11 @@
+﻿
+
+
+@if (ViewBag.FavAnime==1)
+{
+    <a href="/AnimeIzle/FavDel?AnimeID_Sezon= @ViewBag.AnimeID " class="follow-btn"><i class="fa fa-heart"></i> Favoriye Ekle</a>
+}
+else 
+{
+    <a href="/AnimeIzle/Fav?AnimeID_Sezon=@ViewBag.AnimeID " class="follow-btn"><i class="fa fa-heart-o"></i> Favoriye Ekle</a>
+}

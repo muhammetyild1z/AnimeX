@@ -1,4 +1,4 @@
-﻿  @model List<EntityLayer.Comments>
+﻿@model List<EntityLayer.Comments>
 
 
 
@@ -8,29 +8,38 @@
             <div class="section-title">
                 <h5>Son Yaptığın Yorumlar</h5>
             </div>
-    @foreach (var item in Model)
-    {
-        
-    
-           
-                    <div class="anime__review__item">
-                        <div class="anime__review__item__pic">
-                            <img src="@item.appUser.UserImg" alt="">
-                        </div>
-                        <div class="anime__review__item__text">
-                        <h6>
-                            <a href="/AnimeIzle/Izle?AnimeID_Sezon=@item.animeler.AnimeID"><span>@item.animeler.AnimeAdi</span></a>
-                        </h6>
-                            <p>
-                                @item.CommentContent
-                            </p>
-                        </div>
+            @foreach (var item in Model)
+            {
+                <div class="anime__review__item">
+                    <div class="anime__review__item__pic">
+                        <img src="@item.appUser.UserImg" alt="">
                     </div>
-            }
-                </div>
+                    <div class="anime__review__item__text">
+                        <h6>
 
-            </div>
-   
+                            <a href="/AnimeIzle/Izle?AnimeID_Sezon=@item.animeler.AnimeID">
+                                
+                                <span>
+                                    @item.animeler.AnimeAdi 
+                                   
+                                </span>
+
+
+                            </a>
+                            @if (item.CommentStatus == false)
+                            {
+                                <span class="text-white"> - Yorumunuz denetim bekliyor..</span>
+                            }
+                        </h6>
+                        <p>
+                            @item.CommentContent
+                        </p>
+                    </div>
+                </div>
+            }
         </div>
 
-        
+    </div>
+
+</div>
+

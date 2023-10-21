@@ -301,13 +301,13 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.Property<int>("FavUserId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserFavoriID")
+                    b.Property<int>("FavoriID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserFavoriID"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FavoriID"), 1L, 1);
 
-                    b.HasKey("FavAnimeID", "FavUserId", "UserFavoriID");
+                    b.HasKey("FavAnimeID", "FavUserId", "FavoriID");
 
                     b.HasIndex("FavUserId");
 
