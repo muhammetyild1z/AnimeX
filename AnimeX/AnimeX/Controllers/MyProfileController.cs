@@ -20,6 +20,7 @@ namespace AnimeX.UI.Controllers
 
         public async Task<IActionResult> Index()
         {
+            // giris yapan kullaniciyi bulamiyor null geliyor
             if (User.Identity.IsAuthenticated == true)
             {
                 var values = await _userManager.FindByIdAsync(User.Claims.Where(x => x.Type == ClaimTypes.NameIdentifier).FirstOrDefault().Value);

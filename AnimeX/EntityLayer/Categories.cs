@@ -13,9 +13,7 @@ namespace EntityLayer
         public int kategoriID { get; set; }
         public string KategoriAdi { get; set; }
         public bool Status { get; set; }
-
-
-       public List<CategoryAnime> categoryAnimes { get; set; }
+        public List<CategoryAnime> categoryAnimes { get; set; }
 
     }
 }

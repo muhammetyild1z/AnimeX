@@ -13,5 +13,6 @@ namespace EntityLayer
         public string Details { get; set; }
         public DateTime UserCreateDate { get; set; }
         public List<UserFavori> userFavoris { get; set; }
+        public List<Comments> comments { get; set; }
     }
 }

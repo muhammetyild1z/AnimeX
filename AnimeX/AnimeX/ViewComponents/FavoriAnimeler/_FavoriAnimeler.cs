@@ -9,8 +9,9 @@ namespace AnimeX.UI.ViewComponents.FavoriAnimeler
         public IViewComponentResult Invoke(string UserName)
         {
             UserFavoriManager userFavoriManager = new UserFavoriManager(new efUserFavoriRepository(new DataAccessLayer.Concrate.Context()));
-
+            
            var values = userFavoriManager.FavoriUserAnimelerGetListInclude().Where(x=>x.AppUser.UserName== UserName).ToList();
+            
             return View(values);
         }
     }

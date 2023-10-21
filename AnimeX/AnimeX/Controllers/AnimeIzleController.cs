@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Claims;
 
 namespace AnimeX.UI.Controllers
@@ -38,49 +39,35 @@ namespace AnimeX.UI.Controllers
         CommentManager commentManager = new CommentManager(new efCommentRepository(new Context()));
         UserFavoriManager favoriUserManager = new UserFavoriManager(new efUserFavoriRepository(new Context()));
 
-        public async Task< IActionResult >Izle(int AnimeID_Sezon, int bolumNo, int sezonNo, string bolumUrl, int id)
+        public  IActionResult Izle(int AnimeID_Sezon ,int sezonNo ,int bolumNo)
         {
-           
-            if (AnimeID_Sezon == 0)
+            if (sezonNo==0)
             {
-                AnimeID_Sezon = id;
-                UserFavori userFavori = new UserFavori();
-                userFavori.FavAnimeID = animeManager.TGetByID(id).AnimeID;
-                userFavori.FavUserId =  4;                     
-                favoriUserManager.Insert(userFavori);
-
-
+                ViewBag.sezonNo = 1;
             }
-
-            ViewBag.bolumUrl = string.Empty;
-            ViewBag.sezonsBolum = string.Empty;           
-            ViewBag.AnimeName = animeManager.TGetByID(AnimeID_Sezon).AnimeAdi;
-            ViewBag.AnimeID = animeManager.TGetByID(AnimeID_Sezon).AnimeID;
-            ViewBag.AnimeKapakImg = animeManager.TGetByID(AnimeID_Sezon).AnimeKapakImg;
-            ViewBag.CommentCount = commentManager.TGetList().Where(x => x.AnimeCommentID == AnimeID_Sezon).Count();
-
-            if (sezonNo != 0)
+            else
             {
-                var values = animeBolumManager.TGetList().Where(x => x.BolumAnimeID == AnimeID_Sezon).Where(x => x.SezonsNo == sezonNo).ToList();
-                if (bolumUrl == null)
-                {
-                    bolumUrl = values.Select(x => x.BolumUrl).FirstOrDefault();
-                }
-                ViewBag.BolumUrl = bolumUrl;
-                return View(values);
+                ViewBag.sezonNo = sezonNo;
             }
-            if (sezonNo == 0)
+            if ( bolumNo==0)
             {
-                sezonNo = 1;
-                var values = animeBolumManager.TGetList().Where(x => x.BolumAnimeID == AnimeID_Sezon).Where(x => x.SezonsNo == sezonNo).ToList();
-                ViewBag.BolumUrl = bolumUrl;
-                return View(values);
+                ViewBag.BolumUrl = animeBolumManager.TGetList().Where(x => x.BolumAnimeID == AnimeID_Sezon)
+                    .Where(x => x.SezonsNo == 1)
+                    .Where(x => x.BolumNo == 1)
+                    .FirstOrDefault();
             }
+            ViewBag.BolumUrl = animeBolumManager.TGetList().Where(x=>x.BolumAnimeID== AnimeID_Sezon)
+                .Where(x=>x.SezonsNo== sezonNo)
+                .Where(x=>x.BolumNo== bolumNo)
+                .Select(x=>x.BolumUrl)
+                .FirstOrDefault();
 
-            return View();
+
+            var values = animeManager.TGetByID(AnimeID_Sezon);
+      
+
+            return View(values);
         }
-
-
 
         [Authorize]
         [HttpPost]
@@ -88,11 +75,14 @@ namespace AnimeX.UI.Controllers
         {
             CommentManager cm = new CommentManager(new efCommentRepository(new Context()));
             var user = await _userManager.FindByNameAsync(User.Identity.Name);
-            p.UserImg = user.UserImg; 
+            
+            p.CommentUserId = user.Id;
+            p.CommentStatus = false;
             p.AnimeCommentID = animeID;
             p.CommentDate = DateTime.Now;
             cm.TInsert(p);
             return RedirectToAction("Izle", "AnimeIzle", new { AnimeID_Sezon = animeID });
         }
+      
     }
 }

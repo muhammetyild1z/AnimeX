@@ -7,11 +7,11 @@ namespace AnimeX.UI.ViewComponents.UserFavoriComment
 {
     public class _UserFavoriComment:ViewComponent
     {
-        public IViewComponentResult Invoke(string UserName)
+        public IViewComponentResult Invoke(int id )
         {
             CommentManager commentManager = new CommentManager(new efCommentRepository(new Context()));
 
-            var values = commentManager.CommentAnimelerInclude().Where(x=>x.UserName== UserName).ToList();
+            var values = commentManager.CommentUserAndAnimeInclude().Where(x=>x.CommentUserId== id).ToList();
             return View(values);
         }
     }

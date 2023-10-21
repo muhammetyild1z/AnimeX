@@ -7,10 +7,11 @@
                 <div class="col-lg-2">
                     <div class="anime__details__pic set-bg" data-setbg="@Model.AnimeImg">
                         <div class="comment"><i class="fa fa-heart"></i> @Model.Like</div>
-                        <div class="view"><i class="fa fa-comment"></i> @ViewBag.CommentCount</div>
+                        <div class="view"><i class="fa fa-comment"></i> @Model.comments.Count</div>
                           <div class="anime__details__btn d-flex justify-content-center " >
 
-                          @*  @await Component.InvokeAsync("_AnimeFavoriControl", new {animeId=Model.AnimeID })*@
+                            <a href="/AnimeIzle/Fav?AnimeID_Sezon=@Model.AnimeID " class="follow-btn"><i class="fa fa-heart-o"></i> Favoriye Ekle</a>
+                           
                     </div>
                     </div>
                   

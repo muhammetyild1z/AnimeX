@@ -1,11 +1,33 @@
-﻿
-@model List<EntityLayer.AnimeSezonlar>
+﻿@model List<EntityLayer.AnimeBolums>
 
 
 
-@foreach (var item in Model)
+<div class="anime__video__player">
+
+
+    <iframe width="100%" height="600" frameborder="0" src="@ViewBag.BolumUrl" allowfullscreen></iframe>
+
+</div>
+
+<div class="anime__details__episodes">
+    <div class="section-title">
+        <h5>Sezonlar</h5>
+    </div>
+@foreach (var item in Model.DistinctBy(x=>x.SezonsNo).OrderBy(x=>x.SezonsNo))
 {
-    @Html.ActionLink(@item.SezonNo+ ".Sezon", "Izle", "AnimeIzle", new { AnimeID_Sezon=item.AnimeID , SezonNo=item.SezonNo})
     
+        <a href="@Url.Action("Izle","AnimeIzle", new{AnimeID_Sezon=item.BolumAnimeID,sezonNo=item.SezonsNo})">@item.SezonsNo Sezon</a>
 }
+</div>
 
+<div class="anime__details__episodes">
+    <div class="section-title">
+        <h5>Bölümler</h5>
+    </div>
+    @foreach (var item in Model.Where(x => x.SezonsNo == ViewBag.sezonNo).OrderBy(x=>x.BolumNo))
+    {
+
+        @Html.ActionLink(item.BolumNo+ ".Bolüm", "Izle", "AnimeIzle", new { AnimeID_Sezon=item.BolumAnimeID , bolumNo=item.BolumNo , SezonNo=item.SezonsNo})
+   
+}
+</div>

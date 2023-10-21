@@ -3,6 +3,7 @@ using AnimeX.DataAccessLayer.Concrate;
 using AnimeX.DataAccessLayer.Repositories;
 using EntityLayer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,8 @@ namespace AnimeX.DataAccessLayer.EntityFramework
         public List<UserFavori> FavoriUserAnimelerGetListInclude()
         {
             Context c = new Context();
-            return c.userFavoris.Include(x => x.Animelers).Include(x=>x.AppUser).ToList();
+         
+           return c.userFavoris.Include(x => x.Animelers).Include(x=>x.AppUser).ToList();
         }
     }
 }

@@ -18,12 +18,10 @@ namespace AnimeX.UI.ViewComponents.Comments
         public IViewComponentResult Invoke(int animeID)
         {
 
-            CommentManager cm = new CommentManager(new efCommentRepository(new Context()));
-            var comment = cm.TGetList().Where(x => x.AnimeCommentID == animeID).Where(x=>x.CommentStatus==true).OrderBy(x => x.CommentDate).ToList();
+            CommentManager commentManager = new CommentManager(new efCommentRepository(new Context()));
+            var comment = commentManager.CommentUserInclude().Where(x => x.AnimeCommentID == animeID).Where(x=>x.CommentStatus==true).OrderBy(x => x.CommentDate).ToList();
             ViewBag.animeID = animeID;       
-             
-           
-                     
+                         
             return View(comment);
         }
     }

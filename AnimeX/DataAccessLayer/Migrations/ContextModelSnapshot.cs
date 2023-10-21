@@ -54,13 +54,10 @@ namespace AnimeX.DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.AnimeBolums", b =>
                 {
-                    b.Property<int>("BolumID")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("BolumAnimeID")
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("BolumID"), 1L, 1);
-
-                    b.Property<int>("BolumAnimeID")
+                    b.Property<int>("BolumID")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("BolumCreateDate")
@@ -76,12 +73,7 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.Property<int>("SezonsNo")
                         .HasColumnType("int");
 
-                    b.Property<int>("animelerAnimeID")
-                        .HasColumnType("int");
-
-                    b.HasKey("BolumID");
-
-                    b.HasIndex("animelerAnimeID");
+                    b.HasKey("BolumAnimeID", "BolumID");
 
                     b.ToTable("AnimeBolums");
                 });
@@ -118,9 +110,6 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.Property<string>("AnimeKisaDetay")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("AnimeSezonlarAnimelerSezonId")
-                        .HasColumnType("int");
-
                     b.Property<string>("AnimeUyarlamasi")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -137,26 +126,21 @@ namespace AnimeX.DataAccessLayer.Migrations
 
                     b.HasKey("AnimeID");
 
-                    b.HasIndex("AnimeSezonlarAnimelerSezonId");
-
                     b.ToTable("Animelers");
                 });
 
             modelBuilder.Entity("EntityLayer.AnimeSezonlar", b =>
                 {
-                    b.Property<int>("AnimelerSezonId")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("AnimeID")
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AnimelerSezonId"), 1L, 1);
-
-                    b.Property<int>("AnimeID")
+                    b.Property<int>("AnimelerSezonId")
                         .HasColumnType("int");
 
                     b.Property<int>("SezonNo")
                         .HasColumnType("int");
 
-                    b.HasKey("AnimelerSezonId");
+                    b.HasKey("AnimeID", "AnimelerSezonId");
 
                     b.ToTable("animeSezonlars");
                 });
@@ -262,42 +246,34 @@ namespace AnimeX.DataAccessLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.CategoryAnime", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("KategoriID")
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
+                    b.Property<int>("ID")
+                        .HasColumnType("int");
 
                     b.Property<int>("AnimeID")
                         .HasColumnType("int");
 
-                    b.Property<int>("KategoriID")
-                        .HasColumnType("int");
+                    b.HasKey("KategoriID", "ID");
 
-                    b.Property<int>("animelerAnimeID")
-                        .HasColumnType("int");
-
-                    b.Property<int>("categorieskategoriID")
-                        .HasColumnType("int");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("animelerAnimeID");
-
-                    b.HasIndex("categorieskategoriID");
+                    b.HasIndex("AnimeID");
 
                     b.ToTable("CategoryAnimes");
                 });
 
             modelBuilder.Entity("EntityLayer.Comments", b =>
                 {
+                    b.Property<int>("AnimeCommentID")
+                        .HasColumnType("int");
+
                     b.Property<int>("CommentID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CommentID"), 1L, 1);
 
-                    b.Property<int>("AnimeCommentID")
+                    b.Property<int>("CommentUserId")
                         .HasColumnType("int");
 
                     b.Property<string>("CommentContent")
@@ -310,49 +286,30 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.Property<bool>("CommentStatus")
                         .HasColumnType("bit");
 
-                    b.Property<string>("UserImg")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.HasKey("AnimeCommentID", "CommentID", "CommentUserId");
 
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("animelerAnimeID")
-                        .HasColumnType("int");
-
-                    b.HasKey("CommentID");
-
-                    b.HasIndex("animelerAnimeID");
+                    b.HasIndex("CommentUserId");
 
                     b.ToTable("comments");
                 });
 
             modelBuilder.Entity("EntityLayer.UserFavori", b =>
                 {
-                    b.Property<int>("UserFavoriID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserFavoriID"), 1L, 1);
-
-                    b.Property<int?>("AnimelersAnimeID")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("AppUserId")
-                        .HasColumnType("int");
-
                     b.Property<int>("FavAnimeID")
                         .HasColumnType("int");
 
                     b.Property<int>("FavUserId")
                         .HasColumnType("int");
 
-                    b.HasKey("UserFavoriID");
+                    b.Property<int>("UserFavoriID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.HasIndex("AnimelersAnimeID");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserFavoriID"), 1L, 1);
 
-                    b.HasIndex("AppUserId");
+                    b.HasKey("FavAnimeID", "FavUserId", "UserFavoriID");
+
+                    b.HasIndex("FavUserId");
 
                     b.ToTable("userFavoris");
                 });
@@ -464,31 +421,35 @@ namespace AnimeX.DataAccessLayer.Migrations
                 {
                     b.HasOne("EntityLayer.Animeler", "animeler")
                         .WithMany("animeBolums")
-                        .HasForeignKey("animelerAnimeID")
+                        .HasForeignKey("BolumAnimeID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("animeler");
                 });
 
-            modelBuilder.Entity("EntityLayer.Animeler", b =>
+            modelBuilder.Entity("EntityLayer.AnimeSezonlar", b =>
                 {
-                    b.HasOne("EntityLayer.AnimeSezonlar", null)
-                        .WithMany("Animelers")
-                        .HasForeignKey("AnimeSezonlarAnimelerSezonId");
+                    b.HasOne("EntityLayer.Animeler", "animeler")
+                        .WithMany("animeSezons")
+                        .HasForeignKey("AnimeID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("animeler");
                 });
 
             modelBuilder.Entity("EntityLayer.CategoryAnime", b =>
                 {
                     b.HasOne("EntityLayer.Animeler", "animeler")
                         .WithMany("categoryAnimes")
-                        .HasForeignKey("animelerAnimeID")
+                        .HasForeignKey("AnimeID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("EntityLayer.Categories", "categories")
                         .WithMany("categoryAnimes")
-                        .HasForeignKey("categorieskategoriID")
+                        .HasForeignKey("KategoriID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -501,20 +462,34 @@ namespace AnimeX.DataAccessLayer.Migrations
                 {
                     b.HasOne("EntityLayer.Animeler", "animeler")
                         .WithMany("comments")
-                        .HasForeignKey("animelerAnimeID");
+                        .HasForeignKey("AnimeCommentID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EntityLayer.AppUser", "appUser")
+                        .WithMany("comments")
+                        .HasForeignKey("CommentUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("animeler");
+
+                    b.Navigation("appUser");
                 });
 
             modelBuilder.Entity("EntityLayer.UserFavori", b =>
                 {
                     b.HasOne("EntityLayer.Animeler", "Animelers")
                         .WithMany("userFavoris")
-                        .HasForeignKey("AnimelersAnimeID");
+                        .HasForeignKey("FavAnimeID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("EntityLayer.AppUser", "AppUser")
                         .WithMany("userFavoris")
-                        .HasForeignKey("AppUserId");
+                        .HasForeignKey("FavUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Animelers");
 
@@ -576,6 +551,8 @@ namespace AnimeX.DataAccessLayer.Migrations
                 {
                     b.Navigation("animeBolums");
 
+                    b.Navigation("animeSezons");
+
                     b.Navigation("categoryAnimes");
 
                     b.Navigation("comments");
@@ -583,13 +560,10 @@ namespace AnimeX.DataAccessLayer.Migrations
                     b.Navigation("userFavoris");
                 });
 
-            modelBuilder.Entity("EntityLayer.AnimeSezonlar", b =>
-                {
-                    b.Navigation("Animelers");
-                });
-
             modelBuilder.Entity("EntityLayer.AppUser", b =>
                 {
+                    b.Navigation("comments");
+
                     b.Navigation("userFavoris");
                 });
 

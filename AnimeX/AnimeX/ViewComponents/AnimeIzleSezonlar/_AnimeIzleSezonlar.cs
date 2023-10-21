@@ -7,10 +7,12 @@ namespace AnimeX.UI.ViewComponents.AnimeIzleSezonlar
 {
     public class _AnimeIzleSezonlar:ViewComponent
     {
-        AnimeSezonlarManager animeSezonManager = new AnimeSezonlarManager(new efAnimeSezonlarRepository(new Context()));
+        AnimeBolumsManager animeBolumManager = new AnimeBolumsManager(new efAnimeBolumsRepository(new Context()));
         public IViewComponentResult Invoke(int animeID)
         {
-            var values = animeSezonManager.TGetList().Where(x => x.AnimeID == animeID).ToList();
+            var values = animeBolumManager.TGetList().Where(x => x.BolumAnimeID == animeID).ToList();
+           
+           
             return View(values);
         }
     }

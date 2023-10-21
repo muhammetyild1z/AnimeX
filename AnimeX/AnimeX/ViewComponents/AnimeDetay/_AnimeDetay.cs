@@ -10,8 +10,8 @@ namespace AnimeX.UI.ViewComponents.AnimeDetay
     {
         public IViewComponentResult Invoke(int animeID)
         {
-            AnimelerManager am = new AnimelerManager(new efAnimelerRepository(new Context()));
-            var value = am.TGetByID(animeID);
+            AnimelerManager animeManager = new AnimelerManager(new efAnimelerRepository(new Context()));
+            var value = animeManager.GetCommentIncludeAnimeler().Where(x=>x.AnimeID== animeID).FirstOrDefault();
             return View(value);
         }
     }

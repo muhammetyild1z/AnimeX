@@ -23,5 +23,17 @@ namespace AnimeX.DataAccessLayer.EntityFramework
             Context c = new Context();
             return c.comments.Include(x => x.animeler).ToList();
         }
+
+        public List<Comments> CommentUserAndAnimeInclude()
+        {
+            Context c = new Context();
+            return c.comments.Include(x => x.appUser).Include(x=>x.animeler).ToList();
+        }
+
+        public List<Comments> CommentUserInclude()
+        {
+            Context c = new Context();
+            return c.comments.Include(x => x.appUser).ToList();
+        }
     }
 }

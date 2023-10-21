@@ -15,6 +15,7 @@ namespace EntityLayer
         public int SezonNo { get; set; }
         //public AnimeBolumler? Bolum { get; set; }
         public int AnimeID { get; set; }
-        public List<Animeler> Animelers { get; set; }
+       
+        public Animeler animeler { get; set; }
     }
 }

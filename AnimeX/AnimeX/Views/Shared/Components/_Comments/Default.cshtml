@@ -13,12 +13,12 @@
                     <div class="anime__review__item__pic">
 
                 
-                            <img src="@item.UserImg" alt="">
+                            <img src="@item.appUser.UserImg" alt="">
                         
                        
                     </div>
                     <div class="anime__review__item__text">
-                        <h6>@item.UserName - <span>@item.CommentDate.ToString(" MMM yy HH:MM")</span></h6>
+                        <h6>@User.Identity.Name - <span>@item.CommentDate.ToString(" MMM yy HH:MM")</span></h6>
                         <p>
                             @item.CommentContent
                         </p>
