@@ -99,7 +99,7 @@
                                     <div class="product__item__pic set-bg" data-setbg="@item.AnimeImg">
 
                                         <div class="ep fa fa-star">&nbsp;@item.IMDb</div>
-                                        <div class="comment"><i class="fa fa-comments"></i> @item.comments.Count()</div>
+                                        <div class="comment"><i class="fa fa-comments"></i> @item.comments.Where(x=>x.CommentStatus==true).Count()</div>
                                         <div class="view"><i class="fa fa-calendar"></i> @item.AnimeCikisTarihi.Year</div>
                                     </div>
                                     <div class="product__item__text align-content-md-center">

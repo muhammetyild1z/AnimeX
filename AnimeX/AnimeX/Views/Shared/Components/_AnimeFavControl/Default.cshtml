@@ -1,11 +1,33 @@
 ﻿
 
-
 @if (ViewBag.FavAnime==1)
 {
-    <a href="/AnimeIzle/FavDel?AnimeID_Sezon= @ViewBag.AnimeID " class="follow-btn"><i class="fa fa-heart"></i> Favoriye Ekle</a>
+    <a id="favAnimeRemove" href="/AnimeIzle/FavDel?AnimeID_Sezon= @ViewBag.AnimeID " class="follow-btn"><i class="fa fa-heart"></i> Favoriye Ekle</a>
+     
+           
 }
-else 
+else if(ViewBag.FavAnime==0)
 {
-    <a href="/AnimeIzle/Fav?AnimeID_Sezon=@ViewBag.AnimeID " class="follow-btn"><i class="fa fa-heart-o"></i> Favoriye Ekle</a>
+    <a id="favAnimeAdd" href="/AnimeIzle/Fav?AnimeID_Sezon=@ViewBag.AnimeID " class="follow-btn"><i class="fa fa-heart-o"></i> Favoriye Ekle</a>
+ 
 }
+
+<script>
+    $("#favAnimeRemove").click(function () {
+           swal({
+                   title: "İşlem Başarılı..",
+                    text: "Anime Favori Listenizden Kaldırıldı.",
+                icon: "success",
+                    button: "Tamam",
+                });
+    });
+
+       $("#favAnimeAdd").click(function () {
+                swal({
+                title: "İşlem Başarılı..",
+                text: "Anime Favori Listenize Eklendi.",
+                icon: "success",
+                button: "Tamam",
+            });
+    });
+</script>

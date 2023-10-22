@@ -2,6 +2,8 @@
 using EntityLayer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace AnimeX.UI.Controllers
 {
@@ -26,7 +28,7 @@ namespace AnimeX.UI.Controllers
         public async Task<IActionResult> SignIn(SignInDto siginDto)
         {
 
-            var result =await _signInManager.PasswordSignInAsync(siginDto.UserName, siginDto.Password, true, false);
+            var result = await _signInManager.PasswordSignInAsync(siginDto.UserName, siginDto.Password, true, false);
             if (result.Succeeded)
             {
                 return RedirectToAction("Index", "MyProfile");
@@ -47,36 +49,45 @@ namespace AnimeX.UI.Controllers
         [HttpPost]
         public async Task<IActionResult> SignUp(SignUpDto p)
         {
-            if (p.Password==p.PasswordR)
+            if (p.Password == p.PasswordR)
             {
+                string emailHash = p.Email;
+                byte[] encodedPassword = new UTF8Encoding().GetBytes(emailHash);
+                byte[] hash = ((HashAlgorithm)CryptoConfig.CreateFromName("MD5")).ComputeHash(encodedPassword);
+                string encoded = BitConverter.ToString(hash)
+                   .Replace("-", string.Empty)
+                   .ToLower();
+
                 AppUser user = new AppUser
                 {
-                    UserName = p.UserName,
+              
+                UserName = p.UserName,
                     Email = p.Email,
                     UserImg = "https://r.resimlink.com/liu8Qk.jpg",
+                    EmailHash = encoded+"?s=200",
                     Details = " Henuz Kendini Bize Anlatmamis..",
-                    UserCreateDate= DateTime.Now
+                    UserCreateDate = DateTime.Now
                 };
-                var result = await _userManager.CreateAsync(user,p.Password);
-                if (result.Succeeded)
+            var result = await _userManager.CreateAsync(user, p.Password);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("SignIn", "Account");
+            }
+            else
+            {
+                foreach (var item in result.Errors)
                 {
-                    return RedirectToAction("SignIn", "Account");
-                }
-                else
-                {
-                    foreach (var item in result.Errors)
-                    {
-                        ModelState.AddModelError("", item.Description);
-                    }
+                    ModelState.AddModelError("", item.Description);
                 }
             }
+        }
             
             return View();
-        }
-        public async Task<IActionResult> SignOut()
-        {
-            await _signInManager.SignOutAsync();
-            return RedirectToAction("SignIn", "Account");
-        }
     }
+    public async Task<IActionResult> SignOut()
+    {
+        await _signInManager.SignOutAsync();
+        return RedirectToAction("SignIn", "Account");
+    }
+}
 }

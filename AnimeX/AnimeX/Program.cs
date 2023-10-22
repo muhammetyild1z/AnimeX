@@ -7,6 +7,7 @@ using AnimeX.DataAccessLayer.EntityFramework;
 using AnimeX.EntityLayer;
 using AnimeX.UI.Models;
 using EntityLayer;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,11 +30,36 @@ builder.Services.AddIdentity<AppUser, AppRole>(
     .AddErrorDescriber<CustomerIdentityValidation>()
     .AddEntityFrameworkStores<Context>();
 
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+               .AddCookie(x =>
+               {
+                   x.LoginPath = "/Account/login";
+
+               });
+
 builder.Services.AddScoped<Context>();
 builder.Services.AddScoped<IAnimelerDal,efAnimelerRepository>();
 builder.Services.AddScoped<IAnimelerService,AnimelerManager>();
+
 builder.Services.AddScoped<ICategoriesService,CategoriesManager>();
 builder.Services.AddScoped<ICategoriesDal, efCatagoriesRepository>();
+
+
+builder.Services.AddScoped<ICategoryAnimeDal, efCategoryAnimeRepository>();
+builder.Services.AddScoped<ICategoryAnimeService, CategoryAnimeManeger>();
+
+builder.Services.AddScoped<ICommentDal, efCommentRepository>();
+builder.Services.AddScoped<ICommentService, CommentManager>();
+
+builder.Services.AddScoped<IUserFavoriDal, efUserFavoriRepository>();
+builder.Services.AddScoped<IUserFavoriService, UserFavoriManager>();
+
+builder.Services.AddScoped<IAnimeBolumsDal, efAnimeBolumsRepository>();
+builder.Services.AddScoped<IAnimeBolumsService, AnimeBolumsManager>();
+
+builder.Services.AddScoped<IAnimeBolumsService, AnimeBolumsManager>();
+builder.Services.AddScoped<IAnimeBolumsService, AnimeBolumsManager>();
+
 
 
 

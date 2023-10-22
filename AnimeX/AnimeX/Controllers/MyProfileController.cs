@@ -3,12 +3,16 @@ using AnimeX.DataAccessLayer.Concrate;
 using AnimeX.DataAccessLayer.EntityFramework;
 using AnimeX.DtoLayer.ProfileEditDto;
 using EntityLayer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace AnimeX.UI.Controllers
 {
+    [Authorize]
     public class MyProfileController : Controller
     {
         UserManager<AppUser> _userManager;
@@ -17,10 +21,10 @@ namespace AnimeX.UI.Controllers
         {
             _userManager = userManager;
         }
-
         public async Task<IActionResult> Index()
         {
-            
+
+
             if (User.Identity.IsAuthenticated == true)
             {
                 var values = await _userManager.FindByIdAsync(User.Claims.Where(x => x.Type == ClaimTypes.NameIdentifier).FirstOrDefault().Value);
@@ -55,13 +59,30 @@ namespace AnimeX.UI.Controllers
             if (User.Identity.IsAuthenticated == true)
             {
                 var user = await _userManager.FindByNameAsync(User.Identity.Name);
-                user.Email = user.Email;
-                user.Details = user.Details;
+             
+
+                // veri tabaninda bulunan bir email adresi varsa kullanici emaili ekleyemesin ve e mail guncellenmedigi zaman gravatarda md5 ile maili sifrelemesin..
+                if (user.Email == userDto.Email)
+                {
+                    string emailHash = userDto.Email;
+                    byte[] encodedPassword = new UTF8Encoding().GetBytes(emailHash);
+                    byte[] hash = ((HashAlgorithm)CryptoConfig.CreateFromName("MD5")).ComputeHash(encodedPassword);
+                    string encoded = BitConverter.ToString(hash)
+                       .Replace("-", string.Empty)
+                       .ToLower();
+                    user.EmailHash = encoded + "?s=200";
+                    user.Email = userDto.Email;
+                }
+                else if (user.Email != userDto.Email)
+                {
+                    ModelState.AddModelError("", "Bu mail adresi başka hesap için kayıtlı..");
+                }
+                user.Details = userDto.Details;
                 await _userManager.UpdateAsync(user);
 
-                if (userDto.password != null || userDto.passwordR != null && userDto.passwordR== userDto.password)
+                if (userDto.password != null || userDto.passwordR != null && userDto.passwordR == userDto.password)
                 {
-                    
+
                     var result = await _userManager.ChangePasswordAsync(user, userDto.Oldpassword, userDto.passwordR);
                     if (result.Succeeded)
                     {

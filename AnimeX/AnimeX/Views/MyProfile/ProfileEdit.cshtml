@@ -6,35 +6,44 @@
 }
 
 
-<form asp-action="ProfileEdit" asp-controller="MyProfile" method="post" class="container" style="margin:200px">
-    <p class ="text-white mr-1"> <i class="fa fa-info mr-1"></i>Kişisel Bilgiler</p>
-    <div class="form-group col-md-5" style="cursor:no-drop">
+
+<form asp-action="ProfileEdit" asp-controller="MyProfile" method="post" class="container row d-flex justify-content-center mt-5" >
+    <div class="bg-dark col-md-7 mt-5">
+        <h4 class="text-white"><i class="fa fa-info-circle mr-1"></i>Profil Avatar Değişimi İçin..</h4>
+        <p class="text-white mr-1">
+            Profil resmi belirlemek için <a class="font-weight-bold" href="https://tr.gravatar.com/">Gravatar.com</a> adresine girerek,
+            sitemize üye olduğunuz e-mail adresiyle o siteye de üye olarak avatar belirleme işlemini Gravatar üzerinden yapınız.
+    Birkaç saat içerisinde profil resminiz sitemizde görünür hale gelecektir.</p>
+    </div>
+    <hr class="bg-dark col-md-7" />
+    <p class="text-white mr-1 col-md-7"> <i class="fa fa-info mr-1"></i>Kişisel Bilgiler</p>
+    <div class="form-group col-md-7" style="cursor:no-drop">
         <input disabled class="form-control" value="@Model.UserName">
     </div>
 
-    <div class="form-group col-md-5">
-        <textarea class="col-md-12" name="Details" >@Model.Details</textarea>
+    <div class="form-group col-md-7">
+        <textarea class="col-md-12" name="Details" rows="7">@Model.Details</textarea>
     </div>
 
-    <div class="form-group col-md-5">
+    <div class="form-group col-md-7">
         <input type="email" class="form-control" value="@Model.Email" name="Email">
         <small id="emailHelp" class="form-text text-muted">E-postanızı asla başkasıyla paylaşmayacağız.</small>
   </div>
-    
 
-  <p class="text-white mr-1"> <i class="fa fa-key mr-1"></i>Parola Değiştir</p>
-    <div class="form-group col-md-5">
+
+    <p class="text-white mr-1 col-md-7"> <i class="fa fa-key mr-1"></i>Parola Değiştir</p>
+    <div class="form-group col-md-7">
         <input type="password" class="form-control" name="Oldpassword" placeholder="Eski Şifrenizi Girin..">
     </div>
-    <div class="form-group col-md-5">
+    <div class="form-group col-md-7">
         <input type="password"  class="form-control" name="password" placeholder="Yeni Şifrenizi Girin..">
     </div>
 
-    <div class="form-group col-md-5">
+    <div class="form-group col-md-7">
         <input type="password" class="form-control" name="passwordR" placeholder="Yeni Şifrenizi Tekrar Girin..">
     </div>
-
-  <button type="submit" class="btn btn-primary ml-3">Profili Güncelle</button>
+    <br />
+  <button type="submit" class="btn btn-primary col-md-6 mb-5">Profili Güncelle</button>
     <h6 class="text-danger ">@Html.ValidationSummary()</h6>
         
     

@@ -21,11 +21,13 @@ namespace AnimeX.UI.ViewComponents.AnimeFavControl
         {
 
             var user = _userManager.Users.Where(x=>x.UserName==User.Identity.Name).Select(x=>x.Id).FirstOrDefault();
+
             if (User.Identity.IsAuthenticated==true)
             {
                 UserFavoriManager userFavoriManager = new UserFavoriManager(new efUserFavoriRepository(new Context()));
 
-               var value = userFavoriManager.GetList().Where(x => x.FavAnimeID == animeID).Where(x => x.FavUserId == user).Count();    
+               var value = userFavoriManager.GetList().Where(x => x.FavAnimeID == animeID).Where(x => x.FavUserId == user).Count();
+              
                 ViewBag.FavAnime=value;
                 ViewBag.AnimeID= animeID;
                 return View();
