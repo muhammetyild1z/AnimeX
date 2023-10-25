@@ -1,0 +1,26 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+
+        @Html.Partial("_Admin_Head_Partial")
+<body class="hold-transition skin-blue fixed sidebar-mini">
+    <div class="wrapper">
+
+
+
+        @Html.Partial("_Admin_Header_Partial")
+
+
+        @Html.Partial("_Admin_Sidebar_Partial")
+
+        @Html.Partial("_Admin_SidebarController_Partial")
+
+
+        @RenderBody()
+    </div>
+</body>
+        @Html.Partial("_Script_Partial")
+
+</html>

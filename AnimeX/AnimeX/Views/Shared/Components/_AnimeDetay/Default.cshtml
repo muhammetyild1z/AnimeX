@@ -7,7 +7,7 @@
                 <div class="col-lg-2">
                     <div class="anime__details__pic set-bg" data-setbg="@Model.AnimeImg">
                         <div class="comment"><i class="fa fa-heart"></i> @Model.Like</div>
-                        <div class="view"><i class="fa fa-comment"></i> @Model.comments.Count</div>
+                        <div class="view"><i class="fa fa-comment"></i> @Model.comments.Where(x=>x.CommentStatus==true).Count()</div>
                           <div class="anime__details__btn d-flex justify-content-center " >
                          
                             @await Component.InvokeAsync("_AnimeFavControl",new {animeID=Model.AnimeID , userName= User.Identity.Name})
