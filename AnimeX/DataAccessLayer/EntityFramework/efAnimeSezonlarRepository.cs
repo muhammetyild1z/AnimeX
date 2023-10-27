@@ -1,7 +1,7 @@
 ﻿using AnimeX.DataAccessLayer.Abstract;
 using AnimeX.DataAccessLayer.Concrate;
 using AnimeX.DataAccessLayer.Repositories;
-using AnimeX.EntityLayer;
+
 using EntityLayer;
 using System;
 using System.Collections.Generic;

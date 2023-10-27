@@ -1,0 +1,112 @@
+﻿@model EntityLayer.AppUser
+
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="https://secure.gravatar.com/avatar/@Model.EmailHash?s=200" class="img-circle" alt="User Image">
+            </div>
+            <div class="pull-left info">
+                <p>@User.Identity.Name</p>
+                <a href="#"><i class="fa fa-circle text-success"></i> Çevrimiçi</a>
+            </div>
+        </div>
+
+
+        <ul class="sidebar-menu" data-widget="tree">
+
+            <li class="header">Site İşlemleri</li>
+
+            <li>
+                <a href="/Admin/Home/Index">
+                    <i class="fa fa-home"></i> <span>Anasayfa</span>
+                </a>
+            </li>
+
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-plus-square-o"></i>
+                    <span>Anime İşlemleri</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-left"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/Admin/AdminAnimes/AnimeAdd"><i class="fa fa-circle-o"></i>Anime Ekle</a></li>
+                    <li><a href="/Admin/AdminAnimes/Animelers/"><i class="fa fa-circle-o"></i> Animeleri Listele</a></li>
+                    <li><a href="/Admin/AdminAnimes/AnimeUpdate"><i class="fa fa-circle-o"></i> Anime Güncelle</a></li>
+                  
+                </ul>
+            </li>
+
+                 <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-plus-square"></i>
+                    <span>Anime Bölüm İşlemleri</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-left"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/Admin/AdminAnime/AnimeAdd"><i class="fa fa-circle-o"></i>Anime Bölüm Ekle</a></li>
+                    <li><a href="/Admin/AdminAnime/Animelers/"><i class="fa fa-circle-o"></i> Anime Bölüm Düzenle</a></li>
+                   
+                  
+                </ul>
+            </li>
+           
+
+           
+                  <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-sitemap"></i>
+                    <span>Kategori İşlemleri</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-left"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i>Kategori Ekle </a></li>
+                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i>Kategori Listele</a></li>           
+                </ul>
+            </li>
+
+
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-comment-o"></i>
+                    <span>Yorum İşlemleri</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-left"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i>Yorum Onayla</a></li>
+                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i>Yorumları Listele</a></li>
+
+                </ul>
+            </li>
+
+
+            <li class="header">Üyelik İşlemleri</li>
+                 <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-user"></i>
+                    <span>Kullanıcı İşlemleri</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-left"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i>Rol Ekle</a></li>
+                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i>Rol Ata</a></li>
+                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i>Kullacıları Listele</a></li>
+
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>

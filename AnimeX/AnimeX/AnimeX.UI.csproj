@@ -1996,7 +1996,6 @@
     <None Include="wwwroot\animeX\js\mixitup.min.js" />
     <None Include="wwwroot\animeX\js\owl.carousel.min.js" />
     <None Include="wwwroot\animeX\js\player.js" />
-    <None Include="wwwroot\Res-panel\.github\ISSUE_TEMPLATE.md" />
     <None Include="wwwroot\Res-panel\bower_components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.css.map" />
     <None Include="wwwroot\Res-panel\bower_components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.min.css.map" />
     <None Include="wwwroot\Res-panel\bower_components\bootstrap-colorpicker\dist\js\bootstrap-colorpicker.js" />
@@ -6814,8 +6813,6 @@
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\ViewComponents\" />
-    <Folder Include="Areas\Admin\Views\Shared\Components\" />
   </ItemGroup>
 
 </Project>

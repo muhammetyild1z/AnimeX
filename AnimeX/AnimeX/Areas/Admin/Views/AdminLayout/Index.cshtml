@@ -10,10 +10,13 @@
 
 
 
-        @Html.Partial("_Admin_Header_Partial")
+      
+        @await Component.InvokeAsync("_Admin_Header")
+
+        @await Component.InvokeAsync("_Admin_Sidebar")
 
 
-        @Html.Partial("_Admin_Sidebar_Partial")
+       
 
         @Html.Partial("_Admin_SidebarController_Partial")
 

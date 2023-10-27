@@ -1,0 +1,70 @@
+﻿@using X.PagedList;
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@model IPagedList<EntityLayer.Animeler>
+@{
+    ViewData["Title"] = "Animelers";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+
+ <div class="content-wrapper">
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title"> Anime Listesi</h3>
+                        <input name="searchbar" class="rounded-circle d-flex justify-content-end ml-0" type="text" placeholder="Anime Adi Girin" />sag tarafa yaslanacak<i class="fa fa-search"></i>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Anime Adı</th>
+                                <th>Anime Detay Kısa</th>
+                                <th>Uyarlama</th>
+                                <th>Durum</th>
+                                    <th>Anime Çıkış Tarihi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.AnimeAdi</td>
+                                        <td>
+                                            @item.AnimeDetay.Substring(0,100)..
+                                        </td>
+                                        <td>@item.AnimeUyarlamasi</td>
+                                        <td> @item.status</td>
+                                        <td>@item.AnimeCikisTarihi.ToString("dd MMMM yy")</td>
+                                        <td>
+                                            <a class="btn btn-primary" href="/Admin/AdminAnimes/AnimeInfo/@item.AnimeID">Detaylar</a>
+                                        </td>
+                                    </tr>
+                                }
+                                     
+                        
+                    </table>
+                </div>
+                    <div class="product__pagination" style="margin: 2% 35%">
+                        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Animelers", new { page }), new PagedListRenderOptions
+                        {
+                        LiElementClasses = new string[] { "page-item" },
+                        PageClasses=new string[] {"current-page"},
+                        UlElementClasses = new string[] { "pagination justify-content-center" },
+                        //PageClasses = new string[] { "page-link" },
+                        //Display = PagedListDisplayMode.IfNeeded
+                        })                 
+                    </div>
+                <!-- /.box-body -->
+            </div>
+
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+</div>

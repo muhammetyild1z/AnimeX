@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AnimeX.EntityLayer
+namespace EntityLayer
 {
     public class AppRole : IdentityRole<int>
     {

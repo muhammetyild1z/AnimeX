@@ -1119,8 +1119,8 @@ a:focus {
   }
 }
 .navbar-nav > .user-menu > .dropdown-menu > .user-footer {
-  background-color: #f9f9f9;
-  padding: 10px;
+    background-color: #93B1A6;
+    padding: 10px;
 }
 .navbar-nav > .user-menu > .dropdown-menu > .user-footer:before,
 .navbar-nav > .user-menu > .dropdown-menu > .user-footer:after {
@@ -1134,9 +1134,9 @@ a:focus {
   color: #666666;
 }
 @media (max-width: 991px) {
-  .navbar-nav > .user-menu > .dropdown-menu > .user-footer .btn-default:hover {
-    background-color: #f9f9f9;
-  }
+    .navbar-nav > .user-menu > .dropdown-menu > .user-footer .btn-default:hover {
+        background-color: #93B1A6;
+    }
 }
 .navbar-nav > .user-menu .user-image {
   float: left;

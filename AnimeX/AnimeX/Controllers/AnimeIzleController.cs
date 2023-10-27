@@ -3,7 +3,7 @@ using AnimeX.BusinnessLayer.Concrate;
 using AnimeX.DataAccessLayer.Abstract;
 using AnimeX.DataAccessLayer.Concrate;
 using AnimeX.DataAccessLayer.EntityFramework;
-using AnimeX.EntityLayer;
+
 using EntityLayer;
 using Humanizer;
 using Microsoft.AspNetCore.Authorization;

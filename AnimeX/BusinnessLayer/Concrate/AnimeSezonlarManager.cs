@@ -1,6 +1,6 @@
 ﻿using AnimeX.BusinnessLayer.Abstract;
 using AnimeX.DataAccessLayer.Abstract;
-using AnimeX.EntityLayer;
+
 using EntityLayer;
 using System;
 using System.Collections.Generic;

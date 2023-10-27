@@ -2,7 +2,7 @@
 using AnimeX.BusinnessLayer.Concrate;
 using AnimeX.DataAccessLayer.Concrate;
 using AnimeX.DataAccessLayer.EntityFramework;
-using AnimeX.EntityLayer;
+
 using AnimeX.Models;
 using EntityLayer;
 using Microsoft.AspNetCore.Identity;

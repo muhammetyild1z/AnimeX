@@ -16,16 +16,40 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\AnimeX
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/AdminAnimes/Animelers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5BbmltZXNcQW5pbWVsZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/AdminLayout/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5MYXlvdXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/AdminProfile/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5Qcm9maWxlXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/Shared/_Admin_Header_Partial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbl9IZWFkZXJfUGFydGlhbC5jc2h0bWw=
+[C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/Shared/Components/_AdminProfile/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0FkbWluUHJvZmlsZVxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/Shared/Components/_Admin_Header/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0FkbWluX0hlYWRlclxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/Shared/Components/_Admin_Sidebar/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0FkbWluX1NpZGViYXJcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/Shared/Components/_FeedbackMembers/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0ZlZWRiYWNrTWVtYmVyc1xEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/Shared/Components/_Info4Boxes/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0luZm80Qm94ZXNcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/Shared/_Admin_Head_Partial.cshtml]
@@ -34,10 +58,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/Shared/_Admin_SidebarController_Partial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbl9TaWRlYmFyQ29udHJvbGxlcl9QYXJ0aWFsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/Shared/_Admin_Sidebar_Partial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbl9TaWRlYmFyX1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/Shared/_Script_Partial.cshtml]

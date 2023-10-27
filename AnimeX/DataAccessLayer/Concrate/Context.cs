@@ -1,4 +1,4 @@
-﻿using AnimeX.EntityLayer;
+﻿
 using EntityLayer;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
