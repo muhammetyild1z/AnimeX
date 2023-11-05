@@ -86,6 +86,7 @@ namespace AnimeX.UI.Controllers
             UserFavori userFavori = new UserFavori();
             userFavori.FavAnimeID = AnimeID_Sezon;
             userFavori.FavUserId = user.Id;
+            userFavori.FavDate = DateTime.Now;
             favoriUserManager.Insert(userFavori);
             return RedirectToAction("Izle", "AnimeIzle", new { AnimeID_Sezon = AnimeID_Sezon });
         }

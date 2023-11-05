@@ -17,5 +17,6 @@ namespace EntityLayer
         public virtual Animeler Animelers { get; set; }
         public int FavUserId { get; set; }
         public virtual AppUser AppUser { get; set; }
+        public DateTime FavDate { get; set; }
     }
 }

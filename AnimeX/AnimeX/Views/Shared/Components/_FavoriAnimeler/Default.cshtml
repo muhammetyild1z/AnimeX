@@ -34,7 +34,7 @@
                     {
                         <h5>
                             @Html.ActionLink(@item.Animelers.AnimeAdi.Substring(0,22), "Izle", "AnimeIzle",
-                    new { AnimeID_Sezon=1/*item.UserFavAnimeID*/})..
+                    new { AnimeID_Sezon=item.Animelers.AnimeID/*item.UserFavAnimeID*/})..
 
                         </h5>
                     }
@@ -42,7 +42,7 @@
                     {
                         <h5>
                             @Html.ActionLink(@item.Animelers.AnimeAdi, "Izle", "AnimeIzle",
-                    new {AnimeID_Sezon=1/*item.UserFavAnimeID*/})
+                    new {AnimeID_Sezon=item.Animelers.AnimeID/*item.UserFavAnimeID*/})
                         </h5>
                     }
                 </ul>

@@ -29,11 +29,11 @@ builder.Services.AddIdentity<AppUser, AppRole>(
     )
     .AddErrorDescriber<CustomerIdentityValidation>()
     .AddEntityFrameworkStores<Context>();
-
+builder.Services.AddMvc();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                .AddCookie(x =>
                {
-                   x.LoginPath = "/Account/login";
+                   x.LoginPath = "/Account/SignIn";
 
                });
 

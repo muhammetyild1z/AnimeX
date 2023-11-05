@@ -1,0 +1,93 @@
+﻿@using X.PagedList;
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@model IPagedList<EntityLayer.Comments>
+@{
+    ViewData["Title"] = "CommentCheck";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="content-wrapper">
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header row">
+                        <h3 class="box-title col-md-7"> Onaylanmamis Yorum Listesi</h3>
+                        <div class="d-flex justify-content-center h-100 col-md-5">
+                            
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Yorum Tarihi</th>
+                                    <th>Yorum İçerik</th>
+                                    <th>Yorum Yazan Kullanıcı</th>
+                                    <th>Durum</th>
+                                    <th>Yorum Yapılan Anime</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.CommentDate.ToString("dd-MMMM-yy")</td>
+                                        @if (item.CommentContent.Length <= 100)
+                                        {
+                                            <td>
+                                                @item.CommentContent
+                                            </td>
+                                        }else
+                                        {
+                                            <td>
+                                                @item.CommentContent.Substring(0,100)..
+                                            </td>
+                                        }
+                                     
+                                        <td>@item.appUser.UserName</td>
+                                        @if (item.CommentStatus == false)
+                                        {
+                                            <td>Onay Bekliyor</td>
+                                        }
+
+                                        <td>@item.animeler.AnimeAdi</td>
+
+                                       
+                                        <td>
+                                           <a class="btn btn-danger" href="/Comment/CommentRemove/@item.CommentID">Sil</a>
+                                          
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-success" href="/Comment/CommentApprove/@item.CommentID">Onayla</a>
+                                        </td>
+                                       
+
+                                    </tr>
+                                }
+
+
+                        </table>
+                    </div>
+                    <div class="product__pagination" style="margin: 2% 35%">
+                        @Html.PagedListPager((IPagedList)Model, page => Url.Action("CommentCheck", new { page }), new PagedListRenderOptions
+                        {
+                        LiElementClasses = new string[] { "page-item" },
+                        PageClasses=new string[] {"current-page"},
+                        UlElementClasses = new string[] { "pagination justify-content-center" },
+                        //PageClasses = new string[] { "page-link" },
+                        //Display = PagedListDisplayMode.IfNeeded
+                        })
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+</div>
+

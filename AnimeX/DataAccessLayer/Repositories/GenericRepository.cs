@@ -44,6 +44,7 @@ namespace AnimeX.DataAccessLayer.Repositories
         public void Update(T entity, T unchanged)
         {
             _context.Entry(unchanged).CurrentValues.SetValues(entity);
+            _context.SaveChanges();
         }
         public List<T> GetListAllByIdInclude(Expression<Func<T, bool>> filter)
         {
