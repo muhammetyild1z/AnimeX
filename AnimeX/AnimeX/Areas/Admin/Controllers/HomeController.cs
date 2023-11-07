@@ -1,6 +1,7 @@
 ﻿using EntityLayer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using X.PagedList;
 
 namespace AnimeX.UI.Areas.Admin.Controllers
 {
@@ -14,10 +15,16 @@ namespace AnimeX.UI.Areas.Admin.Controllers
         }
 
         [Area("Admin")]
-		public async Task< IActionResult >Index()
+        public async Task< IActionResult >Index()
 		{
             var user =  await _userManager.GetUsersInRoleAsync("Member");
-            return View(user);
+            return View(user.OrderByDescending(x=>x.UserCreateDate).Take(4).ToList());
 		}
-	}
+        [Area("Admin")]
+        public async Task<IActionResult> AllUsers(int page=1)
+        {
+            var user = await _userManager.GetUsersInRoleAsync("Member");
+            return View(user.ToPagedList(page,30)); ;
+        }
+    }
 }

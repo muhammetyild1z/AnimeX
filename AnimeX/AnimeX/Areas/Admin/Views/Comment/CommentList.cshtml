@@ -1,0 +1,83 @@
+﻿@using X.PagedList;
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@model IPagedList<EntityLayer.Comments>
+@{
+    ViewData["Title"] = "CommentList";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="content-wrapper">
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header row">
+                        <h3 class="box-title col-md-7"> Onaylanmış Yorum Listesi</h3>
+                        <div class="d-flex justify-content-center h-100 col-md-5">
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Yorum Tarihi</th>
+                                    <th>Yorum İçerik</th>
+                                    <th>Yorum Yazan Kullanıcı</th>
+                                    <th>Durum</th>
+                                    <th>Yorum Yapılan Anime</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.CommentDate.ToString("dd-MMMM-yy")</td>
+                                      
+                                            <td>
+                                                @item.CommentContent
+                                            </td>
+                                                                           
+
+                                        <td><a href="/Member/Memberdetails/@item.appUser.Id"> @item.appUser.UserName </a></td>
+                                      
+                                            <td>Onaylandı</td>
+
+
+                                        <td><a href="/AnimeIzle/Izle/@item.animeler.AnimeID">@item.animeler.AnimeAdi</a></td>
+
+
+                                        <td>
+                                            <a class="btn btn-danger" href="/Admin/Comment/CommentRemoveStatusTrue/@item.CommentID">Sil</a>
+
+                                        </td>
+                                      
+
+
+                                    </tr>
+                                }
+
+
+                        </table>
+                    </div>
+                    <div class="product__pagination" style="margin: 2% 35%">
+                        @Html.PagedListPager((IPagedList)Model, page => Url.Action("CommentCheck", new { page }), new PagedListRenderOptions
+                        {
+                        LiElementClasses = new string[] { "page-item" },
+                        PageClasses=new string[] {"current-page"},
+                        UlElementClasses = new string[] { "pagination justify-content-center" },
+                        //PageClasses = new string[] { "page-link" },
+                        //Display = PagedListDisplayMode.IfNeeded
+                        })
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+</div>
+

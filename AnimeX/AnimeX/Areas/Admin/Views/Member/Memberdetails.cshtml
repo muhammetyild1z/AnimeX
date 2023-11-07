@@ -1,0 +1,101 @@
+﻿@model EntityLayer.AppUser
+@{
+    ViewData["Title"] = "Memberdetails";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="wrapper">
+
+
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <!-- Main content -->
+        <section class="content">
+
+            <div class="row">
+                <div class="col-md-3">
+
+                    <!-- Profile Image -->
+                    <div class="box box-primary">
+                        <div class="box-body box-profile row">
+                            <img class="profile-user-img img-responsive img-circle" src="https://secure.gravatar.com/avatar/@Model.EmailHash?s=200" alt="User profile picture">
+
+                            <h3 class="profile-username text-center">@Model.UserName</h3>
+
+                            <p class="text-muted text-center">@((DateTime.Now - Model.UserCreateDate).Days) Gündür üye</p>
+                           
+                            <a href="#"  class="follow-btn btn btn-danger col-md-11"><i class="fa fa-lock"></i>&nbsp; Kullanıcı Şifresini Yenile </a>          
+                            <a href="#" class="follow-btn btn btn-danger col-md-11"><i class="fa fa-user-circle"></i>&nbsp; Kullanıcı Adını Düzenle </a>
+                            <a href="#" class="follow-btn btn btn-danger col-md-11"><i class="fa fa-envelope "></i>&nbsp; Mail Adresini Düzenle </a>
+                            
+                      
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                    <!-- About Me Box -->
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">Hakkında</h3>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <strong><i class="fa fa-info margin-r-5"></i> Hakkinda</strong>
+
+                            <p class="text-muted">
+                                @Model.Details
+                            </p>
+
+                            <hr>
+
+                            <strong><i class="fa fa-envelope margin-r-5"></i> E-mail</strong>
+
+                            <p class="text-muted">@Model.Email</p>
+
+                            <hr>
+
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-9">
+                    <div class="nav-tabs-custom">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#activity" data-toggle="tab">Hareketler</a></li>
+
+                        
+                        </ul>
+                        <div class="tab-content">
+                            <div class="active tab-pane" id="activity">
+                                <!-- Post -->
+                                  @await Component.InvokeAsync("_MemberCommentsPost",new {memberid=Model.Id})
+                            
+                                </div>
+                              
+
+                              
+                                <!-- /.tab-pane -->
+                            </div>
+                            <!-- /.tab-content -->
+                        </div>
+                        <!-- /.nav-tabs-custom -->
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+       
+
+        <!-- Control Sidebar -->
+   
+        <!-- /.control-sidebar -->
+        <!-- Add the sidebar's background. This div must be placed
+             immediately after the control sidebar -->
+       
+    </div>

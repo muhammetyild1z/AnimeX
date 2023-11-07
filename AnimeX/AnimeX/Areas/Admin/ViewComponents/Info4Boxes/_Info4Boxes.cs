@@ -9,12 +9,12 @@ namespace AnimeX.UI.Areas.Admin.ViewComponents.Info4Boxes
 {
     public class _Info4Boxes:ViewComponent
     {
-        private readonly UserManager<AppUser> _userManager;
+        //private readonly UserManager<AppUser> _userManager;
 
-        public _Info4Boxes(UserManager<AppUser> userManager)
-        {
-            _userManager = userManager;
-        }
+        //public _Info4Boxes(UserManager<AppUser> userManager)
+        //{
+        //    _userManager = userManager;
+        //}
 
         public IViewComponentResult Invoke()
         {
@@ -26,7 +26,7 @@ namespace AnimeX.UI.Areas.Admin.ViewComponents.Info4Boxes
             ViewBag.CommentCount = commentManager.TGetList().Count();
             ViewBag.AnimeCount = animelerManager.TGetList().Count(); 
             ViewBag.CategoryCount = categoryManager.TGetList().Count();
-            ViewBag.UserCount = _userManager.Users.Count();
+           // ViewBag.UserCount = _userManager.Users.Count();
             return View();
         }
     }

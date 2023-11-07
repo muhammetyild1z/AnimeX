@@ -117,7 +117,12 @@
                             <img src="https://secure.gravatar.com/avatar/@Model.EmailHash?s=200" class="img-circle" alt="User Image">
 
                             <p>
-                                @User.Identity.Name - ROLES
+                                @User.Identity.Name -
+                                @if (User.IsInRole("Admin")==true)
+                                {
+                                    <span>Admin</span>
+                                }
+
                                 <small>Uyelik Tarihi @Model.UserCreateDate.ToString("yyyy")</small>
                             </p>
 
@@ -125,19 +130,15 @@
                       
                         <!-- Menu Footer-->
                         <li class="user-footer">
-                            <div class="pull-left">
-                                <a href="#" class="btn btn-default btn-flat">Profile</a>
-                            </div>
+                           
                             <div class="pull-right">
-                                <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                <a href="/AdminProfile/SignOut" class="btn btn-default btn-flat">Çıkış Yap</a>
                             </div>
                         </li>
                     </ul>
                 </li>
                 <!-- Control Sidebar Toggle Button -->
-                <li>
-                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                </li>
+              
             </ul>
         </div>
     </nav>

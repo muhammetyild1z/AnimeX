@@ -1,0 +1,34 @@
+﻿@model List<EntityLayer.Comments>
+
+@foreach (var item in Model)
+{
+    <div class="post">
+        <div class="user-block">
+
+            <span class="username">
+                <bold>
+                    @item.appUser.UserName -
+
+                    @if (item.CommentStatus == true)
+                    {
+                        <span>Onaylanmış Yorum</span>
+                    }
+                    else
+                    {
+                        <span>Onaylanmamış Yorum</span>
+                    }
+                </bold>
+                <a href="/Member/MemberCommentRemove/@item.CommentID" class="pull-right btn-box-tool"><i class="fa fa-times"></i></a>
+            </span>
+            <span class="description">@item.CommentDate.ToString("dd MMMM yyyy")</span>
+        </div>
+        <!-- /.user-block -->
+        <p>
+            @item.CommentContent
+        </p>
+        <bold>
+            Yorum Yapılan Anime
+            <a href="/AnimeIzle/Izle?AnimeID_Sezon=@item.animeler.AnimeID">@item.animeler.AnimeAdi</a>
+        </bold>
+    </div>
+}

@@ -7,33 +7,51 @@ using X.PagedList;
 
 namespace AnimeX.UI.Areas.Admin.Controllers
 {
-   
+
     public class CommentController : Controller
     {
-     
         CommentManager commentManager = new CommentManager(new efCommentRepository(new Context()));
+
+        [Route("[controller]/[action]/{id?}")]
         [Area("Admin")]
-        [HttpGet]
-        public IActionResult CommentCheck(int page=1)
+        public IActionResult CommentCheck(int page = 1)
         {
-            var comments = commentManager.CommentUserAndAnimeInclude().Where(x=>x.CommentStatus==false);
-            return View(comments.ToPagedList(page,12));
+            var comments = commentManager.CommentUserAndAnimeInclude().Where(x => x.CommentStatus == false);
+            return View(comments.ToPagedList(page, 12));
         }
-       
+
+        [Route("Admin/[controller]/[action]/{id?}")]
         public IActionResult CommentRemove(int id)
         {
-           var comment= commentManager.TGetList().Where(x=>x.CommentID==id).FirstOrDefault();
+            var comment = commentManager.TGetList().Where(x => x.CommentID == id).FirstOrDefault();
             commentManager.TDelete(comment);
-            //YONLENDIRME YAPILACAK SAYFA REFLESH OLACAK
-            return View("CommentCheck");
+
+            return RedirectToAction("CommentCheck");
         }
+    
+        [Route("Admin/[controller]/[action]/{id?}")]
         public IActionResult CommentApprove(int id)
         {
             var comment = commentManager.TGetList().Where(x => x.CommentID == id).FirstOrDefault();
-            comment.CommentStatus= true;
+            comment.CommentStatus = true;
             commentManager.TUpdate(comment, comment);
-            //YONLENDIRME YAPILACAK SAYFA REFLESH OLACAK
-            return View("CommentCheck");
+
+            return RedirectToAction("CommentCheck");
+        }
+        [Route("[controller]/[action]/{id?}")]
+        [Area("Admin")]
+        public IActionResult CommentList(int page = 1)
+        {
+            var comments = commentManager.CommentUserAndAnimeInclude().Where(x => x.CommentStatus == true);
+            return View(comments.ToPagedList(page, 20));
+        }
+        [Route("Admin/[controller]/[action]/{id?}")]
+        public IActionResult CommentRemoveStatusTrue(int id)
+        {
+            var comment = commentManager.TGetList().Where(x => x.CommentID == id).FirstOrDefault();
+            commentManager.TDelete(comment);
+
+            return RedirectToAction("CommentList");
         }
     }
 }

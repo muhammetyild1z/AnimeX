@@ -11,11 +11,14 @@ namespace AnimeX.UI.Controllers
     {
         private readonly SignInManager<AppUser> _signInManager;
         private readonly UserManager<AppUser> _userManager;
+        private readonly RoleManager<AppRole> _roleManager;
+       
 
-        public AccountController(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager)
+        public AccountController(SignInManager<AppUser> signInManager, UserManager<AppUser> userManager, RoleManager<AppRole> roleManager)
         {
             _signInManager = signInManager;
             _userManager = userManager;
+            _roleManager = roleManager;
         }
 
         [HttpGet]
@@ -27,17 +30,22 @@ namespace AnimeX.UI.Controllers
         [HttpPost]
         public async Task<IActionResult> SignIn(SignInDto siginDto)
         {
-
+            var user= await _userManager.FindByNameAsync(siginDto.UserName);
             var result = await _signInManager.PasswordSignInAsync(siginDto.UserName, siginDto.Password, true, false);
             if (result.Succeeded)
             {
+                if (await _userManager.IsInRoleAsync(user, "Admin") == true)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
                 return RedirectToAction("Index", "MyProfile");
 
-            }
+            }     
             else
             {
                 ViewBag.loginFailed = "Kullanici adi veya şifre hatalı.";
             }
+            
             return View();
         }
         [HttpGet]

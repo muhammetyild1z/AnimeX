@@ -40,7 +40,7 @@
                                 @foreach (var item in Model)
                                 {
                                     <tr>
-                                        <td>@item.AnimeAdi</td>
+                                        <td> <a href="/AnimeIzle/Izle?AnimeID_Sezon=@item.AnimeID">@item.AnimeAdi</a></td>
                                         <td>
                                             @item.AnimeDetay.Substring(0,100)..
                                         </td>
