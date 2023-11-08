@@ -4,26 +4,20 @@
 <!DOCTYPE html>
 <html>
 
-        @Html.Partial("_Admin_Head_Partial")
+@Html.Partial("_Admin_Head_Partial")
 <body class="hold-transition skin-blue fixed sidebar-mini">
     <div class="wrapper">
 
-
-
-      
         @await Component.InvokeAsync("_Admin_Header")
 
         @await Component.InvokeAsync("_Admin_Sidebar")
-
-
-       
-
-        @Html.Partial("_Admin_SidebarController_Partial")
-
-
-        @RenderBody()
+        <div class="content-wrapper">
+            @RenderBody()
+        </div>
     </div>
+    @Html.Partial("_Admin_SidebarController_Partial")
+    @Html.Partial("_Script_Partial")
 </body>
-        @Html.Partial("_Script_Partial")
+
 
 </html>

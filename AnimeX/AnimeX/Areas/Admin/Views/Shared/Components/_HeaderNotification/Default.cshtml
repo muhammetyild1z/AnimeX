@@ -1,0 +1,28 @@
+﻿
+@model List<EntityLayer.Comments>
+
+<li class="dropdown notifications-menu">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="fa fa-bell-o"></i>
+        <span class="label label-warning">@Model.Count</span>
+    </a>
+    <ul class="dropdown-menu">
+        <li class="header">@Model.Count Onaylanmamış Yeni Yorum Mevcut</li>
+        <li>
+            <!-- inner menu: contains the actual data -->
+        
+            <ul class="menu">
+                @foreach (var item in Model)
+                {
+                    <li>
+                        <a >
+                            <i class="fa fa-comment text-aqua"></i> @item.CommentContent - @item.animeler.AnimeAdi
+                        </a>
+                    </li>
+                }
+               
+            </ul>
+        </li>
+        <li class="footer"><a href="/Comment/CommentCheck">Onaylama işlemi</a></li>
+    </ul>
+</li>

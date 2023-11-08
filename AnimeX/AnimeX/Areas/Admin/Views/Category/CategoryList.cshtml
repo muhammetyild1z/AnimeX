@@ -1,0 +1,69 @@
+﻿@using X.PagedList;
+@using X.PagedList.Mvc.Core
+@using X.PagedList.Web.Common
+@model IPagedList<EntityLayer.Categories>
+@{
+    ViewData["Title"] = "CategoryList";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header row">
+                    <h3 class="box-title col-md-7"> Kategori Listesi</h3>
+                  
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Kategori Adı</th>
+                                <th>Kategori Durumu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td> @item.KategoriAdi</td>
+
+                                    @if (item.Status == true)
+                                    {
+                                        <td>  Aktif   </td>
+                                    }
+                                    @if (item.Status == false)
+                                    {
+                                        <td>  Pasif   </td>
+                                    }
+                                
+                                    <td><a class="btn btn-primary" href="/Category/CategoryEdit/@item.kategoriID">Kategori Adını Düzenle</a></td>
+                                </tr>
+
+
+                            }
+
+
+                    </table>
+                </div>
+                <div class="product__pagination" style="margin: 2% 35%">
+                    @Html.PagedListPager((IPagedList)Model, page => Url.Action("CategoryList", new { page }), new PagedListRenderOptions
+                    {
+                    LiElementClasses = new string[] { "page-item" },
+                    PageClasses=new string[] {"current-page"},
+                    UlElementClasses = new string[] { "pagination justify-content-center" },
+                    //PageClasses = new string[] { "page-link" },
+                    //Display = PagedListDisplayMode.IfNeeded
+                    })
+                </div>
+                <!-- /.box-body -->
+            </div>
+
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+

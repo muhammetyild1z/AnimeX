@@ -1,4 +1,7 @@
-﻿using EntityLayer;
+﻿using AnimeX.BusinnessLayer.Concrate;
+using AnimeX.DataAccessLayer.Concrate;
+using AnimeX.DataAccessLayer.EntityFramework;
+using EntityLayer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,12 +18,11 @@ namespace AnimeX.UI.Areas.Admin.ViewComponents.Admin_Header
             _userManager = userManager;
          
         }
-
+       
         public IViewComponentResult Invoke()
         {
             var user = _userManager.Users.Where(x=>x.UserName==User.Identity.Name).FirstOrDefault();
-
-           
+          
             return View(user);
         }
     }

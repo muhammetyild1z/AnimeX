@@ -36,12 +36,12 @@
                 <ul class="treeview-menu">
                     <li><a href="/Admin/AdminAnimes/AnimeAdd"><i class="fa fa-circle-o"></i>Anime Ekle</a></li>
                     <li><a href="/Admin/AdminAnimes/Animelers/"><i class="fa fa-circle-o"></i> Animeleri Listele</a></li>
-                   
-                  
+
+
                 </ul>
             </li>
 
-                 <li class="treeview">
+            <li class="treeview">
                 <a href="#">
                     <i class="fa fa-plus-square"></i>
                     <span>Anime Bölüm İşlemleri</span>
@@ -52,14 +52,14 @@
                 <ul class="treeview-menu">
                     <li><a href="/Admin/AdminAnime/AnimeAdd"><i class="fa fa-circle-o"></i>Anime Bölüm Ekle</a></li>
                     <li><a href="/Admin/AdminAnime/Animelers/"><i class="fa fa-circle-o"></i> Anime Bölüm Düzenle</a></li>
-                   
-                  
+
+
                 </ul>
             </li>
-           
 
-           
-                  <li class="treeview">
+
+
+            <li class="treeview">
                 <a href="#">
                     <i class="fa fa-sitemap"></i>
                     <span>Kategori İşlemleri</span>
@@ -68,8 +68,8 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i>Kategori Ekle </a></li>
-                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i>Kategori Listele</a></li>           
+                    <li><a href="/Category/CategoryAdd"><i class="fa fa-circle-o"></i>Kategori Ekle </a></li>
+                    <li><a href="/Category/CategoryList"><i class="fa fa-circle-o"></i>Kategori Listele</a></li>
                 </ul>
             </li>
 
@@ -83,7 +83,17 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="/Comment/CommentCheck"><i class="fa fa-circle-o"></i>Yorum Onayla</a></li>
+
+                    <li class="active">
+                        <a href="/Comment/CommentCheck">
+                            <i class="fa fa-circle-o"></i> <span>Yorum Onayla</span>
+                            <span class="pull-right-container">
+                                <small class="label pull-right bg-red">@ViewBag.CommentFalse</small>
+                              
+                            </span>
+                        </a>
+                    </li>
+
                     <li><a href="/Comment/CommentList"><i class="fa fa-circle-o"></i>Yorumları Listele</a></li>
 
                 </ul>
@@ -91,7 +101,7 @@
 
 
             <li class="header">Üyelik İşlemleri</li>
-                 <li class="treeview">
+            <li class="treeview">
                 <a href="#">
                     <i class="fa fa-user"></i>
                     <span>Kullanıcı İşlemleri</span>
@@ -102,7 +112,7 @@
                 <ul class="treeview-menu">
                     <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i>Rol Ekle</a></li>
                     <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i>Rol Ata</a></li>
-                    <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i>Kullacıları Listele</a></li>
+                    <li><a href="/Admin/Home/AllUsers/"><i class="fa fa-circle-o"></i>Kullacıları Listele</a></li>
 
                 </ul>
             </li>
