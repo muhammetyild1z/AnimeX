@@ -1,0 +1,85 @@
+﻿@model EntityLayer.Animeler
+@{
+    ViewData["Title"] = "AnimeAdd";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<section class="content">
+
+    <div class="box box-default">
+        <div class="box-header with-border">
+            <h3 class="box-title">Anime Ekle</h3>
+        </div>
+
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-9">
+                    <form method="post">
+                      
+                        <div class="form-group">
+                            <label>Anime Adı</label>
+                            <input type="text" class="form-control" asp-for="AnimeAdi" >
+                        </div>
+
+                        <div class="form-group">
+                            <label>Anime Detay</label>
+                            <textarea class="form-control" rows="4" asp-for="AnimeDetay"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Anime Kısa Detay</label>
+                            <textarea class="form-control" rows="3" asp-for="AnimeKisaDetay"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Anime Uyarlama</label>
+                            <input type="text" class="form-control" asp-for="AnimeUyarlamasi" >
+                        </div>
+
+                        <div class="form-group">
+                            <label>Anime IMDB</label>
+                            <input type="text" class="form-control" asp-for="IMDb" >
+                        </div>
+
+                        <div class="form-group">
+                            <label>Animenin Durumu</label>
+                            <select asp-for="status" class="form-control" >
+                                <option value="true">Aktif</option>
+                                <option value="false">Pasif</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Anime Kapak Görseli <small>(Resmi Link Olarak Giriş Yapın!!)</small></label>
+                            <input type="text" class="form-control" asp-for="AnimeImg ">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Anime Detay Görseli<small>(Resmi Link Olarak Giriş Yapın!!)</small></label>
+                            <input type="text" class="form-control" asp-for="AnimeKapakImg" >
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label>Anime Çıkış Tarihi Tarih <small>(gg/aa/yyyy)</small></label>
+
+                            <div class="input-group date">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                <input asp-for="AnimeCikisTarihi" type="date" class="form-control pull-right" id="datepicker" >
+                            </div>
+                            <!-- /.input group -->
+                        </div>
+                        <br />
+                        <button class="btn btn-info" type="submit">Anime Ekle</button>
+                    </form>
+                </div>
+
+              
+            </div>
+        </div>
+    </div>
+</section>
+

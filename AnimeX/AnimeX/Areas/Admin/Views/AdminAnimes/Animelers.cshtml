@@ -9,68 +9,78 @@
 
 
 
-    <section class="content">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="box">
-                    <div class="box-header row">
-                        <h3 class="box-title col-md-7"> Anime Listesi</h3>
-                        <div class="d-flex justify-content-center h-100 col-md-5">
-                            <div class="search">
-                                <input type="text" class="search-input"  placeholder="Anime adi ara..." name="">
-                                <a href="#" class="search-icon">
-                                    <i class="fa fa-search"></i>
-                                </a>
-                            </div>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header row">
+                    <h3 class="box-title col-md-7"> Anime Listesi</h3>
+                    <div class="d-flex justify-content-center h-100 col-md-5">
+                        <div class="search">
+                            <input type="text" class="search-input" placeholder="Anime adi ara..." name="">
+                            <a href="#" class="search-icon">
+                                <i class="fa fa-search"></i>
+                            </a>
                         </div>
                     </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <table id="example2" class="table table-bordered table-hover">
-                            <thead>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>Anime Adı</th>
+                                <th>Anime Detay Kısa</th>
+                                <th>Uyarlama</th>
+                                <th>Durum</th>
+                                <th>Anime Çıkış Tarihi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
                                 <tr>
-                                    <th>Anime Adı</th>
-                                    <th>Anime Detay Kısa</th>
-                                    <th>Uyarlama</th>
-                                    <th>Durum</th>
-                                    <th>Anime Çıkış Tarihi</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var item in Model)
-                                {
-                                    <tr>
-                                        <td> <a href="/AnimeIzle/Izle?AnimeID_Sezon=@item.AnimeID">@item.AnimeAdi</a></td>
+                                    <td> <a href="/AnimeIzle/Izle?AnimeID_Sezon=@item.AnimeID">@item.AnimeAdi</a></td>
+                                    @if (item.AnimeDetay.Length <= 100)
+                                    {
                                         <td>
+                                            @item.AnimeDetay
+                                        </td>
+                                    }
+                                    else if (item.AnimeDetay.Length > 100)
+                                    { <td>
                                             @item.AnimeDetay.Substring(0,100)..
                                         </td>
-                                        <td>@item.AnimeUyarlamasi</td>
-                                        <td> @item.status</td>
-                                        <td>@item.AnimeCikisTarihi.ToString("dd MMMM yy")</td>
-                                        <td>
-                                            <a class="btn btn-primary" href="/AdminAnimes/AnimeInfo/@item.AnimeID">Detaylar</a>
-                                        </td>
-                                    </tr>
-                                }
+                                        
+                                    }
+
+                                    <td>@item.AnimeUyarlamasi</td>
+                                    <td> @item.status</td>
+                                    <td>@item.AnimeCikisTarihi.ToString("dd MMMM yy")</td>
+                                    <td>
+                                        <a class="btn btn-primary" href="/AdminAnimes/AnimeInfo/@item.AnimeID">Detaylar</a>
+                                    </td>
+                                </tr>
+                            }
 
 
-                        </table>
-                    </div>
-                    <div class="product__pagination" style="margin: 2% 35%">
-                        @Html.PagedListPager((IPagedList)Model, page => Url.Action("Animelers", new { page }), new PagedListRenderOptions
-                        {
-                        LiElementClasses = new string[] { "page-item" },
-                        PageClasses=new string[] {"current-page"},
-                        UlElementClasses = new string[] { "pagination justify-content-center" },
-                        //PageClasses = new string[] { "page-link" },
-                        //Display = PagedListDisplayMode.IfNeeded
-                        })
-                    </div>
-                    <!-- /.box-body -->
+                    </table>
                 </div>
-
+                <div class="product__pagination" style="margin: 2% 35%">
+                    @Html.PagedListPager((IPagedList)Model, page => Url.Action("Animelers", new { page }), new PagedListRenderOptions
+                    {
+                    LiElementClasses = new string[] { "page-item" },
+                    PageClasses=new string[] {"current-page"},
+                    UlElementClasses = new string[] { "pagination justify-content-center" },
+                    //PageClasses = new string[] { "page-link" },
+                    //Display = PagedListDisplayMode.IfNeeded
+                    })
+                </div>
+                <!-- /.box-body -->
             </div>
-            <!-- /.col -->
+
         </div>
-        <!-- /.row -->
-    </section>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>

@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\muham\OneDrive\Belgeler\GitHub\AnimeX\AnimeX\AnimeX
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/AdminAnimes/AnimeAdd.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5BbmltZXNcQW5pbWVBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/AdminAnimes/AnimeInfo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5BbmltZXNcQW5pbWVJbmZvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -52,12 +56,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tbWVudFxDb21tZW50TGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/Home/AllUsers.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxBbGxVc2Vycy5jc2h0bWw=
+[C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/Home/AdminIndexPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxBZG1pbkluZGV4UGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/Home/AllUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxBbGxVc2Vycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Areas/Admin/Views/Member/Memberdetails.cshtml]
@@ -134,6 +138,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Views/CustomerLayout/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ3VzdG9tZXJMYXlvdXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Views/ErrorPage/Ups.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3JQYWdlXFVwcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/muham/OneDrive/Belgeler/GitHub/AnimeX/AnimeX/AnimeX/Views/Home/Index.cshtml]

@@ -36,7 +36,7 @@ namespace AnimeX.UI.Controllers
             {
                 if (await _userManager.IsInRoleAsync(user, "Admin") == true)
                 {
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("AdminIndexPage", "Home");
                 }
                 return RedirectToAction("Index", "MyProfile");
 

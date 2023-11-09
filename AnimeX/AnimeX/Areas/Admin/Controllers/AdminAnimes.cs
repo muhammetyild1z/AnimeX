@@ -1,10 +1,11 @@
 ﻿using AnimeX.BusinnessLayer.Concrate;
 using AnimeX.DataAccessLayer.Concrate;
 using AnimeX.DataAccessLayer.EntityFramework;
-using AnimeX.DtoLayer.AdminAnimeUpdateDto;
+using AnimeX.DtoLayer.AdminAnime;
 using EntityLayer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System;
 using X.PagedList;
 
 namespace AnimeX.UI.Areas.Admin.Controllers
@@ -15,13 +16,28 @@ namespace AnimeX.UI.Areas.Admin.Controllers
         CategoryAnimeManeger categoryAnimeManager = new CategoryAnimeManeger(new efCategoryAnimeRepository(new Context()));
 
         [Area("Admin")]
+        [Route("[controller]/[action]/{id?}")]
         public IActionResult Animelers(int page = 1)
         {
 
             var values = animelerManager.TGetList().ToPagedList(page, 14);
             return View(values);
         }
-
+        [Area("Admin")]
+        [HttpGet]
+        public IActionResult AnimeAdd()
+        {
+           return View();
+        }
+       
+        [HttpPost]
+        [Area("Admin")]
+        public IActionResult AnimeAdd(Animeler animeAdd)
+        {
+            animeAdd.AnimeEklenmeTarihi=DateTime.Now;
+            animelerManager.TInsert(animeAdd);
+            return RedirectToAction("Animelers", "AdminAnimes");
+        }
         [Area("Admin")]
         [Route("[controller]/[action]/{id?}")]
         public IActionResult AnimeInfo(int id)
@@ -33,7 +49,7 @@ namespace AnimeX.UI.Areas.Admin.Controllers
         }
         [HttpPost]
         [Route("[controller]/[action]/{id?}")]
-        public IActionResult AnimeInfo(AdminAnimeUpdateDto animeUpdate )
+        public IActionResult AnimeInfo(AdminAnimeUpdateDto animeUpdate  )
         {
             var anime = animelerManager.TGetList().Where(x => x.AnimeID == animeUpdate.AnimeID).FirstOrDefault();
           

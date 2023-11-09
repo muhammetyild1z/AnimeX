@@ -8,6 +8,7 @@ using AnimeX.DataAccessLayer.EntityFramework;
 using AnimeX.UI.Models;
 using EntityLayer;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Security.Principal;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,7 +23,7 @@ builder.Services.AddIdentity<AppUser, AppRole>(
         opt.Password.RequireUppercase = false;
         opt.Password.RequireLowercase = false;
         opt.Password.RequireDigit = false;
-        
+
         // opt.SignIn.RequireConfirmedEmail = true;//mail doðrulamasý olsun mu
 
     }
@@ -30,18 +31,23 @@ builder.Services.AddIdentity<AppUser, AppRole>(
     .AddErrorDescriber<CustomerIdentityValidation>()
     .AddEntityFrameworkStores<Context>();
 builder.Services.AddMvc();
-builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-               .AddCookie(x =>
-               {
-                   x.LoginPath = "/Account/SignIn";
 
-               });
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.AccessDeniedPath = "/ErrorPage/Ups?code=1";
+    options.Cookie.Name = "Cookie";
+    options.Cookie.HttpOnly = true;
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(720);
+    options.LoginPath = "/Account/SignIn";
+    options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
+    options.SlidingExpiration = true;
+});
 
 builder.Services.AddScoped<Context>();
-builder.Services.AddScoped<IAnimelerDal,efAnimelerRepository>();
-builder.Services.AddScoped<IAnimelerService,AnimelerManager>();
+builder.Services.AddScoped<IAnimelerDal, efAnimelerRepository>();
+builder.Services.AddScoped<IAnimelerService, AnimelerManager>();
 
-builder.Services.AddScoped<ICategoriesService,CategoriesManager>();
+builder.Services.AddScoped<ICategoriesService, CategoriesManager>();
 builder.Services.AddScoped<ICategoriesDal, efCatagoriesRepository>();
 
 
@@ -82,11 +88,12 @@ if (app.Environment.IsDevelopment())
 }
 else
 {
-    app.UseExceptionHandler("/Home/Privacy");
+    app.UseExceptionHandler("/ErrorPage/Ups");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
+app.UseStatusCodePagesWithReExecute("/ErrorPage/Ups", "?code{0}");
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
@@ -104,7 +111,7 @@ app.MapControllerRoute(
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(
-      name: "areas", 
+      name: "areas",
       pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
     );
 });

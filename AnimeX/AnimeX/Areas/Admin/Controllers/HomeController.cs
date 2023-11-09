@@ -1,4 +1,5 @@
 ﻿using EntityLayer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using X.PagedList;
@@ -13,9 +14,10 @@ namespace AnimeX.UI.Areas.Admin.Controllers
         {
             _userManager = userManager;
         }
-
+        [Authorize]
         [Area("Admin")]
-        public async Task< IActionResult >Index()
+        [Route("[controller]/[action]/{id?}")]
+        public async Task<IActionResult>AdminIndexPage()
 		{
             var user =  await _userManager.GetUsersInRoleAsync("Member");
             return View(user.OrderByDescending(x=>x.UserCreateDate).Take(4).ToList());
