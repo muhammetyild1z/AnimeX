@@ -14,6 +14,8 @@ namespace AnimeX.UI.Areas.Admin.Controllers
     {
         AnimelerManager animelerManager = new AnimelerManager(new efAnimelerRepository(new Context()));
         CategoryAnimeManeger categoryAnimeManager = new CategoryAnimeManeger(new efCategoryAnimeRepository(new Context()));
+       
+        
 
         [Area("Admin")]
         [Route("[controller]/[action]/{id?}")]
@@ -27,15 +29,28 @@ namespace AnimeX.UI.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult AnimeAdd()
         {
+          
            return View();
         }
        
         [HttpPost]
         [Area("Admin")]
-        public IActionResult AnimeAdd(Animeler animeAdd)
+        public IActionResult AnimeAdd(Animeler animeAdd , IFormCollection form , CategoryAnime addcategori)
         {
-            animeAdd.AnimeEklenmeTarihi=DateTime.Now;
+            string[] selectedCategories = form["categoriesCheck"].ToArray();
+            animeAdd.AnimeEklenmeTarihi = DateTime.Now;
+          
             animelerManager.TInsert(animeAdd);
+            var animeId = animelerManager.TGetList().Where(x => x.AnimeAdi == animeAdd.AnimeAdi).FirstOrDefault().AnimeID;
+            for (int i = 0; i < selectedCategories.Length; i++)
+            {
+                addcategori.AnimeID = animeId;
+                addcategori.KategoriID =Convert.ToInt16(selectedCategories[i]);
+                categoryAnimeManager.TInsert(addcategori);
+            }
+         
+          
+          
             return RedirectToAction("Animelers", "AdminAnimes");
         }
         [Area("Admin")]

@@ -11,6 +11,8 @@ namespace EntityLayer
 {
     public class CategoryAnime
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
         public int AnimeID { get; set; }
         public Animeler animeler { get; set; }

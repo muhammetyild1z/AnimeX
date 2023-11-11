@@ -18,6 +18,11 @@ namespace AnimeX.BusinnessLayer.Concrate
             _animelerDal = animelerDal;
         }
 
+        public List<Animeler> GetCategoriesIncludeAnimeler()
+        {
+          return _animelerDal.GetCategoriesIncludeAnimeler();
+        }
+
         public List<Animeler> GetCommentIncludeAnimeler()
         {
            return _animelerDal.GetCommentIncludeAnimeler();

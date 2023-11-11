@@ -1,0 +1,70 @@
+﻿@model List<EntityLayer.Categories>
+
+    <style>
+ 
+.selectBox {
+  position: relative;
+}
+
+
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #1e90ff;
+}
+    </style>
+
+
+<div class="col-md-4">
+   
+        <div class="multiselect">
+            <div class="selectBox" onclick="showCheckboxes()">
+                <select class="form-control col-md-12">
+                    <option>Kategori Seç</option>
+                </select>
+                <div class="overSelect"></div>
+            </div>
+            <div id="checkboxes">
+              <lable></lable>
+               @foreach (var item in Model)
+                {
+                    <label for="three" class="font-weight-normal">
+                        <input type="checkbox" id="three" name="categoriesCheck" value="@item.kategoriID"/>@item.KategoriAdi
+                    </label>
+                }
+             
+            </div>
+        </div>
+
+</div>
+
+<script>
+    var expanded = false;
+
+    function showCheckboxes() {
+        var checkboxes = document.getElementById("checkboxes");
+        if (!expanded) {
+            checkboxes.style.display = "block";
+            expanded = true;
+        } else {
+            checkboxes.style.display = "none";
+            expanded = false;
+        }
+    }
+</script>

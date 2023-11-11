@@ -10,5 +10,6 @@ namespace AnimeX.BusinnessLayer.Abstract
     public interface IAnimelerService:IGenericService<Animeler>
     {
         List<Animeler> GetCommentIncludeAnimeler();
+        List<Animeler> GetCategoriesIncludeAnimeler();
     }
 }

@@ -254,7 +254,10 @@ namespace AnimeX.DataAccessLayer.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
 
                     b.Property<int>("AnimeID")
                         .HasColumnType("int");
